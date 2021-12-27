@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Do As I'm Doing Ideas</title>
+        <meta name="description" content="Movement Ideas for the Primary song Do As I'm Doing">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            button:active {
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body class="bg-black text-white" style="font-family: 'Mali', cursive;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="bg-yellow-600 py-12">
+            <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">Do As I'm Doing</h1>
+            <h2 class="text-semibold text-base md:text-2xl text-center">As you sing the song, click on the button at the bottom to get different actions to do.</h2>
+        </header>
+        <main class="container flex flex-col items-center justify-center space-y-4 pt-8 ">
+            <audio controls>
+                <source src="./audio/do-as-im-doing.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div>
+                <p>Do as I’m doing;</p>
+
+                <p>Follow, follow me!</p>
+                
+                <p>Do as I’m doing;</p>
+                
+                <p>Follow, follow me!</p>
+                
+                <p>If I do it high or low,</p>
+                
+                <p>If I do it fast or slow,</p>
+                
+                <p>Do as I’m doing;</p>
+                
+                <p>Follow, follow me!</p>
+                
+                <p>Do as I’m doing;</p>
+                
+                <p>Follow, follow me!</p>
+            </div>
+
+            <div class="w-full h-12">
+                <p id="current-action" class="text-5xl text-center"></p>
+            </div>
+
+            <div class="p-4">
+                <button id="action-button" class="bg-blue-700 py-2 px-4 rounded hover:bg-blue-500 font-bold text-center" type="button">Get An Action</button>
+            </div>
+            
+            
+        </main>
+        <script src="do-as-im-doing.js" async defer></script>
+    </body>
+</html>
