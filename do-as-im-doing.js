@@ -206,3 +206,6 @@ function test(timeAmount, char) {
         currentActionEl.textContent += char
        }, timeAmount)
 }
+
+const currentYearSpan = document.getElementById('current-year')
+currentYearSpan.textContent = new Date().getFullYear()
