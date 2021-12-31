@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Smiles</title>
+        <meta name="description" content="Face transformation activity for the Primary song Smiles">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/images/smile.family-portrait.jpeg">
+        <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/">
+        <meta property="og:title" content="Smiles">
+        <meta property="og:description" content="Face transformation activity for the Primary song Smiles">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-black text-white" style="font-family: 'Mali', cursive;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="bg-blue-600 py-4 md:py-12">
+            <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">Smiles</h1>
+            <h2 class="text-semibold text-base md:text-2xl text-center px-2">Click on the face to change the frown to a smile, and the smile to a frown.</h2>
+        </header>
+        <main class="container flex flex-col items-center justify-center space-y-3 py-8">
+            <audio controls>
+                <source src="./audio/smiles.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <h3 class="text-base text-green-400 font-bold md:text-lg">Original lyrics:</h3>
+            <div class="flex px-2 space-x-4 text-sm md:text-base sm:space-x-6">
+                <div>
+                    <p>If you chance to meet a frown,</p>
+
+                    <p>Do not let it stay.</p>
+                    
+                    <p>Quickly turn it upside down</p>
+                    
+                    <p>And smile that frown away.</p>
+                </div>
+                <div>
+                    <p>No one likes a frowning face,</p>
+                    
+                    <p>Change it for a smile.</p>
+                    
+                    <p>Make the world a better place</p>
+                    
+                    <p>By smiling all the while.</p>
+                </div>
+            </div>
+
+            <div class="p-1">
+                <button id="smile" type="button" class="transform duration-1000 rotate-180 w-full ">
+                    <img src="./images/smile/smile.png" alt="smiley/frowny face" />
+                </button>
+            </div>
+
+            
+            <p class="text-sm px-2 text-center w-full max-w-xl select-none md:text-base"><span class="italic">Note:</span> I think that it's fine to be sad and feel frowny for a while. 
+                When you feel sad but then feel ready to try and feel more positive, hopefully this song can help.
+            </p>
+
+            <h3 class="text-base text-green-400 font-bold pt-4 md:text-lg">My suggested lyrics:</h3>
+            <div class="flex px-2 pb-4 space-x-4 text-sm md:text-base sm:space-x-6">
+                <div>
+                    <p>If you chance to meet a frown,</p>
+
+                    <p>Know that it's okay.</p>
+                    
+                    <p>When ready, turn it upside down</p>
+                    
+                    <p>And smile that frown away.</p>
+                </div>
+                
+                <div>
+                    <p>At times you might be feeling sad,</p>
+                    
+                    <p>And your face will frown.</p>
+                    
+                    <p>Other times you might be glad</p>
+                    
+                    <p>And spread the smiles around.</p>
+                </div>
+            </div>
+
+        <div class="flex items-center justify-around pt-4 w-full ">
+            <div class="bg-cover bg-center bg-no-repeat h-64 w-64 rounded"
+                style="background-image: url('./images/smile/family-portrait.jpeg');"
+            ></div>
+            <div class="bg-cover bg-center bg-no-repeat h-64 w-64 rounded"
+                style="background-image: url('./images/smile/girls-giggling.jpeg');"
+            ></div>
+            <div class="bg-cover bg-center bg-no-repeat h-64 w-64 rounded"
+                style="background-image: url('./images/smile/family-portrait-2.jpeg');"
+            ></div>
+        </div>
+            
+        </main>
+        <footer class="h-24 w-full bg-blue-600 flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
+            <p class="text-center text-sm md:text-base"><span class="italic select-none">Resources:</span> 
+                <a href="https://www.churchofjesuschrist.org/get-help/mental-health" target="_blank" class="hover:underline">Mental Health</a> | 
+                <a href="https://suicidepreventionlifeline.org/" target="_blank" class="hover:underline">National Suicide Prevention Hotline</a>
+            </p>
+            <p class="text-center">Copyright <span id="current-year">2021</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+        </footer>
+        <script type="text/javascript">
+            const smileEl = document.getElementById('smile')
+            smileEl.addEventListener('click', () => {
+                smileEl.classList.toggle('rotate-180')
+            })
+            const currentYearSpan = document.getElementById('current-year')
+            currentYearSpan.textContent = new Date().getFullYear()
+        </script>
+    </body>
+</html>
