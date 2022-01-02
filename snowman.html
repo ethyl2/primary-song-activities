@@ -31,6 +31,7 @@
         <header class="bg-blue-600 py-4 md:py-12">
             <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">Once There Was a Snowman</h1>
             <h2 class="text-semibold text-base md:text-2xl text-center px-2">Click to build a snowman and make him tall, tall, tall!</h2>
+            <h2 class="text-semibold text-base md:text-2xl text-center px-2">Click on the sun to make him small, small, small!</h2>
         </header>
         <main class="container flex flex-col items-center justify-center space-y-3 py-8 mx-auto">
             <audio controls>
@@ -142,8 +143,10 @@
                 
                 if (snowballs.length === 0 || visibleSnowballCount === 0) {
                     // No snowballs, so display puddle
-                    puddleEl.classList.remove('hidden')
+                    setTimeout(() => {
+                        puddleEl.classList.remove('hidden')
                     puddleEl.classList.add('block')
+                    }, 500)
                 } else {
                      // If snowballs are present and visible, remove puddle
                     puddleEl.classList.remove('block')
