@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Follow the Prophet</title>
+        <meta name="description" content="Activity page for the Primary song Follow the Prophet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/images/wonder/little-one.jpeg">
+        <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/wonder.html">
+        <meta property="og:title" content="Follow the Prophet">
+        <meta property="og:description" content="Activity page for the Primary song Follow the Prophet">
+        <meta property="og:type" content="website" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-black text-white min-h-screen" style="font-family: 'Mali', cursive;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="sticky z-50 bg-gradient-to-b from-red-400 to-yellow-700 py-4 md:py-12">
+            <h1 class="z-50 text-bold text-lg md:text-3xl text-center font-bold pb-2">Follow the Prophet</h1>
+            <h2 class="z-50 text-semibold text-base md:text-2xl text-center px-2">Guess the words and phrases from the song</h2>
+        </header>
+        <main class="flex flex-col items-center justify-center space-y-3 py-8 mx-auto">
+            <audio controls class="z-50 mb-8">
+                <source src="./audio/prophet.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <button type="button" onclick="getWord()" class="rounded-3xl px-2 py-4 border-2 font-semibold hover:bg-gray-800">Let's Play</button>
+            <div id="word-container"></div>
+
+        </main>
+        <footer class="z-50 h-96 w-full bg-gradient-to-b from-yellow-500 to-red-900 flex flex-col space-y-2 items-center justify-start pt-2 md:pt-4">
+            <div class="flex items-center justify-center space-x-3 z-50">
+                <a 
+                href="https://ethyl2.github.io/primary-song-activities/" 
+                title="back to home"
+                class="bg-white p-px rounded hover:bg-green-400"
+            >
+                <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+                <span class="sr-only">Back to Home</span>
+            </a>
+                <a 
+                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-am-a-child-of-god" 
+                target="_blank" 
+                title="sheet music"
+                class="bg-white p-px rounded hover:bg-yellow-400"
+            >
+                <img src="./images/music-note-icon.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+                <span class="sr-only">Link to Sheet Music</span>
+            </a>
+            
+            <a  href="https://github.com/ethyl2/primary-song-activities" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-px rounded bg-white hover:bg-red-400"
+                title="link to GitHub repository"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" class="w-7 h-7 md:w-10 md:h-10"
+                focusable="false" width="1.73em" height="1.5em" style="
+                                    -ms-transform: rotate(360deg);
+                                    -webkit-transform: rotate(360deg);
+                                    transform: rotate(360deg);
+                                " preserveAspectRatio="xMidYMid meet" viewBox="0 0 1227.825 1000">
+                <path
+                    d="M1078.94-.985c-33.192-.491-110.295 10.777-239.027 96.936c-70.161-17.535-144.812-26.188-219.591-26.188c-82.278 0-165.425 10.448-242.965 31.719C192.534-24.605 110.955 1.234 110.955 1.234c-53.258 133.183-20.347 231.788-10.344 256.277C38.014 325.069-.2 411.338-.2 517.07c0 79.822 9.085 151.416 31.281 213.653c1.231 4.803.832 3.732 2.906 7.844c4.89 12.884 10.327 25.39 16.438 37.468c2.094 4.346 4 7.563 4 7.563c62.395 116.307 185.396 191.438 404.244 215.028l330.995.375c233.392-23.144 345.386-98.499 396.994-215.591l3.281-7.625c4.89-11.828 9.153-24.135 20.813-65.562c11.659-41.427 16.875-113.172 16.875-193.185c0-114.755-43.1-206.577-113.092-276.434c12.231-39.48 28.57-127.158-16.313-239.402c0 0-6.293-1.995-19.281-2.188zM818.1 420.133c53.893-.117 100.057 9.136 134.717 45.499v.031c43.369 45.541 68.749 100.525 68.749 159.778c0 276.658-177.932 284.183-397.4 284.183c-219.506 0-397.4-38.336-397.4-284.183c0-58.861 25.009-113.516 67.843-158.872c71.451-75.59 192.365-35.562 329.558-35.562c70.423-.011 136.564-10.75 193.935-10.875zm-408.807 81.468c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936zm443.649 0c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936z"
+                    fill="black" />
+                </svg>
+                <span class="sr-only">GitHub Repo</span>
+            </a>
+            </div>
+            
+            <p class="z-50 text-center text-sm md:text-base">Copyright <span id="current-year">2021</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+        </footer>
+        <script type="text/javascript">
+            const currentYearSpan = document.getElementById('current-year')
+            currentYearSpan.textContent = new Date().getFullYear()
+
+            const words = [
+                'Adam', 'Enoch', 'Abraham', 'Samuel', 'Daniel', 'Noah', 'Moses', 'Jonah', 'Follow the prophet', 'He knows the way', 'heed the prophets', 'Hannah', 'Isaac'
+            ]
+            const wordContainerEl = document.getElementById('word-container')
+            function getWord() {
+                console.log('in here')
+                const newWord = words[Math.floor(Math.random() * words.length)]
+                console.log(newWord)
+                const letters = newWord.split('')
+                letters.forEach(letter => {
+                    const letterEl = document.createElement('span')
+                    letterEl.textContent = '__'
+                    letterEl.classList.add('px-2')
+                    letterEl.setAttribute('data-letter', letter)
+                    wordContainerEl.append(letterEl)
+                })
+                
+            }
+        </script>
+    </body>
+</html>
