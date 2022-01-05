@@ -33,13 +33,16 @@
             <h2 class="z-50 text-semibold text-base md:text-2xl text-center px-2">Guess the words and phrases from the song</h2>
         </header>
         <main class="flex flex-col items-center justify-center space-y-3 py-8 mx-auto">
-            <audio controls class="z-50 mb-8">
+            <audio controls class="z-50 mb-4">
                 <source src="./audio/prophet.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
 
-            <button type="button" onclick="getWord()" class="rounded-3xl px-2 py-4 border-2 font-semibold hover:bg-gray-800">Let's Play</button>
-            <div id="word-container"></div>
+            <button type="button" onclick="getWord()" class="rounded-3xl px-2 py-4 border-2 font-semibold hover:bg-gray-800">Get a word or phrase</button>
+            <div id="word-container" class="pt-4 flex flex-wrap justify-center"></div>
+            <p id="message" class="h-10"></p>
+            <div id="alphabet-container" class="opacity-0 w-full grid grid-cols-7 gap-2 md:w-1/2 px-3"></div>
+            <div id="rainbow" class="flex items-center justify-center border border-gray-500"></div>
 
         </main>
         <footer class="z-50 h-96 w-full bg-gradient-to-b from-yellow-500 to-red-900 flex flex-col space-y-2 items-center justify-start pt-2 md:pt-4">
@@ -53,7 +56,7 @@
                 <span class="sr-only">Back to Home</span>
             </a>
                 <a 
-                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-am-a-child-of-god" 
+                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/follow-the-prophet" 
                 target="_blank" 
                 title="sheet music"
                 class="bg-white p-px rounded hover:bg-yellow-400"
@@ -88,23 +91,120 @@
             const currentYearSpan = document.getElementById('current-year')
             currentYearSpan.textContent = new Date().getFullYear()
 
+            const messageEl = document.getElementById('message')
+
+            // Create the alphabet grid
+            const alpha = Array.from(Array(26)).map((e, i) => i + 65)
+            const alphabet = alpha.map((x) => String.fromCharCode(x))
+            const alphabetContainerEl = document.getElementById('alphabet-container')
+            alphabet.forEach(letter => {
+                const letterEl = document.createElement('button')
+                letterEl.textContent = letter
+                letterEl.classList.add('border-2', 'rounded-xl', 'px-1', 'py-2', 'hover:bg-gray-800')
+                letterEl.setAttribute('data-letter', letter)
+                letterEl.addEventListener('click', handleClick)
+                alphabetContainerEl.append(letterEl)
+            })
+
+            // Create the rainbow element
+            const rainbowEl = document.getElementById('rainbow')
+            const colors = ['#002E96', '#80198C', '#BA0072', '#DB2950', '#E55D2C', '#DB8D00', '#BFB800']
+            colors.forEach(color => {
+                const colorEl = document.createElement('div')
+                colorEl.classList.add('w-10', 'h-10', 'md:w-20', 'md:h-20', 'rainbow-color')
+                colorEl.style.backgroundColor = color
+                rainbowEl.append(colorEl)
+            })
+
             const words = [
-                'Adam', 'Enoch', 'Abraham', 'Samuel', 'Daniel', 'Noah', 'Moses', 'Jonah', 'Follow the prophet', 'He knows the way', 'heed the prophets', 'Hannah', 'Isaac'
+                'Adam', 'Enoch', 'Abraham', 'Samuel', 'Daniel', 'Noah', 'Moses', 'Jonah', 'Follow the prophet', 'He knows the way', 'heed the prophets', 'Hannah', 'Isaac',
+                'twelve tribes', 'Here I am', 'eden', 'descendants', 'chosen one', 'promised land', 'wilderness', 'whale', 'really try', 'lions', 'refused to sin', 'get direction',
+                'watch the news', 'repentance', 'rain', 'preach the word'
+
             ]
             const wordContainerEl = document.getElementById('word-container')
+            let newWord = ''
+            let letters = []
+            let errorsCount = 0
+
             function getWord() {
-                console.log('in here')
-                const newWord = words[Math.floor(Math.random() * words.length)]
-                console.log(newWord)
-                const letters = newWord.split('')
+                // Clear the message
+                messageEl.textContent = ''
+
+                // Reset the alphabet grid
+                alphabetContainerEl.classList.remove('opacity-0')
+                const alphabetButtons = document.querySelector('#alphabet-container').childNodes
+                alphabetButtons.forEach(button => {
+                    button.classList.remove('bg-green-600', 'bg-red-600', 'cursor-not-allowed')
+                    button.disabled = false
+                })
+
+                // Reset the rainbow
+                errorsCount = 0
+                const colorEls = rainbowEl.childNodes
+                colorEls.forEach(colorEl => {
+                    colorEl.classList.remove('opacity-0')
+                })
+
+                // Remove the old word/phrase
+                const letterHolders = document.querySelectorAll('.letter-holder')
+                letterHolders.forEach(letterHolder => {
+                    letterHolder.remove()
+                })
+
+                // Get a new word/phrase
+                newWord = words[Math.floor(Math.random() * words.length)]
+                letters = newWord.toUpperCase().split('')
+                console.log(letters)
                 letters.forEach(letter => {
                     const letterEl = document.createElement('span')
+                    
+                    if (letter !== ' ') {
                     letterEl.textContent = '__'
-                    letterEl.classList.add('px-2')
+                    } else {
+                        letterEl.classList.add('w-4', 'h-4')
+                    }
+                    letterEl.classList.add('px-2', 'letter-holder', 'md:text-xl')
                     letterEl.setAttribute('data-letter', letter)
                     wordContainerEl.append(letterEl)
                 })
                 
+            }
+
+            // Handle alphabet grid click
+            function handleClick(e) {
+                const letterButton = e.target
+                letterButton.disabled = true
+                letterButton.classList.add('cursor-not-allowed')
+                const letter = letterButton.getAttribute('data-letter')
+                const indices = getAllIndices(letters, letter)
+                if (indices.length > 0) {
+                    letterButton.classList.add('bg-green-600')
+                    const letterHolders = document.querySelectorAll('.letter-holder')
+                    indices.forEach(index => {
+                        letterHolders[index].textContent = letter
+                    })
+                    // Show the success message if all the letters are guessed correctly
+                    if (Array.from(letterHolders).filter(element => element.textContent === '__').length === 0) {
+                        messageEl.textContent = "You figured it out! Congratulations!"
+                    }
+                } else {
+                    letterButton.classList.add('bg-red-600')
+                    if (errorsCount < 7) {
+                        Array.from(document.querySelectorAll('.rainbow-color'))[errorsCount].classList.add('opacity-0')
+                        errorsCount++
+                    }
+                } 
+            }
+
+            function getAllIndices(arr, val) {
+                let indexes = [], i
+                for(i = 0; i < arr.length; i++) {
+                    if (arr[i] === val) {
+                        indexes.push(i)
+                    } 
+                }
+                return indexes;
             }
         </script>
     </body>
