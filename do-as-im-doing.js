@@ -194,6 +194,12 @@ const actions = [
     {    name: 'do the floss',
         image: 'floss.png', 
     },
+    {    name: 'play an invisible trombone',
+        image: 'trombone.jpg', 
+    },
+    {    name: 'play something like a drum',
+        image: 'drum.jpg', 
+    },
     
 ]
 
