@@ -172,6 +172,9 @@ const actions = [
     },
     { name: 'pretend to be an elephant',
         image: 'elephant.jpg', 
+    },
+    { name: 'take selfies with an invisible phone',
+        image: 'selfie.jpg', 
     }
 ]
 
