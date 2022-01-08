@@ -175,7 +175,26 @@ const actions = [
     },
     { name: 'take selfies with an invisible phone',
         image: 'selfie.jpg', 
-    }
+    },
+    {
+        name: 'butterfly hands flying around',
+        image: 'butterfly-hands.png',
+    },
+    { 
+        name: 'backbend',
+        image: 'backbend.jpg', 
+    },
+    { 
+        name: 'yoga tree pose',
+        image: 'yoga-tree-pose.jpg', 
+    },
+    {    name: 'bend to the side',
+        image: 'side-reach.jpg', 
+    },
+    {    name: 'do the floss',
+        image: 'floss.png', 
+    },
+    
 ]
 
 const actionButton = document.getElementById('action-button')
