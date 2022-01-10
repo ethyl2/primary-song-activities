@@ -43,9 +43,9 @@
             <div id="word-container" class="pt-4 flex flex-wrap justify-center"></div>
             <p id="message" class="h-10"></p>
             <div id="alphabet-container" class="opacity-0 w-full grid grid-cols-7 gap-2 md:w-1/2 px-3"></div>
-            <div id="rainbow" class="flex items-center justify-center border border-gray-500 mb-4"></div>
-            <div class="h-48 flex items-center justify-center">
-                <img id="current-img" class="h-full" />
+            <div id="rainbow" class="rounded overflow-hidden flex items-center justify-center border border-gray-500 mb-4"></div>
+            <div class="rounded overflow-hidden h-32 flex items-center justify-center w-full sm:h-48">
+                <img id="current-img" class="h-full rounded" src="./images/prophet/which-prophet.png" />
             </div>
 
         </main>
@@ -56,7 +56,7 @@
                 title="back to home"
                 class="bg-white p-px rounded hover:bg-green-400"
             >
-                <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+                <img src="./images/home.png" alt="music note" class="rounded w-7 h-7 md:w-10 md:h-10" />
                 <span class="sr-only">Back to Home</span>
             </a>
                 <a 
@@ -233,6 +233,8 @@
                 // Get a new word/phrase
                 newWord = words[Math.floor(Math.random() * words.length)]
                 letters = newWord.solution.toUpperCase().split('')
+                imgEl.src = `./images/prophet/which-prophet.png`
+                imgEl.alt = 'guess'
                 letters.forEach(letter => {
                     const letterEl = document.createElement('span')
                     
