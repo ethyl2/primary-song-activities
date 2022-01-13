@@ -184,7 +184,6 @@
     })
 
     function handleClick(event) {
-      console.log(event.target)
       currentActivityTextEls.forEach(el => {
         el.textContent = event.target.getAttribute('data-activity')
       })
