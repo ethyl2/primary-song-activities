@@ -136,6 +136,18 @@
         'slug': 'cooking-some-dinner'
       },
       {
+        'name': 'Flying a kite',
+        'slug': 'flying-a-kite'
+      },
+      {
+        'name': 'Writing with chalk',
+        'slug': 'writing-with-chalk'
+      },
+      {
+        'name': 'Jumping in puddles',
+        'slug': 'jumping-in-puddles'
+      },
+      {
         'name': 'Going down slides',
         'slug': 'going-down-slides'
       },
@@ -156,6 +168,18 @@
         'slug': 'reading-a-book'
       },
       {
+        'name': 'Taking a bath',
+        'slug': 'taking-a-bath'
+      },
+      {
+        'name': 'Doing some math',
+        'slug': 'doing-some-math'
+      },
+      {
+        'name': 'Painting your nails',
+        'slug': 'painting-your-nails'
+      },
+      {
         'name': 'Riding a bike',
         'slug': 'riding-a-bike'
       },
@@ -164,12 +188,36 @@
         'slug': 'taking-a-selfie'
       },
       {
+        'name': 'Licking your ice cream',
+        'slug': 'licking-your-ice-cream'
+      },
+      {
+        'name': 'Playing a game',
+        'slug': 'playing-a-game'
+      },
+      {
         'name': 'Wearing a mask',
         'slug': 'wearing-a-mask'
       },
       {
+        'name': 'Making some toast',
+        'slug': 'making-some-toast'
+      },
+      {
         'name': 'Wearing a wig',
         'slug': 'wearing-a-wig'
+      },
+      {
+        'name': 'Eating some tacos',
+        'slug': 'eating-some-tacos'
+      },
+      {
+        'name': 'Brushing your teeth',
+        'slug': 'brushing-your-teeth'
+      },
+      {
+        'name': 'Singing a song',
+        'slug': 'singing-a-song'
       },
     ]
     const buttonSection = document.getElementById('button-section')
@@ -183,6 +231,10 @@
       activityButton.addEventListener('click', handleClick)
       buttonSection.append(activityButton)
     })
+
+    // Start the focus on the singing activity's button
+    const singingButton = document.querySelector('button[data-activity="Singing a song"]')
+    singingButton.focus()
 
     function handleClick(event) {
       currentActivityTextEls.forEach(el => {
