@@ -216,6 +216,18 @@
         'slug': 'brushing-your-teeth'
       },
       {
+        'name': 'Blowing some bubbles',
+        'slug': 'blowing-some-bubbles'
+      },
+      {
+        'name': 'Smelling a flower',
+        'slug': 'smelling-a-flower'
+      },
+      {
+        'name': 'Hitting a ball',
+        'slug': 'hitting-a-ball'
+      },
+      {
         'name': 'Singing a song',
         'slug': 'singing-a-song'
       },
@@ -224,7 +236,7 @@
     const currentActivityTextEls = document.querySelectorAll('.current-activity')
     activities.forEach(activity => {
       const activityButton = document.createElement('button')
-      activityButton.classList.add('w-16', 'h-16', 'sm:w-32', 'sm:h-32', 'bg-no-repeat', 'bg-cover', 'bg-center', 'rounded', 'm-3', 'md:m-4', 'md:w-36', 'md:h-36')
+      activityButton.classList.add('w-16', 'h-16', 'sm:w-32', 'sm:h-32', 'bg-no-repeat', 'bg-cover', 'bg-center', 'rounded', 'm-3', 'md:w-36', 'md:h-36')
       activityButton.style.backgroundImage = `url("./images/fun-to-do/${activity.slug}.jpg")`
       activityButton.style.border = '2px solid black'
       activityButton.setAttribute('data-activity', activity.name)
