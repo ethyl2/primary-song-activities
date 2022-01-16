@@ -272,7 +272,7 @@
     const currentActivityTextEls = document.querySelectorAll('.current-activity')
     activities.forEach(activity => {
       const activityButton = document.createElement('button')
-      activityButton.classList.add('w-16', 'h-16', 'sm:w-32', 'sm:h-32', 'bg-no-repeat', 'bg-cover', 'bg-center', 'rounded', 'm-3', 'md:w-36', 'md:h-36')
+      activityButton.classList.add('w-16', 'h-16', 'sm:w-24', 'sm:h-24', 'bg-no-repeat', 'bg-cover', 'bg-center', 'rounded', 'm-3', 'md:w-32', 'md:h-32', 'lg:w-36', 'lg:h-36')
       activityButton.style.backgroundImage = `url("./images/fun-to-do/${activity.slug}.jpg")`
       activityButton.style.border = '2px solid black'
       activityButton.setAttribute('data-activity', activity.name)
