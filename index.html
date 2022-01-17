@@ -46,6 +46,7 @@
                 <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./child-of-god.html">I Am a Child of God</a></li>
                 <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./follow-the-prophet.html">Follow the Prophet</a></li>
                 <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./fun-to-do.html">Fun to Do</a></li>
+                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./beautiful-savior.html">Beautiful Savior</a></li>
             </ul>
         </main>
         <footer class="h-40 w-full bg-blue-600 flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
@@ -70,8 +71,12 @@
                 </a>
             </div>
 
-            <p class="text-center text-sm md:text-base">Copyright <span id="current-year">2021</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+            <p class="text-center text-sm md:text-base">Copyright <span id="current-year">2022</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
         </footer>
-        <script src="" async defer></script>
+        <script>
+            const currentYearSpan = document.getElementById('current-year')
+            currentYearSpan.textContent = new Date().getFullYear()
+        </script>
+        
     </body>
 </html>
