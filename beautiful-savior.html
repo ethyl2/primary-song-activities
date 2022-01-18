@@ -64,16 +64,30 @@
             <source src="./audio/beautiful-savior.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-        <iframe 
-            id="video-iframe"
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/r54sTcBCPkQ" 
-            title="YouTube video player"
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen
-        ></iframe>
+        <div class="md:hidden">
+            <iframe 
+                id="video-iframe"
+                width="300" 
+                height="200" 
+                src="https://www.youtube.com/embed/r54sTcBCPkQ" 
+                title="YouTube video player"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+            ></iframe>
+        </div>
+        <div class="hidden md:block">
+            <iframe 
+                id="video-iframe"
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/r54sTcBCPkQ" 
+                title="YouTube video player"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+            ></iframe>
+        </div>
     </main>
   <footer class="h-40 w-full bg-white flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
     <div class="flex items-center justify-center space-x-3">
@@ -110,27 +124,6 @@
   </body>
     <script>
         const centerImgDiv = document.getElementById('center-img')
-        window.addEventListener('load', () => {
-            const deviceTypeDetected = deviceType()
-            console.log(deviceTypeDetected)
-            const iframeEl = document.getElementById('video-iframe')
-            if (deviceTypeDetected === 'mobile') {
-                iframeEl.width = 300
-                iframeEl.height = 200
-            }
-        })
-
-
-        const deviceType = () => {
-            const ua = navigator.userAgent;
-            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-                return "tablet"
-            }
-            else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-                return "mobile"
-            }
-            return "desktop"
-        }
 
         const items = [
             { 
@@ -172,6 +165,53 @@
                 text: 'And brings to all the world his love.',
                 centerImgSlug: 'world-his-love.jpeg'
             },
+            { 
+                headerText: 'Click the leaf to see what is most beautiful',
+                buttonSlug : 'leaf.png',
+                backgroundSlug: 'meadows.jpg',
+                text: 'Fair are the meadows,',
+            },
+            { 
+                headerText: 'Click the tree to see what is most beautiful',
+                buttonSlug : 'tree.png',
+                backgroundSlug: 'woodlands.jpg',
+                text: 'Fairer the woodlands,',
+            },
+            { 
+                headerText: 'Click the flower to see what is most beautiful',
+                buttonSlug : 'flower.png',
+                backgroundSlug: 'flowers.jpg',
+                text: 'Robed in the flowers of blooming spring;',
+            },
+            { 
+                headerText: 'Jesus is! Keep clicking',
+                buttonSlug : 'jesus-easter.png',
+                backgroundSlug: 'icebergs.jpg',
+                text: 'Jesus is fairer,',
+                centerImgSlug: 'resurrected-christ.jpeg'
+            },
+            { 
+                headerText: 'Jesus is! Keep clicking',
+                buttonSlug : 'jesus-palm-sunday.png',
+                backgroundSlug: 'white-sands.jpg',
+                text: 'Jesus is purer.',
+                centerImgSlug: 'christ-portrait.jpeg'
+            },
+            { 
+                headerText: 'Jesus is! Keep clicking',
+                buttonSlug : 'jesus-gethsemane.png',
+                backgroundSlug: 'garden-tomb.jpeg',
+                text: 'He makes the sorrowing spirit sing.',
+                centerImgSlug: 'jesus-heals.jpeg'
+            },
+            { 
+                headerText: 'Jesus is! Keep clicking',
+                buttonSlug : 'jesus-creator.png',
+                backgroundSlug: 'grain.jpg',
+                text: 'Beautiful Savior!',
+                centerImgSlug: 'jesus-with-child.jpeg'
+            },
+
         ]
         let currentIndex = 0
 
@@ -183,7 +223,6 @@
 
         sunButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % items.length
-            console.log(currentIndex)
             mainEl.style.backgroundImage = `url('./images/beautiful-savior/${items[currentIndex].backgroundSlug}')`
             sunButton.style.backgroundImage = `url('./images/beautiful-savior/${items[currentIndex].buttonSlug}')`
             headerInstructionEl.textContent = items[currentIndex].headerText
