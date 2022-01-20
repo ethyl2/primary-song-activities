@@ -35,53 +35,96 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header class="bg-green-400 py-4 md:py-12">
-      <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">I Lived in Heaven</h1>
+    <header class="bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-200 py-4 md:py-12">
+      <h1 class="font-bold text-lg md:text-3xl text-center font-bold pb-2">I Lived in Heaven</h1>
+      <p class="font-medium text-sm md:text-xl text-center">Select or copy words from the lyrics below. 
+      </p>
+      <p class="font-medium text-sm md:text-xl text-center">
+        Then press the buttons to see what you selected and copied, displayed
+          with randomly-chosen <a href="https://tailwindcss.com/" target="_blank" class="underline hover:text-blue-400">tailwindcss</a> classes.
+      </p>
     </header>
     
 
-    <main class="container flex flex-col items-center justify-start space-y-8 mx-auto min-h-screen pt-8">
+    <main class="container flex flex-col items-start justify-start space-y-8 mx-auto min-h-screen pt-8">
+        <div class="flex items-start justify-between w-full px-2">
+            <section class="flex flex-col items-center justify-start space-y-6 w-1/2 pr-2 text-xs md:pr-0 md:text-base">
+                <img 
+                    class="w-24 h-24 md:w-48 md:h-48"
+                    src="./images/i-lived-in-heaven/heavenly-father-jesus-christ.jpeg" 
+                    alt="Heavenly Father and Jesus Christ present a plan for us to come to earth"
+                />
+                <div class="flex flex-col items-center justify-center space-y-1 text-yellow-200">
 
-        <div class="flex flex-col items-center justify-center space-y-1 text-sm text-yellow-200 md:text-base">
+                    <p>1. I lived in heaven a long time ago, it is true;</p>
 
-            <p>1. I lived in heaven a long time ago, it is true;</p>
+                    <p>Lived there and loved there with people I know. So did you.</p>
 
-            <p>Lived there and loved there with people I know. So did you.</p>
+                    <p>Then Heav'nly Father presented a beautiful plan,</p>
 
-            <p>Then Heav'nly Father presented a beautiful plan,</p>
+                    <p>All about earth and eternal salvation for man.</p>
+                </div>
+            
+                <div class="flex flex-col items-center justify-center space-y-1 text-yellow-200">
 
-            <p>All about earth and eternal salvation for man.</p>
+                    <p>2. Father said he needed someone who had enough love</p>
+
+                    <p>To give his life so we all could return there above.</p>
+
+                    <p>There was another who sought for the honor divine.</p>
+
+                    <p>Jesus said, “Father, send me, and the glory be thine.”</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center space-y-1 text-yellow-200">
+
+                    <p>3. Jesus was chosen, and as the Messiah he came,</p>
+
+                    <p>Conquering evil and death through his glorious name,</p>
+
+                    <p>Giving us hope of a wonderful life yet to be</p>
+
+                    <p>Home in that heaven where Father is waiting for me.</p>
+                </div>
+                <audio controls class="hidden md:block">
+                    <source src="./audio/i-lived-in-heaven.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+            <section class="flex flex-col items-center justify-center space-y-3 w-1/2">
+
+                <button
+                    type="button"
+                    id="show-selection"
+                    class="rounded-full px-2 py-1 bg-yellow-300 text-sm hover:bg-yellow-200 text-black text-center font-bold font-sans md:text-lg md:px-3 md:py-2"
+                >
+                    Show the Selected Words
+                </button>
+                <div  class="h-48 rounded w-full border text-center m-auto overflow-auto flex items-center justify-center">
+                    <p id="selection-clipboard"></p>
+                </div>
+                <div id="selected-classes-box" class="h-24 w-full flex flex-wrap items-start justify-center overflow-auto"></div>
+
+                <button
+                    type="button"
+                    id="show-text"
+                    class="rounded-full px-2 py-1 bg-yellow-300 text-sm hover:bg-yellow-200 text-black text-center font-bold font-sans md:text-lg md:px-3 md:py-2"
+                >
+                    Show the Copied Words
+                </button>
+                <div  class="h-48 rounded w-full border text-center m-auto overflow-auto flex items-center justify-center">
+                    <p id="clipboard"></p>
+                </div>
+                <div id="copied-classes-box" class="h-24 w-full flex flex-wrap items-start justify-center overflow-auto"></div>
+                
+            </section>
         </div>
-      
-        <div class="flex flex-col items-center justify-center space-y-1 text-sm text-yellow-200 md:text-base">
-
-            <p>2. Father said he needed someone who had enough love</p>
-
-            <p>To give his life so we all could return there above.</p>
-
-            <p>There was another who sought for the honor divine.</p>
-
-            <p>Jesus said, “Father, send me, and the glory be thine.”</p>
-        </div>
-
-        <div class="flex flex-col items-center justify-center space-y-1 text-sm text-yellow-200 md:text-base">
-
-            <p>3. Jesus was chosen, and as the Messiah he came,</p>
-
-            <p>Conquering evil and death through his glorious name,</p>
-
-            <p>Giving us hope of a wonderful life yet to be</p>
-
-            <p>Home in that heaven where Father is waiting for me.</p>
-        </div>
-
-        <audio controls>
+        <audio controls class="mx-auto py-2 md:hidden">
             <source src="./audio/i-lived-in-heaven.mp3" type="audio/mp3">
             Your browser does not support the audio element.
-        </audio>
-        
+        </audio>  
     </main>
-    <footer class="h-40 w-full bg-pink-500 flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
+    <footer class="h-40 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
         <div class="flex items-center justify-center space-x-3">
         <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
             class="bg-white p-px rounded hover:bg-green-400">
@@ -115,7 +158,102 @@
     </footer>
   </body>
   <script>
-    
+    const showButton = document.getElementById('show-text')
+    const clipboardBox = document.getElementById('clipboard')
+    const showSelectedButton = document.getElementById('show-selection')
+    const selectionBox = document.getElementById('selection-clipboard')
+    const selectedClassesBox = document.getElementById('selected-classes-box')
+    const copiedClassesBox = document.getElementById('copied-classes-box')
+    showButton.addEventListener('click', () => {
+        clipboardBox.removeAttribute('class')
+        const newClasses = getTextClasses()
+        console.log(newClasses)
+        clipboardBox.classList.add(...newClasses)
+        navigator.clipboard.readText().then(clipText => {
+            clipboardBox.textContent = clipText
+        })
+        removeAllChildNodes(copiedClassesBox)
+        const caption = document.createElement('p')
+        caption.classList.add('text-xs', 'italic')
+        caption.textContent = 'Tailwind classes:'
+        copiedClassesBox.append(caption)
+        newClasses.forEach(newClass => {
+            const classPill = document.createElement('p')
+            classPill.classList.add('rounded-full', 'px-2', 'h-10', 'border', 'text-white', 'm-1', 'flex', 'items-center', 'text-center', 'justify-center', 'text-xs', 'bg-white', 'bg-opacity-20')
+            classPill.textContent = newClass
+            copiedClassesBox.append(classPill)
+        })
+    })
+    showSelectedButton.addEventListener('click', () => {
+        selectionBox.removeAttribute('class')
+        const newClasses = getTextClasses()
+        console.log(newClasses)
+        selectionBox.classList.add(...newClasses)
+        const selectedText = getSelectionText()
+        selectionBox.textContent = selectedText
+        removeAllChildNodes(selectedClassesBox)
+        const caption = document.createElement('p')
+        caption.classList.add('text-xs', 'italic')
+        caption.textContent = 'Tailwind classes:'
+        selectedClassesBox.append(caption)
+        newClasses.forEach(newClass => {
+            const classPill = document.createElement('p')
+            classPill.classList.add('rounded-full', 'h-10', 'px-2', 'border', 'text-white', 'm-1', 'flex', 'items-center', 'text-center', 'justify-center', 'text-xs', 'bg-white', 'bg-opacity-20')
+            classPill.textContent = newClass
+            selectedClassesBox.append(classPill)
+        })
+    })
+    function getSelectionText() {
+        let text = "";
+        if (window.getSelection) {
+            text = window.getSelection().toString();
+        } else if (document.selection && document.selection.type != "Control") {
+            text = document.selection.createRange().text;
+        }
+        return text;
+    }
+
+    const colors = ['white', 'gray', 'red', 'yellow', 'black', 'green', 'blue', 'indigo', 'purple', 'pink']
+    const colorLevels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+    const fontWeights = ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black']
+    const fontStyles = ['italic', 'not-italic', 'underline', 'no-underline']
+    const textTransforms = ['uppercase', 'lowercase', 'capitalize', 'normal-case']
+    const fontSizes = ['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl']
+    const fontFamilies = ['sans', 'serif', 'mono']
+
+    function getTextClasses() {
+        let textClasses = []
+        let color = colors[Math.floor(Math.random() * colors.length)]
+        let level = 1000
+        if (color !== 'white' && color !== 'black') {
+            level = colorLevels[Math.floor(Math.random() * colorLevels.length)]
+            color += '-' + level
+        }
+        textClasses.push('text-' + color)
+        if (color === 'white' || level < 500) {
+            textClasses.push('bg-black')
+        } else {
+            textClasses.push('bg-white')
+        }
+        const weight = fontWeights[Math.floor(Math.random() * fontWeights.length )]
+        textClasses.push('font-' + weight)
+        const currentStyle = fontStyles[Math.floor(Math.random() * fontStyles.length)]
+        textClasses.push(currentStyle)
+        const textTransform = textTransforms[Math.floor(Math.random() * textTransforms.length)]
+        textClasses.push(textTransform)
+        const fontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)]
+        textClasses.push('text-' + fontSize)
+        const fontFamily = fontFamilies[Math.floor(Math.random() * fontFamilies.length)]
+        textClasses.push('font-' + fontFamily)
+        return textClasses
+    }
+
+    function removeAllChildNodes(parent) {
+        while(parent.firstChild) {
+            parent.removeChild(parent.firstChild)
+        }
+    }
+
     const currentYearSpan = document.getElementById('current-year')
     currentYearSpan.textContent = new Date().getFullYear()
     
