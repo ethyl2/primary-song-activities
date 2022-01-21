@@ -37,10 +37,10 @@
         <![endif]-->
     <header class="bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-200 py-4 md:py-12">
       <h1 class="font-bold text-lg md:text-3xl text-center font-bold pb-2">I Lived in Heaven</h1>
-      <p class="font-medium text-sm md:text-xl text-center">Select or copy words from the lyrics below. 
+      <p class="font-medium text-sm md:text-xl text-center">Copy <span class="hidden md:inline">or select</span> words from the lyrics below. 
       </p>
       <p class="font-medium text-sm md:text-xl text-center">
-        Then press the buttons to see what you selected and copied, displayed
+        Then press the button<span class="hidden md:inline">s</span> to see what you copied<span class="hidden md:inline"> and selected</span>, displayed
           with randomly-chosen <a href="https://tailwindcss.com/" target="_blank" class="underline hover:text-blue-400">tailwindcss</a> classes.
       </p>
     </header>
@@ -96,14 +96,14 @@
                 <button
                     type="button"
                     id="show-selection"
-                    class="rounded-full px-2 py-1 bg-yellow-300 text-sm hover:bg-yellow-200 text-black text-center font-bold font-sans md:text-lg md:px-3 md:py-2"
+                    class="hidden md:block rounded-full px-2 py-1 bg-yellow-300 text-sm hover:bg-yellow-200 text-black text-center font-bold font-sans md:text-lg md:px-3 md:py-2"
                 >
                     Show the Selected Words
                 </button>
-                <div  class="h-48 rounded w-full border text-center m-auto overflow-auto flex items-center justify-center">
+                <div  class="hidden h-48 rounded w-full border text-center m-auto overflow-auto items-center justify-center md:flex">
                     <p id="selection-clipboard"></p>
                 </div>
-                <div id="selected-classes-box" class="h-24 w-full flex flex-wrap items-start justify-center overflow-auto"></div>
+                <div id="selected-classes-box" class="hidden h-24 w-full flex-wrap items-start justify-center overflow-auto md:flex"></div>
 
                 <button
                     type="button"
@@ -167,7 +167,6 @@
     showButton.addEventListener('click', () => {
         clipboardBox.removeAttribute('class')
         const newClasses = getTextClasses()
-        console.log(newClasses)
         clipboardBox.classList.add(...newClasses)
         navigator.clipboard.readText().then(clipText => {
             clipboardBox.textContent = clipText
