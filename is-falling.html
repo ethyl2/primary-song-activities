@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rain is Falling All Around</title>
+    <meta name="description" content="Activity page for the Primary song Rain is Falling All Around">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/images/rain/rain-is-falling.png">
+    <meta property="og:url" content="https://ethyl2.github.io/is-falling.html">
+    <meta property="og:title" content="Rain is Falling All Around">
+    <meta property="og:description" content="Activity page for the Primary song Rain is Falling All Around">
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="https://ethyl2.github.io/primary-song-activities/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="https://ethyl2.github.io/primary-song-activities/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="https://ethyl2.github.io/primary-song-activities/favicon-16x16.png">
+    <link rel="manifest" href="https://ethyl2.github.io/primary-song-activities/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      #snowflakeContainer {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: none;
+      }
+
+      .snowflake {
+        position: fixed;
+        user-select: none;
+        z-index: 1000;
+        pointer-events: none;
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+
+  </head>
+
+  <body class="bg-gray-200 text-black min-h-screen" style="font-family: 'Mali', cursive;">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header class="bg-gray-500 flex flex-col items-center justify-center py-2 pt-4 md:pt-10">
+      <h1 class="text-bold text-white text-lg md:text-3xl text-center font-bold pb-6"><span class="item capitalize">Rain</span> is Falling All Around</h1>
+    </header>
+
+    <main
+      class="flex flex-col items-center justify-start space-y-4 py-8 mx-auto min-h-screen bg-cover bg-no-repeat bg-center"
+    >
+      <button type="button" id="change-button" class="bg-black text-white rounded-lg px-2 py-1 text-lg hover:bg-gray-700">Poof!</button>
+      <div class="py-2 px-3 bg-white rounded-lg bg-opacity-60 my-4 mx-2">
+        <p class="text-bold text-xl md:text-2xl text-center"><span class="item capitalize">Rain</span> is falling all around,</p>
+        <p class="text-bold text-xl md:text-2xl text-center">On the housetops, on the ground.</p>
+        <p class="text-bold text-xl md:text-2xl text-center"><span class="item capitalize">Rain</span> is falling on my nose,</p>
+        <p class="text-bold text-xl md:text-2xl text-center">On my head and hands and toes.</p>
+      </div>
+
+      <audio controls>
+        <source src="./audio/rain-is-falling-all-around.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <div id="snowflakeContainer">
+        <span class="snowflake bg-center bg-no-repeat bg-contain" style="background-image: url('./images/rain/raindrop.png')"></span>
+      </div>
+    </main>
+    <footer class="h-40 w-full bg-gray-200 flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
+      <div class="flex items-center justify-center space-x-3">
+        <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
+          class="bg-white p-px rounded hover:bg-green-400">
+          <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+          <span class="sr-only">Back to Home</span>
+        </a>
+        <a href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/rain-is-falling-all-around"
+          target="_blank" title="sheet music" class="bg-white p-px rounded hover:bg-yellow-400">
+          <img src="./images/music-note-icon.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+          <span class="sr-only">Link to Sheet Music</span>
+        </a>
+
+        <a href="https://github.com/ethyl2/primary-song-activities" target="_blank" rel="noopener noreferrer"
+          class="p-px rounded bg-white hover:bg-red-400" title="link to GitHub repository">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            class="w-7 h-7 md:w-10 md:h-10" focusable="false" width="1.73em" height="1.5em" style="
+                                      -ms-transform: rotate(360deg);
+                                      -webkit-transform: rotate(360deg);
+                                      transform: rotate(360deg);
+                                  " preserveAspectRatio="xMidYMid meet" viewBox="0 0 1227.825 1000">
+            <path
+              d="M1078.94-.985c-33.192-.491-110.295 10.777-239.027 96.936c-70.161-17.535-144.812-26.188-219.591-26.188c-82.278 0-165.425 10.448-242.965 31.719C192.534-24.605 110.955 1.234 110.955 1.234c-53.258 133.183-20.347 231.788-10.344 256.277C38.014 325.069-.2 411.338-.2 517.07c0 79.822 9.085 151.416 31.281 213.653c1.231 4.803.832 3.732 2.906 7.844c4.89 12.884 10.327 25.39 16.438 37.468c2.094 4.346 4 7.563 4 7.563c62.395 116.307 185.396 191.438 404.244 215.028l330.995.375c233.392-23.144 345.386-98.499 396.994-215.591l3.281-7.625c4.89-11.828 9.153-24.135 20.813-65.562c11.659-41.427 16.875-113.172 16.875-193.185c0-114.755-43.1-206.577-113.092-276.434c12.231-39.48 28.57-127.158-16.313-239.402c0 0-6.293-1.995-19.281-2.188zM818.1 420.133c53.893-.117 100.057 9.136 134.717 45.499v.031c43.369 45.541 68.749 100.525 68.749 159.778c0 276.658-177.932 284.183-397.4 284.183c-219.506 0-397.4-38.336-397.4-284.183c0-58.861 25.009-113.516 67.843-158.872c71.451-75.59 192.365-35.562 329.558-35.562c70.423-.011 136.564-10.75 193.935-10.875zm-408.807 81.468c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936zm443.649 0c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936z"
+              fill="black" />
+          </svg>
+          <span class="sr-only">GitHub Repo</span>
+        </a>
+      </div>
+
+      <p class="text-center text-sm md:text-base">Copyright <span id="current-year">2021</span> <a
+          href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+    </footer>
+  </body>
+  <script>
+    const currentYearSpan = document.getElementById('current-year')
+    currentYearSpan.textContent = new Date().getFullYear()
+
+    const fallingItems = [
+      {
+        name: 'rain',
+        imgUrl: './images/rain/raindrop.png'
+      },
+      {
+        name: 'snow',
+        imgUrl: './images/rain/snowflake.png'
+      },
+      {
+        name: 'toast',
+        imgUrl: './images/rain/toast.png'
+      },
+      {
+        name: 'money',
+        imgUrl: './images/rain/money.png'
+      },
+    ]
+
+    const changeButton = document.getElementById('change-button')
+    const itemTextEls = document.querySelectorAll('.item')
+    let itemIndex = 0
+    changeButton.addEventListener('click', () => {
+      itemIndex = (itemIndex + 1) % fallingItems.length
+      const snowflakeEls = document.querySelectorAll('.snowflake')
+      snowflakeEls.forEach(snowflakeEl => {
+        snowflakeEl.style.backgroundImage = `url("${fallingItems[itemIndex].imgUrl}")`
+      })
+      itemTextEls.forEach(itemTextEl => {
+        itemTextEl.textContent = fallingItems[itemIndex].name
+      })
+    })
+
+    // Array to store our Snowflake objects
+      var snowflakes = [];
+
+      // Global variables to store our browser's window size
+      var browserWidth;
+      var browserHeight;
+
+      // Specify the number of snowflakes you want visible
+      var numberOfSnowflakes = 150;
+
+      // Flag to reset the position of the snowflakes
+      var resetPosition = false;
+
+      // Handle accessibility
+      var enableAnimations = false;
+      var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
+
+      // Handle animation accessibility preferences
+      function setAccessibilityState() {
+        if (reduceMotionQuery.matches) {
+          enableAnimations = false;
+        } else {
+          enableAnimations = true;
+        }
+      }
+      setAccessibilityState();
+
+      reduceMotionQuery.addListener(setAccessibilityState);
+
+      //
+      // It all starts here...
+      //
+      function setup() {
+        if (enableAnimations) {
+          window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
+          window.addEventListener("resize", setResetFlag, false);
+        }
+      }
+      setup();
+
+      //
+      // Constructor for our Snowflake object
+      //
+      function Snowflake(element, speed, xPos, yPos) {
+        // set initial snowflake properties
+        this.element = element;
+        this.speed = speed;
+        this.xPos = xPos;
+        this.yPos = yPos;
+        this.scale = 1;
+
+        // declare variables used for snowflake's motion
+        this.counter = 0;
+        this.sign = Math.random() < 0.5 ? 1 : -1;
+
+        // setting an initial opacity and size for our snowflake
+        // this.element.style.opacity = (.1 + Math.random()) / 3;
+      }
+
+      //
+      // The function responsible for actually moving our snowflake
+      //
+      Snowflake.prototype.update = function () {
+        // using some trigonometry to determine our x and y position
+        this.counter += this.speed / 5000;
+        this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
+        this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
+        this.scale = .55 + Math.abs(10 * Math.cos(this.counter) / 20);
+
+        // setting our snowflake's position
+        setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
+
+        // if snowflake goes below the browser window, move it back to the top
+        if (this.yPos > browserHeight) {
+          this.yPos = -50;
+        }
+      }
+
+      //
+      // A performant way to set your snowflake's position and size
+      //
+      function setTransform(xPos, yPos, scale, el) {
+        el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
+      }
+
+      //
+      // The function responsible for creating the snowflake
+      //
+      function generateSnowflakes() {
+
+        // get our snowflake element from the DOM and store it
+        var originalSnowflake = document.querySelector(".snowflake");
+
+        // access our snowflake element's parent container
+        var snowflakeContainer = originalSnowflake.parentNode;
+        snowflakeContainer.style.display = "block";
+
+        // get our browser's size
+        browserWidth = document.documentElement.clientWidth;
+        browserHeight = document.documentElement.clientHeight;
+
+        // create each individual snowflake
+        for (var i = 0; i < numberOfSnowflakes; i++) {
+
+          // clone our original snowflake and add it to snowflakeContainer
+          var snowflakeClone = originalSnowflake.cloneNode(true);
+          snowflakeContainer.appendChild(snowflakeClone);
+
+          // set our snowflake's initial position and related properties
+          var initialXPos = getPosition(50, browserWidth);
+          var initialYPos = getPosition(50, browserHeight);
+          var speed = 5 + Math.random() * 140;
+
+          // create our Snowflake object
+          var snowflakeObject = new Snowflake(snowflakeClone,
+            speed,
+            initialXPos,
+            initialYPos);
+          snowflakes.push(snowflakeObject);
+        }
+
+        // remove the original snowflake because we no longer need it visible
+        snowflakeContainer.removeChild(originalSnowflake);
+
+        moveSnowflakes();
+      }
+
+      //
+      // Responsible for moving each snowflake by calling its update function
+      //
+      function moveSnowflakes() {
+
+        if (enableAnimations) {
+          for (var i = 0; i < snowflakes.length; i++) {
+            var snowflake = snowflakes[i];
+            snowflake.update();
+          }
+        }
+
+        // Reset the position of all the snowflakes to a new value
+        if (resetPosition) {
+          browserWidth = document.documentElement.clientWidth;
+          browserHeight = document.documentElement.clientHeight;
+
+          for (var i = 0; i < snowflakes.length; i++) {
+            var snowflake = snowflakes[i];
+
+            snowflake.xPos = getPosition(50, browserWidth);
+            snowflake.yPos = getPosition(50, browserHeight);
+          }
+
+          resetPosition = false;
+        }
+
+        requestAnimationFrame(moveSnowflakes);
+      }
+
+      //
+      // This function returns a number between (maximum - offset) and (maximum + offset)
+      //
+      function getPosition(offset, size) {
+        return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
+      }
+
+      //
+      // Trigger a reset of all the snowflakes' positions
+      //
+      function setResetFlag(e) {
+        resetPosition = true;
+      }
+  </script>
+
+</html>
