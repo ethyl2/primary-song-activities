@@ -130,6 +130,18 @@
         name: 'money',
         imgUrl: './images/rain/money.png'
       },
+      {
+        name: 'cheese',
+        imgUrl: './images/rain/cheese.png'
+      },
+      {
+        name: 'slime',
+        imgUrl: './images/rain/slime.png'
+      },
+      {
+        name: 'love',
+        imgUrl: './images/rain/love.png'
+      },
     ]
 
     const changeButton = document.getElementById('change-button')
@@ -155,7 +167,7 @@
       var browserHeight;
 
       // Specify the number of snowflakes you want visible
-      var numberOfSnowflakes = 150;
+      var numberOfSnowflakes = 100;
 
       // Flag to reset the position of the snowflakes
       var resetPosition = false;
@@ -197,6 +209,7 @@
         this.xPos = xPos;
         this.yPos = yPos;
         this.scale = 1;
+        this.flipped = Math.floor(Math.random() * 2) === 1
 
         // declare variables used for snowflake's motion
         this.counter = 0;
@@ -217,7 +230,7 @@
         this.scale = .55 + Math.abs(10 * Math.cos(this.counter) / 20);
 
         // setting our snowflake's position
-        setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
+        setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element, this.flipped);
 
         // if snowflake goes below the browser window, move it back to the top
         if (this.yPos > browserHeight) {
@@ -228,8 +241,12 @@
       //
       // A performant way to set your snowflake's position and size
       //
-      function setTransform(xPos, yPos, scale, el) {
+      function setTransform(xPos, yPos, scale, el, isFlipped) {
+        if (isFlipped) {
+          el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale}) rotateY(150deg)`;
+        } else {
         el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
+        }
       }
 
       //
