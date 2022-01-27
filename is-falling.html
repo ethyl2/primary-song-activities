@@ -53,7 +53,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <header class="bg-gray-500 flex flex-col items-center justify-center py-2 pt-4 md:pt-10">
-      <h1 class="text-bold text-white text-lg md:text-3xl text-center font-bold pb-6"><span class="item capitalize">Rain</span> is Falling All Around</h1>
+      <h1 class="text-bold text-white text-lg md:text-3xl text-center font-bold pb-6"><span class="item">Rain is</span> Falling All Around</h1>
     </header>
 
     <main
@@ -61,9 +61,9 @@
     >
       <button type="button" id="change-button" class="bg-black text-white rounded-lg px-2 py-1 text-lg hover:bg-gray-700">Poof!</button>
       <div class="py-2 px-3 bg-white rounded-lg bg-opacity-60 my-4 mx-2">
-        <p class="text-bold text-xl md:text-2xl text-center"><span class="item capitalize">Rain</span> is falling all around,</p>
+        <p class="text-bold text-xl md:text-2xl text-center"><span class="item">Rain is</span> falling all around,</p>
         <p class="text-bold text-xl md:text-2xl text-center">On the housetops, on the ground.</p>
-        <p class="text-bold text-xl md:text-2xl text-center"><span class="item capitalize">Rain</span> is falling on my nose,</p>
+        <p class="text-bold text-xl md:text-2xl text-center"><span class="item">Rain is</span> falling on my nose,</p>
         <p class="text-bold text-xl md:text-2xl text-center">On my head and hands and toes.</p>
       </div>
 
@@ -115,33 +115,44 @@
 
     const fallingItems = [
       {
-        name: 'rain',
+        name: 'Rain is',
         imgUrl: './images/rain/raindrop.png'
       },
       {
-        name: 'snow',
+        name: 'Snow is',
         imgUrl: './images/rain/snowflake.png'
       },
       {
-        name: 'toast',
+        name: 'Toast is',
         imgUrl: './images/rain/toast.png'
       },
       {
-        name: 'money',
+        name: `Money's`,
         imgUrl: './images/rain/money.png'
       },
       {
-        name: 'cheese',
+        name: 'Cheese is',
         imgUrl: './images/rain/cheese.png'
       },
       {
-        name: 'slime',
+        name: 'Slime is',
         imgUrl: './images/rain/slime.png'
       },
       {
-        name: 'love',
+        name: 'Love is',
         imgUrl: './images/rain/love.png'
       },
+      {
+        name: 'Leaves are',
+        imgUrl: [
+          './images/rain/leaf1.png',  
+          './images/rain/leaf2.png',
+          './images/rain/leaf3.png',
+          './images/rain/leaf4.png',
+          './images/rain/leaf5.png',
+          './images/rain/leaf6.png'
+        ]
+      }
     ]
 
     const changeButton = document.getElementById('change-button')
@@ -151,7 +162,12 @@
       itemIndex = (itemIndex + 1) % fallingItems.length
       const snowflakeEls = document.querySelectorAll('.snowflake')
       snowflakeEls.forEach(snowflakeEl => {
-        snowflakeEl.style.backgroundImage = `url("${fallingItems[itemIndex].imgUrl}")`
+        if (typeof fallingItems[itemIndex].imgUrl === 'object') {
+          const imgIndex = Math.floor(Math.random() * fallingItems[itemIndex].imgUrl.length)
+          snowflakeEl.style.backgroundImage = `url("${fallingItems[itemIndex].imgUrl[imgIndex]}")`
+        } else {
+          snowflakeEl.style.backgroundImage = `url("${fallingItems[itemIndex].imgUrl}")`
+        }
       })
       itemTextEls.forEach(itemTextEl => {
         itemTextEl.textContent = fallingItems[itemIndex].name
