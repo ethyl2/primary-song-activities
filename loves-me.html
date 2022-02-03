@@ -174,6 +174,38 @@
           imgUrl: 'connected.png',
           bgClass: 'red-100',
           audioSrc: 'https://freesound.org/people/esistnichtsoernst/sounds/434700/'
+        },
+        {  
+          id: 'eyes',
+          audioFile: 'eye-blink.wav',
+          text: "He gave me my eyes that I might see",
+          imgUrl: 'eyes.png',
+          bgClass: 'blue-100',
+          audioSrc: 'https://freesound.org/people/markboylan10/sounds/189586/'
+        },
+        {  
+          id: 'butterflies',
+          audioFile: 'butterflies.wav',
+          text: "The color of butterfly wings.",
+          imgUrl: 'butterflies.png',
+          bgClass: 'pink-100',
+          audioSrc: 'https://freesound.org/people/olver/sounds/417862/'
+        },
+        {  
+          id: 'ears',
+          audioFile: 'ocean-waves.wav',
+          text: "He gave me my ears that I might hear",
+          imgUrl: 'ears.png',
+          bgClass: 'yellow-100',
+          audioSrc: 'https://freesound.org/people/darren1979/sounds/58416/'
+        },
+        {  
+          id: 'magic',
+          audioFile: 'distant-fireworks.wav',
+          text: "The magical sound of things.",
+          imgUrl: 'fireworks.png',
+          bgClass: 'pink-100',
+          audioSrc: 'https://freesound.org/people/ivolipa/sounds/552164/'
         }
       ]
 
@@ -204,7 +236,7 @@
 
       const footer = document.getElementsByTagName('footer')[0]
       const audioSrcSection = document.createElement('div')
-      audioSrcSection.classList.add('pb-2')
+      audioSrcSection.classList.add('pb-2', 'grid', 'grid-cols-6', 'md:flex')
       items.forEach(item => {
         const audioLink = document.createElement('a')
         audioLink.href = item.audioSrc
@@ -216,7 +248,7 @@
         audioSrcSection.append(audioLink)
       })
       footer.prepend(audioSrcSection)
-      console.log(footer)
+      
       const currentYearSpan = document.getElementById('current-year')
       currentYearSpan.textContent = new Date().getFullYear()
     </script>
