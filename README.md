@@ -10,3 +10,8 @@ original, creative, and hopefully quite useful to others.
 I've decided to start this repo to create an index page for the song pages, as well as to contain new pages.
 
 If you have an idea for a song, please contribute to this repo and/or tell me about it!
+
+
+## Resources
+
+[Neon Text Effect](https://css-tricks.com/how-to-create-neon-text-with-css/)
