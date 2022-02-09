@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    
+
   </head>
 
   <body class="bg-white text-yellow-900 min-h-screen" style="font-family: 'Mali', cursive;">
@@ -39,14 +39,14 @@
         <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">Beautiful Savior</h1>
         <h2 id="header-instruction" class="text-semibold text-base md:text-2xl text-center">Click the sun to see what is most beautiful</h2>
         <button
-            id="sun" 
+            id="sun"
             class="w-24 h-24 rounded border border-white bg-contain bg-center bg-no-repeat hover:border-yellow-900"
             style="background-image: url('./images/beautiful-savior/sun.png')"
         >
         </button>
     </header>
 
-    <main 
+    <main
         class="flex flex-col items-center justify-start space-y-4 py-8 mx-auto min-h-screen bg-cover bg-no-repeat bg-center"
         style="background-image: url('./images/beautiful-savior/sunshine.jpg')"
     >
@@ -54,37 +54,37 @@
             <p id="lyric" class="text-bold text-xl md:text-2xl text-center">Fair is the sunshine,</p>
         </div>
 
-        <div 
+        <div
             id="center-img"
             class="w-56 h-56 bg-cover bg-center bg-no-repeat rounded md:w-96 md:h-96"
-           
+
         ></div>
-       
+
         <audio controls>
             <source src="./audio/beautiful-savior.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
         <div class="md:hidden">
-            <iframe 
+            <iframe
                 id="video-iframe"
-                width="300" 
-                height="200" 
-                src="https://www.youtube.com/embed/r54sTcBCPkQ" 
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/r54sTcBCPkQ"
                 title="YouTube video player"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
             ></iframe>
         </div>
         <div class="hidden md:block">
-            <iframe 
+            <iframe
                 id="video-iframe"
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/r54sTcBCPkQ" 
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/r54sTcBCPkQ"
                 title="YouTube video player"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
             ></iframe>
         </div>
@@ -93,9 +93,9 @@
                 <p>1. Fair is the sunshine,</p>
 
                 <p>Fairer the moonlight</p>
-                
+
                 <p>And all the stars in heav'n above;</p>
-                
+
                 <p>Jesus shines brighter,</p>
 
                 <p>Jesus shines purer</p>
@@ -106,9 +106,9 @@
                 <p>2. Fair are the meadows,</p>
 
                 <p>Fairer the woodlands,</p>
-                
+
                 <p>Robed in the flowers of blooming spring;</p>
-                
+
                 <p>Jesus is fairer,</p>
 
                 <p>Jesus is purer.</p>
@@ -119,16 +119,15 @@
                 <p>3. Beautiful Savior!</p>
 
                 <p>Lord of the nations!</p>
-                
+
                 <p>Son of God and Son of Man!</p>
-                
+
                 <p>Thee will I honor, praise, and give glory,</p>
 
                 <p>Give praise and glory evermore!</p>
 
                 <p>Evermore!</p>
             </div>
-            
         </div>
     </main>
   <footer class="h-40 w-full bg-white flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
@@ -155,7 +154,7 @@
         <img src="./images/cello.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
         <span class="sr-only">Link to Sheet Music of Descant in Bass Clef</span>
       </a>
-      
+
 
       <a href="https://github.com/ethyl2/primary-song-activities" target="_blank" rel="noopener noreferrer"
         class="p-px rounded bg-white hover:bg-red-400" title="link to GitHub repository">
@@ -181,120 +180,120 @@
         const centerImgDiv = document.getElementById('center-img')
 
         const items = [
-            { 
+            {
                 headerText: 'Click the sun to see what is most beautiful',
                 buttonSlug : 'sun.png',
                 backgroundSlug: 'sunshine.jpg',
                 text: 'Fair is the sunshine,'
             },
-            { 
+            {
                 headerText: 'Click the moon to see what is most beautiful',
                 buttonSlug : 'moon.png',
                 backgroundSlug: 'moonlight.jpg',
                 text: 'Fairer the moonlight',
             },
-            { 
+            {
                 headerText: 'Click the star to see what is most beautiful',
                 buttonSlug : 'star.png',
                 backgroundSlug: 'stars.jpg',
                 text: 'And all the stars in heav\'n above;',
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-teaching.png',
                 backgroundSlug: 'shines-brighter.jpg',
                 text: 'Jesus shines brighter,',
                 centerImgSlug: 'jesus-shines-brighter.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-resurrected.png',
                 backgroundSlug: 'shines-purer.jpg',
                 text: 'Jesus shines purer',
                 centerImgSlug: 'jesus-shines-purer.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'heart-world.png',
                 backgroundSlug: 'nebula.jpg',
                 text: 'And brings to all the world his love.',
                 centerImgSlug: 'world-his-love.jpeg'
             },
-            { 
+            {
                 headerText: 'Click the leaf to see what is most beautiful',
                 buttonSlug : 'leaf.png',
                 backgroundSlug: 'meadows.jpg',
                 text: 'Fair are the meadows,',
             },
-            { 
+            {
                 headerText: 'Click the tree to see what is most beautiful',
                 buttonSlug : 'tree.png',
                 backgroundSlug: 'woodlands.jpg',
                 text: 'Fairer the woodlands,',
             },
-            { 
+            {
                 headerText: 'Click the flower to see what is most beautiful',
                 buttonSlug : 'flower.png',
                 backgroundSlug: 'flowers.jpg',
                 text: 'Robed in the flowers of blooming spring;',
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-easter.png',
                 backgroundSlug: 'icebergs.jpg',
                 text: 'Jesus is fairer,',
                 centerImgSlug: 'resurrected-christ.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-palm-sunday.png',
                 backgroundSlug: 'white-sands.jpg',
                 text: 'Jesus is purer.',
                 centerImgSlug: 'christ-portrait.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-gethsemane.png',
                 backgroundSlug: 'garden-tomb.jpeg',
                 text: 'He makes the sorrowing spirit sing.',
                 centerImgSlug: 'jesus-heals.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-creator.png',
                 backgroundSlug: 'grain.jpg',
                 text: 'Beautiful Savior!',
                 centerImgSlug: 'jesus-with-child.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'earth.png',
                 backgroundSlug: 'flags.jpg',
                 text: 'Lord of the nations!',
                 centerImgSlug: 'judgement.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'jesus-and-the-father.png',
                 backgroundSlug: 'nativity.jpg',
                 text: 'Son of God and Son of Man!',
                 centerImgSlug: 'nativity.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'temple.png',
                 backgroundSlug: 'sunbeams.jpg',
                 text: 'Thee will I honor, praise, and give glory,',
                 centerImgSlug: 'jesus-and-bofm-children.jpeg'
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'firework.png',
                 backgroundSlug: 'fireworks.jpg',
                 text: 'Give praise and glory everymore!,',
                 centerImgSlug: 'jesus-creator-barrett.jpg',
             },
-            { 
+            {
                 headerText: 'Jesus is! Keep clicking',
                 buttonSlug : 'infinity.png',
                 backgroundSlug: 'purple-flowers.jpg',
@@ -309,7 +308,7 @@
         const mainEl = document.getElementsByTagName('main')[0]
         const headerInstructionEl = document.getElementById('header-instruction')
         const lyricEl = document.getElementById('lyric')
-       
+
 
         sunButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % items.length
@@ -324,7 +323,7 @@
                 centerImgDiv.classList.remove('border-4', 'shadow',  'border-yellow-900')
                 centerImgDiv.style.backgroundImage = null
             }
-            
+
         })
         const currentYearSpan = document.getElementById('current-year')
         currentYearSpan.textContent = new Date().getFullYear()
