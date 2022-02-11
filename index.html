@@ -31,28 +31,23 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <div class="bg-contain bg-top bg-no-repeat h-16 sm:h-36 lg:h-52" style="background-image: url('./images/primary-song-activities.png'); background-color: #FCB708;"></div>
-            <h1 class="py-8 text-center text-lg font-bold md:text-3xl">Interactive Activities to Learn Primary Songs</h1>
-            </header>
+          <div class="bg-contain bg-top bg-no-repeat h-16 sm:h-36 lg:h-52" style="background-image: url('./images/primary-song-activities.png'); background-color: #FCB708;"></div>
+          <h1 class="py-8 text-center text-yellow-300 text-lg font-bold md:text-3xl">Interactive Activities to Learn Primary Songs</h1>
+        </header>
         <main>
-            <ul class="text-center text-base md:text-lg flex flex-col space-y-4 pb-48">
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="https://ethyl2.github.io/primary-christmas-2021/bells.html" target="_blank">Christmas Bells</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="https://ethyl2.github.io/primary-christmas-2021/picture-a-christmas.html" target="_blank">Picture a Christmas</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="https://ethyl2.github.io/primary-christmas-2021/qa.html" target="_blank">He Sent His Son</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./do-as-im-doing.html">Do As I'm Doing</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./smile.html">Smiles</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./snowman.html">Once There Was a Snowman</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./wonder.html">I Wonder When He Comes Again</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./child-of-god.html">I Am a Child of God</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./follow-the-prophet.html">Follow the Prophet</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./fun-to-do.html">Fun to Do</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./beautiful-savior.html">Beautiful Savior</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./lived-in-heaven.html">I Lived in Heaven</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./is-falling.html">Rain is Falling All Around</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./loves-me.html">Heavenly Father Loves Me</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./live-again.html">Did Jesus Really Live Again?</a></li>
-                <li><a class="px-4 py-2 rounded hover:bg-blue-800" href="./i-will-shine.html">I Will Shine</a></li>
-            </ul>
+          <nav
+            id="song-nav"
+            class="text-center text-base md:text-lg flex flex-col md:w-1/2 mx-auto md:grid md:grid-cols-2"
+          >
+          </nav>
+          <div class="flex flex-col items-center justify-center mt-6">
+            <button
+              class="transition mx-auto duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 py-3 px-6 rounded-md"
+            >
+              <img id="mix-tape" src="./images/mixtape.png" alt="primary mixtape" />
+            </button>
+            <p id="audio-name" class="text-center pb-4 text-base italic text-green-400 md:text-lg md:pb-12"></p>
+          </div>
         </main>
         <footer class="h-40 w-full bg-gradient-to-r from-yellow-500 via-green-600 to-blue-700 flex flex-col space-y-2 items-center justify-center pt-2 md:pt-4">
             <div class="flex items-center justify-center space-x-3">
@@ -81,13 +76,106 @@
                     <span class="sr-only">GitHub Repo</span>
                 </a>
             </div>
-
             <p class="text-center text-sm md:text-base">Copyright <span id="current-year">2022</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
         </footer>
         <script>
-            const currentYearSpan = document.getElementById('current-year')
-            currentYearSpan.textContent = new Date().getFullYear()
-        </script>
+          const songs = [
+            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/bells.html", name: 'Christmas Bells', newTab: true },
+            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/picture-a-christmas.html", name: 'Picture a Christmas', newTab: true},
+            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/qa.html", name: 'He Sent His Son', newTab: true},
+            { siteLink: "./do-as-im-doing.html", name:"Do As I'm Doing"},
+            { siteLink: "./smile.html", name:'Smiles'},
+            { siteLink: "./snowman.html", name:'Once There Was a Snowman'},
+            { siteLink: "./wonder.html", name:'I Wonder When He Comes Again'},
+            { siteLink: "./child-of-god.html", name:'I Am a Child of God'},
+            { siteLink: "./follow-the-prophet.html", name: 'Follow the Prophet'},
+            { siteLink: "./fun-to-do.html", name:'Fun to Do'},
+            { siteLink: "./beautiful-savior.html", name:'Beautiful Savior',},
+            { siteLink: "./lived-in-heaven.html", name:'I Lived in Heaven',},
+            { siteLink: "./is-falling.html", name:'Rain is Falling All Around',},
+            { siteLink: "./loves-me.html", name:'Heavenly Father Loves Me',},
+            { siteLink: "./live-again.html", name:'Did Jesus Really Live Again?',},
+            { siteLink: "./i-will-shine.html", name:'I Will Shine',},
+          ]
+          songs.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
+          const bgColors = [
+            'purple-700',
+            'indigo-700',
+            'blue-700',
+            'green-700',
+            'yellow-700',
+            'red-700',
+            'pink-700',
+          ]
+          let bgColorIndex = 0
+
+          const songNav = document.getElementById('song-nav')
+          songs.forEach(song => {
+            const songLink = document.createElement('a')
+            songLink.href = song.siteLink
+            if (song.newTab) {
+              songLink.rel = 'nofollow noreferrer noopener'
+              songLink.target = '_blank'
+            }
+            songLink.textContent = song.name
+            songLink.classList.add('px-4', 'py-2', 'rounded')
+            songLink.classList.add(`hover:bg-${bgColors[bgColorIndex]}`)
+            bgColorIndex = (bgColorIndex + 1) % bgColors.length
+            songNav.append(songLink)
+          })
+
+          const audioFiles = [
+            'amazing-grace.wav',
+            'angelic-choir.wav',
+            'beautiful-guitar.wav',
+            'beautiful-savior.mp3',
+            'bird-song.wav',
+            'blow.wav',
+            'butterflies.wav',
+            'child-of-god.mp3',
+            'ding.wav',
+            'distant-fireworks.wav',
+            'do-as-im-doing.mp3',
+            'eye-blink.wav',
+            'fun-to-do.mp3',
+            'harp.wav',
+            'heart-beat.wav',
+            'i-lived-in-heaven.mp3',
+            'live-again.mp3',
+            'loves-me.mp3',
+            'match.wav',
+            'ocean-waves.wav',
+            'prophet.mp3',
+            'rain-drips.mp3',
+            'rain-is-falling-all-around.mp3',
+            'rooster.wav',
+            'smiles.mp3',
+            'snowman.mp3',
+            'sparkler.wav',
+            'walking.wav',
+            'wind-chimes.wav',
+            'wind.mp3',
+            'wonder.mp3',
+          ]
+          const mixTape = document.getElementById('mix-tape')
+          const audioNameEl = document.getElementById('audio-name')
+          let audio = null
+          mixTape.addEventListener('click', () => {
+            if (audio) {
+              audio.pause()
+            }
+            const randomAudioFileIndex = Math.floor(Math.random() * audioFiles.length)
+            audio = new Audio(`./audio/${audioFiles[randomAudioFileIndex]}`)
+            audio.play()
+            const audioFileArray = audioFiles[randomAudioFileIndex].split('.')
+            console.log(audioFileArray)
+            const audioName = audioFileArray[0].replace(/-/g, ' ')
+            console.log(audioName)
+            audioNameEl.textContent = `♪ ${audioName} ♪`
+          })
+          const currentYearSpan = document.getElementById('current-year')
+          currentYearSpan.textContent = new Date().getFullYear()
+        </script>
     </body>
 </html>
