@@ -169,9 +169,7 @@
             audio = new Audio(`./audio/${audioFiles[randomAudioFileIndex]}`)
             audio.play()
             const audioFileArray = audioFiles[randomAudioFileIndex].split('.')
-            console.log(audioFileArray)
             const audioName = audioFileArray[0].replace(/-/g, ' ')
-            console.log(audioName)
             audioNameEl.textContent = `♪ ${audioName} ♪`
           })
           const currentYearSpan = document.getElementById('current-year')
