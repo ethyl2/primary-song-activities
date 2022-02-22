@@ -31,7 +31,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
 
-  <body class="min-h-screen bg-center bg-repeat" style="font-family: 'Zen Kurenaido', sans-serif;">
+  <body class="min-h-screen bg-center bg-repeat bg-contain md:bg-cover md:bg-no-repeat" style="font-family: 'Zen Kurenaido', sans-serif; background-image: url('./images/serve/torah.jpg')">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -39,9 +39,10 @@
       class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 md:py-10 bg-black text-white">
       <h1 class="text-bold text-xl md:text-5xl text-center font-bold pb-2 md:pb-4">Choose to Serve the Lord</h1>
       <h2 class="text-semibold text-base md:text-2xl text-center">by Angie Killian</h2>
+      <p class="italic pt-3 px-2 md:px-0 text-center" style="color: #FFFF66;">Click on the scripture heroes below to read about them.</p>
     </header>
 
-    <div class="py-4 flex items-center justify-center text-center bg-yellow-50 md:py-12">
+    <section class="py-4 flex items-center justify-center text-center bg-yellow-50 md:py-12">
         <a 
             class="block rounded w-96 flex flex-col items-center justify-center shadow border overflow-hidden bg-yellow-100 group hover:bg-yellow-200 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 rounded-md"
             href="https://www.angiekillian.com/product-page/choose-to-serve-the-lord-coloring-book"
@@ -50,20 +51,15 @@
             <div class="bg-cover bg-center bg-no-repeat w-full h-48" style="background-image: url('./images/serve/crayons.jpg')"></div>
             <div class="p-4 text-black">
                 <h3 class="font-bold text-xl">Coloring Time!</h3>
-                <p class="text-base">Get free coloring pages for this song.</p>
+                <p class="text-base font-medium">Get free coloring pages for this song.</p>
             </div>
         </a>
-    </div>
+    </section>
 
-    <main class="min-h-screen flex flex-col items-center justify-start mt-8 md:mt-12">
-        <div
-            class="mb-8 md:mb-12 flex flex-col items-center justify-center font-semibold text-center space-y-6 shadow-lg bg-black w-11/12 md:w-3/4 py-16 rounded md:space-y-10 xl:w-3/5"
-        >
-      
-        <div>
-            <div
-                class="flex flex-col px-2 text-sm py-2 rounded-lg mx-2 font-semibold space-y-3 md:space-y-0 md:flex-row md:text-base md:space-x-6 md:items-center md:justify-center"
-            >
+    <main class="min-h-screen flex flex-col items-center mx-auto justify-start mt-8 md:mt-12 mb-8 md:mb-12 flex flex-col items-center justify-center font-semibold text-center space-y-6 shadow-lg bg-black w-11/12 md:w-3/4 py-16 rounded md:space-y-10 xl:w-3/5">
+        <!-- VERSES 1&2 -->
+        <section class="flex flex-col px-2 text-sm py-2 rounded-lg mx-2 font-semibold space-y-3 md:space-y-0 md:flex-row md:text-base md:space-x-6 md:items-center md:justify-center">
+            <!-- VERSE ONE -->
             <div class="flex flex-col items-center justify-start" style="color: #FFFF66;">
                 <a 
                     href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/queen-esther?lang=eng"
@@ -77,7 +73,7 @@
                 <p class="pb-4"><span class="text-white">1.</span> Queen Esther's story shows me that I can stand for right.</p>
 
                 <a 
-                    href="hhttps://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/elisha-and-the-lords-army?lang=eng"
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/elisha-and-the-lords-army?lang=eng"
                     class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
                     style="background-image: url('./images/serve/elisha.jpeg')"
                     title="Elisha's Experience"
@@ -85,26 +81,82 @@
                     <span class="sr-only">Link to story of Elisha and the Lord's Army</span>
                 </a>
 
-                <p>Elisha taught that angels protect me by my side.</p>
+                <p class="pb-4">Elisha taught that angels protect me by my side.</p>
 
-                <p>Like David, I can slay Goliaths in my way.</p>
+                <a 
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/david-and-goliath?lang=eng"
+                    class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
+                    style="background-image: url('./images/serve/david.jpeg')"
+                    title="David's Story"
+                >
+                    <span class="sr-only">Link to story of David and Goliath</span>
+                </a>
+
+                <p class="pb-4">Like David, I can slay Goliaths in my way.</p>
+
+                <a 
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/deborah-the-prophetess?lang=eng"
+                    class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
+                    style="background-image: url('./images/serve/deborah.jpeg')"
+                    title="Deborah's Story"
+                >
+                    <span class="sr-only">Link to story of Deborah</span>
+                </a>
 
                 <p>Like Deb'rah, I can lead my friends to Christ.</p>
             </div>
-            <div style="color: #FFFF66;">
-                <p><span class="text-white">2.</span> Like Moses I find courage, for God provides a way.</p>
 
-                <p>Like Noah, I will listen to heaven and obey.</p>
+            <!-- VERSE TWO -->
+            <div class="flex flex-col items-center justify-start pt-6 md:pt-0 border-t md:border-none" style="color: #FFFF66;">
+                <a 
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/moses-the-prophet?lang=eng"
+                    class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
+                    style="background-image: url('./images/serve/moses.jpeg')"
+                    title="Moses' Mission"
+                >
+                    <span class="sr-only">Link to story of Moses</span>
+                </a>
 
-                <p>I'll trust the Lord, like Job, and live with love and hope.</p>
+                <p class="pb-4"><span class="text-white">2.</span> Like Moses I find courage, for God provides a way.</p>
+
+                <a 
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/noah-and-his-family?lang=eng"
+                    class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
+                    style="background-image: url('./images/serve/noah.jpeg')"
+                    title="Noah's Mission"
+                >
+                    <span class="sr-only">Link to story of Noah</span>
+                </a>
+
+                <p class="pb-4">Like Noah, I will listen to heaven and obey.</p>
+
+                <a 
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/job?lang=eng"
+                    class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
+                    style="background-image: url('./images/serve/job.jpeg')"
+                    title="Job's Experience"
+                >
+                    <span class="sr-only">Link to story of Job</span>
+                </a>
+
+                <p class="pb-4">I'll trust the Lord, like Job, and live with love and hope.</p>
+
+                <a 
+                    href="https://www.churchofjesuschrist.org/study/manual/old-testament-stories-2022/hannah?lang=eng"
+                    class="bg-cover bg-center bg-no-repeat w-24 h-24 rounded mb-2  md:w-32 md:h-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" 
+                    style="background-image: url('./images/serve/hannah.jpeg')"
+                    title="Hannah's Experience"
+                >
+                <span class="sr-only">Link to story of Hannah</span>
+                </a>
 
                 <p>Like Hannah, God will hear me when I pray.</p>
             </div>
-        </div>
+        </section>
 
-        <div
-                class="flex flex-col px-2 text-sm py-2 rounded-lg mx-2 font-semibold space-y-3 md:space-y-0 md:flex-row md:text-base md:space-x-6 md:items-center md:justify-center"
-            >
+        <!-- BRIDGE & CHORUS -->
+        <section class="flex flex-col px-2 text-sm py-2 rounded-lg mx-2 font-semibold space-y-3 md:space-y-0 md:flex-row md:text-base md:space-x-6 md:items-center md:justify-center">
+            <!-- BRIDGE -->
             <div
                 class="px-2 text-sm py-2 font-semibold md:text-base"
                 style="color: #FFFF33;"
@@ -119,6 +171,7 @@
 
                 <p>Jonah changed!</p>
             </div>
+            <!-- CHORUS -->
             <div
                 class="px-2 text-sm py-2 font-semibold md:text-base"
                 style="color: #FFFF33;"
@@ -135,10 +188,9 @@
 
                 <p>I will choose to serve the Lord.</p>
             </div>
-        </div>
-
+        </section>
         
-
+        <!-- VIDEO -->
         <div class="mt-8 mx-auto rounded md:hidden">
             <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/-fDKdtZGCJM"
             title="YouTube video player" frameborder="0"
@@ -151,7 +203,6 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen class="mx-auto rounded"></iframe>
         </div>
-      
     </main>
     <footer
       class="shadow-lg mt-12 h-40 w-full flex flex-col space-y-2 items-center justify-center pt-2 bg-black md:pt-4">

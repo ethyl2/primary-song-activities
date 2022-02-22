@@ -34,7 +34,7 @@
           <div class="bg-contain bg-top bg-no-repeat h-16 sm:h-36 lg:h-52" style="background-image: url('./images/primary-song-activities.png'); background-color: #FCB708;"></div>
           <h1 class="py-8 text-center text-yellow-300 text-lg font-bold md:text-3xl">Interactive Activities to Learn Primary Songs</h1>
         </header>
-        <main>
+        <main class="min-h-screen">
           <nav
             id="song-nav"
             class="text-center text-base md:text-lg flex flex-col md:w-1/2 mx-auto md:grid md:grid-cols-2"
@@ -103,6 +103,7 @@
             { siteLink: "./live-again.html", name:'Did Jesus Really Live Again?',},
             { siteLink: "./i-will-shine.html", name:'I Will Shine',},
             { siteLink: "./choose-to-serve-the-lord.html", name:'Choose to Serve the Lord',},
+          ]
           songs.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
           const bgColors = [
