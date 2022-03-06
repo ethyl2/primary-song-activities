@@ -58,7 +58,7 @@
          background-image: linear-gradient(to left, #fc0303, #45f52a, #2a7bf5, #2af5e4, #c92af5, #f52a6e, #df8816);
       }
 
-      .snowflake {
+      .raindrop {
         z-index: 1000;
         width: 30px;
         height: 30px;
@@ -144,8 +144,8 @@
           style="background-image: url('./images/rainbow/cloud.png');"></button>
       </div>
 
-      <div id="snowflakeContainer" class="absolute left-0 top-0 hidden">
-        <span class="snowflake bg-center bg-no-repeat bg-contain pointer-events-none select-none fixed"
+      <div id="raindropContainer" class="absolute left-0 top-0 hidden">
+        <span class="raindrop bg-center bg-no-repeat bg-contain pointer-events-none select-none fixed"
           style="background-image: url('./images/rainbow/raindrop.png')"></span>
       </div>
     </main>
@@ -195,17 +195,17 @@
     })
 
     // Adapted from https://www.kirupa.com/html5/the_falling_snow_effect.htm
-      // Array to store our Snowflake objects
-      var snowflakes = [];
+      // Array to store our Raindrop objects
+      var raindrops = [];
 
       // Global variables to store our browser's window size
       var browserWidth;
       var browserHeight;
 
-      // Specify the number of snowflakes you want visible
-      var numberOfSnowflakes = 100;
+      // Specify the number of raindrops you want visible
+      var numberOfRaindrops = 50;
 
-      // Flag to reset the position of the snowflakes
+      // Flag to reset the position of the raindrops
       var resetPosition = false;
 
       // Handle accessibility
@@ -229,17 +229,17 @@
       //
       function setup() {
         if (enableAnimations) {
-          window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
+          window.addEventListener("DOMContentLoaded", generateRaindrops, false);
           window.addEventListener("resize", setResetFlag, false);
         }
       }
       setup();
 
       //
-      // Constructor for our Snowflake object
+      // Constructor for our Raindrop object
       //
-      function Snowflake(element, speed, xPos, yPos) {
-        // set initial snowflake properties
+      function Raindrop(element, speed, xPos, yPos) {
+        // set initial raindrop properties
         this.element = element;
         this.speed = speed;
         this.xPos = xPos;
@@ -247,128 +247,128 @@
         this.scale = 1;
         this.flipped = Math.floor(Math.random() * 2) === 1
 
-        // declare variables used for snowflake's motion
+        // declare variables used for raindrop's motion
         this.counter = 0;
-        this.sign = Math.random() < 0.5 ? 1 : -1;
+        this.sign = Math.random() < 0.5 ? 1 : -1
 
-        // setting an initial opacity and size for our snowflake
-        // this.element.style.opacity = (.1 + Math.random()) / 3;
+        // setting an initial opacity and size for our raindrop
+        this.element.style.opacity = (.1 + Math.random()) /1.5
       }
 
       //
-      // The function responsible for actually moving our snowflake
+      // The function responsible for actually moving our raindrop
       //
-      Snowflake.prototype.update = function () {
+      Raindrop.prototype.update = function () {
         // using some trigonometry to determine our x and y position
-        this.counter += this.speed / 5000;
-        this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
-        this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
-        this.scale = .55 + Math.abs(10 * Math.cos(this.counter) / 20);
+        this.counter += this.speed / 5000
+        this.xPos += this.sign * this.speed * Math.cos(this.counter) / 120 // 40 was original denominator
+        this.yPos += Math.sin(this.counter) / 40 + this.speed / 30
+        this.scale = .55 + Math.abs(10 * Math.cos(this.counter) / 20)
 
-        // setting our snowflake's position
-        setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element, this.flipped);
+        // setting our raindrop's position
+        setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element, this.flipped)
 
-        // if snowflake goes below the browser window, move it back to the top
+        // if raindrop goes below the browser window, move it back to the top
         if (this.yPos > browserHeight) {
-          this.yPos = -50;
+          this.yPos = -50
         }
       }
 
       //
-      // A performant way to set your snowflake's position and size
+      // A performant way to set a raindrop's position and size
       //
       function setTransform(xPos, yPos, scale, el, isFlipped) {
         if (isFlipped) {
-          el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale}) rotateY(150deg)`;
+          el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale}) rotateY(150deg)`
         } else {
-          el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
+          el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`
         }
       }
 
       //
-      // The function responsible for creating the snowflake
+      // The function responsible for creating the raindrop
       //
-      function generateSnowflakes() {
+      function generateRaindrops() {
 
-        // get our snowflake element from the DOM and store it
-        var originalSnowflake = document.querySelector(".snowflake");
+        // get our raindrop element from the DOM and store it
+        var originalRaindrop = document.querySelector(".raindrop")
 
-        // access our snowflake element's parent container
-        var snowflakeContainer = originalSnowflake.parentNode;
-        snowflakeContainer.style.display = "block";
+        // access our raindrop element's parent container
+        var raindropContainer = originalRaindrop.parentNode
+        raindropContainer.style.display = "block"
 
         // get our browser's size
-        browserWidth = document.documentElement.clientWidth;
-        browserHeight = document.documentElement.clientHeight;
+        browserWidth = document.documentElement.clientWidth
+        browserHeight = document.documentElement.clientHeight
 
-        // create each individual snowflake
-        for (var i = 0; i < numberOfSnowflakes; i++) {
+        // create each individual raindrop
+        for (let i = 0; i < numberOfRaindrops; i++) {
 
-          // clone our original snowflake and add it to snowflakeContainer
-          var snowflakeClone = originalSnowflake.cloneNode(true);
-          snowflakeContainer.appendChild(snowflakeClone);
+          // clone our original raindrop and add it to raindropContainer
+          const raindropClone = originalRaindrop.cloneNode(true)
+          raindropContainer.appendChild(raindropClone)
 
-          // set our snowflake's initial position and related properties
-          var initialXPos = getPosition(50, browserWidth);
-          var initialYPos = getPosition(50, browserHeight);
-          var speed = 5 + Math.random() * 140;
+          // set our raindrop's initial position and related properties
+          var initialXPos = getPosition(50, browserWidth)
+          var initialYPos = getPosition(50, browserHeight)
+          var speed = 5 + Math.random() * 300 // 140 was the original multiplier
 
-          // create our Snowflake object
-          var snowflakeObject = new Snowflake(snowflakeClone,
+          // create our raindrop object
+          var raindropObject = new Raindrop(raindropClone,
             speed,
             initialXPos,
-            initialYPos);
-          snowflakes.push(snowflakeObject);
+            initialYPos)
+          raindrops.push(raindropObject)
         }
 
-        // remove the original snowflake because we no longer need it visible
-        snowflakeContainer.removeChild(originalSnowflake);
+        // remove the original raindrop because we no longer need it visible
+        raindropContainer.removeChild(originalRaindrop)
 
-        moveSnowflakes();
+        moveRaindrops()
       }
 
       //
-      // Responsible for moving each snowflake by calling its update function
+      // Responsible for moving each raindrop by calling its update function
       //
-      function moveSnowflakes() {
+      function moveRaindrops() {
 
         if (enableAnimations) {
-          for (var i = 0; i < snowflakes.length; i++) {
-            var snowflake = snowflakes[i];
-            snowflake.update();
+          for (let i = 0; i < raindrops.length; i++) {
+            const raindrop = raindrops[i]
+            raindrop.update()
           }
         }
 
-        // Reset the position of all the snowflakes to a new value
+        // Reset the position of all the raindrops to a new value
         if (resetPosition) {
-          browserWidth = document.documentElement.clientWidth;
-          browserHeight = document.documentElement.clientHeight;
+          browserWidth = document.documentElement.clientWidth
+          browserHeight = document.documentElement.clientHeight
 
-          for (var i = 0; i < snowflakes.length; i++) {
-            var snowflake = snowflakes[i];
+          for (var i = 0; i < raindrops.length; i++) {
+            var raindrop = raindrops[i]
 
-            snowflake.xPos = getPosition(50, browserWidth);
-            snowflake.yPos = getPosition(50, browserHeight);
+            raindrop.xPos = getPosition(50, browserWidth)
+            raindrop.yPos = getPosition(50, browserHeight)
           }
 
           resetPosition = false;
         }
 
-        requestAnimationFrame(moveSnowflakes);
+        requestAnimationFrame(moveRaindrops);
       }
 
       //
       // This function returns a number between (maximum - offset) and (maximum + offset)
       //
       function getPosition(offset, size) {
-        return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
+        return Math.round(-1 * offset + Math.random() * (size + 2 * offset))
       }
 
       //
-      // Trigger a reset of all the snowflakes' positions
+      // Trigger a reset of all the Raindrops' positions
       //
       function setResetFlag(e) {
-        resetPosition = true;
+        resetPosition = true
       }
   </script>
 </html>
