@@ -291,10 +291,15 @@
         if (animal.classList.contains('animal-down')) {
           animal.classList.remove('animal-down')
           animal.classList.add('animal-up')
-
+          
           setTimeout(() => {
-            window.open(
-              songLinks[currentPocket.id], "_blank")
+            let windowReference = window.open()
+            getUrl(currentPocket.id).then(function(url) {
+              windowReference.target = "_blank"
+              windowReference.location = url
+            })
+            // window.open(
+            //   songLinks[currentPocket.id], "_blank")
           }, 1600)
         } else {
           animal.classList.remove('animal-up')
@@ -302,6 +307,10 @@
         }
       })
     })
+
+    async function getUrl(key) {
+      return songLinks[key]
+    }
 
     const currentYearSpan = document.getElementById('current-year')
     currentYearSpan.textContent = new Date().getFullYear()
