@@ -289,6 +289,8 @@
         const currentPocket = e.target
         const animal = currentPocket.previousElementSibling
         if (animal.classList.contains('animal-down')) {
+          const audio = new Audio(`./audio/up.wav`)
+          audio.play()
           animal.classList.remove('animal-down')
           animal.classList.add('animal-up')
           
