@@ -150,7 +150,9 @@
       style="margin-top: 0 !important; background: url('./images/program-2022/dots.png');"
     >
       <div class="pt-10 relative">
-        <img src="./images/program-2022/dog.png" alt="dog head" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute block animal animal-down shake w-full left-0">
+          <img src="./images/program-2022/dog.png" alt="dog head" class="w-full" />
+        </a>
         <img
           id="loa"
           src="./images/program-2022/pocket-loa.png"
@@ -160,7 +162,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/sloth.png" alt="sloth head" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+          <img src="./images/program-2022/sloth.png" alt="sloth head" class="shake w-full" />
+        </a>
         <img
           id="iltstt"
           src="./images/program-2022/pocket-iltstt.png"
@@ -170,7 +174,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/llama.png" alt="llama head" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/llama.png" alt="llama head" class="shake w-full" />
+      </a>
         <img
           id="ctstl"
           src="./images/program-2022/pocket-ctstl.png"
@@ -180,7 +186,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/peacock.png" alt="peacock head" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/peacock.png" alt="peacock head" class="shake w-full" />
+      </a>
         <img
           id="iws"
           src="./images/program-2022/pocket-iws.png"
@@ -190,7 +198,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/crab.png" alt="crab" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/crab.png" alt="crab" class="shake w-full" />
+      </a>
         <img
           id="acp"
           src="./images/program-2022/pocket-acp.png"
@@ -200,7 +210,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/cat.png" alt="cat head" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/cat.png" alt="cat head" class="shake w-full" />
+      </a>
         <img
           id="hshs"
           src="./images/program-2022/pocket-hshs.png"
@@ -210,7 +222,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/monkey.png" alt="monkey" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/monkey.png" alt="monkey" class="shake w-full" />
+      </a>
         <img
           id="ktc"
           src="./images/program-2022/pocket-ktc.png"
@@ -220,7 +234,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/penguin.png" alt="penguin" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/penguin.png" alt="penguin" class="shake w-full" />
+      </a>
         <img
           id="iwbv"
           src="./images/program-2022/pocket-iwbv.png"
@@ -230,7 +246,9 @@
       </div>
 
       <div class="pt-10 relative">
-        <img src="./images/program-2022/lizard.png" alt="lizard" class="absolute animal animal-down" />
+        <a href="" target="_blank" class="absolute animal animal-down w-full left-0">
+        <img src="./images/program-2022/lizard.png" alt="lizard" class="shake w-full" />
+      </a>
         <img
           id="roi"
           src="./images/program-2022/pocket-roi.png"
@@ -241,7 +259,7 @@
     </div>
     </main>
     <footer
-      class="shadow-lg mt-12 h-40 w-full flex flex-col space-y-2 items-center justify-center pt-2 bg-black md:pt-4">
+      class="shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-black md:pt-4">
       <div class="flex items-center justify-center space-x-3">
         <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
           class="bg-white p-px rounded shadow hover:bg-green-400 shake">
@@ -264,10 +282,16 @@
           <span class="sr-only">GitHub Repo</span>
         </a>
       </div>
-
-      <p class="text-center text-sm text-black md:text-base">Copyright <span id="current-year">2021</span>
+      <div class="flex flex-col items-center justify-center">
+        <p class="text-white text-center text-xs pb-1 italic font-medium">Sound Effects:</p>
+        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/497092/simple/small/" width="300" height="30"></iframe>
+      </div>
+      
+      <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2021</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
+
+      
     </footer>
   </body>
   <script>
@@ -293,6 +317,7 @@
           audio.play()
           animal.classList.remove('animal-down')
           animal.classList.add('animal-up')
+          animal.href =  songLinks[currentPocket.id]
           
           setTimeout(() => {
             let windowReference = window.open()
@@ -300,8 +325,6 @@
               windowReference.target = "_blank"
               windowReference.location = url
             })
-            // window.open(
-            //   songLinks[currentPocket.id], "_blank")
           }, 1600)
         } else {
           animal.classList.remove('animal-up')
