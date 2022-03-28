@@ -138,7 +138,12 @@
         style="border: 3px dashed white; color: #5CE1E6;"
       >
         Lindon 13th Ward Primary Presentation 2022</h1>
-      <p class="italic text-white text-center text-lg md:text-3xl pt-4">Click on a pocket of my apron and an animal friend will take you to a song page!</p>
+      <p class="italic text-white text-center text-base pt-4 md:hidden">
+        Click on a pocket of my apron and an animal friend will appear! Click on him to go to a song page
+      </p>
+      <p class="hidden italic text-white text-center text-3xl pt-4 md:block">
+        Click on a pocket of my apron and an animal friend will take you to a song page!
+      </p>
     </header>
 
     <main
@@ -282,9 +287,10 @@
           <span class="sr-only">GitHub Repo</span>
         </a>
       </div>
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center space-y-1">
         <p class="text-white text-center text-xs pb-1 italic font-medium">Sound Effects:</p>
         <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/497092/simple/small/" width="300" height="30"></iframe>
+        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/497093/simple/small/" width="300" height="30"></iframe>
       </div>
       
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2021</span>
@@ -327,6 +333,8 @@
             })
           }, 1600)
         } else {
+          const audio = new Audio(`./audio/down.wav`)
+          audio.play()
           animal.classList.remove('animal-up')
           animal.classList.add('animal-down')
         }
