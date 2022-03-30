@@ -29,6 +29,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <style>
       @keyframes shake {
         0% {
@@ -86,7 +89,7 @@
     </style>
   </head>
 
-  <body class="min-h-screen">
+  <body class="min-h-screen" style="font-family: 'Zen Kurenaido', sans-serif;">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -97,8 +100,28 @@
     </header>
 
     <main
-      class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center md:mt-16">
+      class="container font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center md:mt-16">
+      <p class="pb-6 text-lg font-medium md:text-4xl">
+        I'll cov'nant with my Father;</p>
+      <p class="pb-12 text-lg font-medium md:text-4xl">
+        I'll promise to obey.
+      </p>
       <div class="grid grid-cols-2 gap-2">
+        <div class="flex items-center justify-center container">
+          <img src="./images/temple/haiti_temple_entryway.jpeg" alt="Haiti Temple Entryway" class="w-5/6" />
+        </div>
+        <div class="flex items-center justify-center container">
+          <img src="./images/temple/oakland-waiting-room.jpeg" alt="Oakland Temple Waiting Room" class="w-5/6" />
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="./images/temple/meridian_idaho_temple_confirmation_room_interior.jpeg" alt="Meridian Idaho Temple Confirmation Room" />
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="./images/temple/oquirrh_mountain_temple_baptistry.jpeg" alt="Oquirrh Mountain Temple Baptistry" />
+        </div>
+        <div class="flex items-center justify-center container">
+          <img src="./images/temple/oakland-north-chapel.jpeg" alt="Oakland California Temple North Chapel" class="w-5/6" />
+        </div>
         <div class="flex items-center justify-center">
           <img src="./images/temple/fort_lauderdale_florida_temple_interior.jpeg" alt="Fort Lauderdale Florida temple" />
         </div>
@@ -108,28 +131,57 @@
         <div class="flex items-center justify-center">
           <img src="./images/temple/rome-italy-brides-room.jpeg" alt="Rome Italy Bride's Room" />
         </div>
-        <div class="flex items-center justify-center">
-          <img src="./images/temple/cordoba_argentina_temples_buildings_sealing_room.jpeg" alt="Cordoba Argentina Sealing Room" />
-        </div>
+        
         <div class="flex items-center justify-center">
           <img src="./images/temple/rome-italy-instruction-room.jpeg" alt="Rome Italy Instruction Room" />
         </div>
         <div class="flex items-center justify-center">
-          <img src="./images/temple/meridian_idaho_temple_confirmation_room_interior.jpeg" alt="Meridian Idaho Temple Confirmation Room" />
-        </div>
-        <div class="flex items-center justify-center">
-          <img src="./images/temple/oquirrh_mountain_temple_baptistry.jpeg" alt="Oquirrh Mountain Temple Baptistry" />
+          <img src="./images/temple/hartford-celestial-room.jpg" alt="Hartford Connecticut Temple Celestial Room" />
         </div>
       </div>
 
-      <p class="whitespace-pre-wrap">
-        I'll cov'nant with my Father;
-        I'll promise to obey.
-        For the temple is a holy place
+      <p class="pb-6 pt-12 text-lg font-medium md:text-4xl">
+        For the temple is a holy place</p>
+        <p class="pb-12 text-lg font-medium md:text-4xl">
         Where we are sealed together.
-        As a child of God, I've learned this truth:
-        A fam'ly is forever.
       </p>
+      <div class="flex items-center justify-center">
+        <img src="./images/temple/cordoba_argentina_temples_buildings_sealing_room.jpeg" alt="Cordoba Argentina Sealing Room" />
+      </div>
+      <p class="py-12 text-lg font-medium leading-loose md:text-4xl">As a child of God, I've learned this truth:</p>
+
+      <img src="./images/temple/haiti-temple-reflection-mirror.jpg" alt="Haiti Temple Reflection Mirror" />
+      <p class="py-12 text-lg font-medium leading-loose md:text-4xl"> A fam'ly is forever.</p>
+
+      <audio controls class="mb-12">
+        <source src="./audio/i-love-to-see-the-temple.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="md:hidden">
+        <iframe
+            id="video-iframe"
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/V9fS7ycmEzM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+      </div>
+      <div class="hidden md:block">
+        <iframe
+            id="video-iframe"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/V9fS7ycmEzM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+      </div>
     </main>
     <footer
       class="shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-black md:pt-4">
@@ -155,14 +207,6 @@
           <span class="sr-only">GitHub Repo</span>
         </a>
       </div>
-      <div class="flex flex-col items-center justify-center space-y-1">
-        <p class="text-white text-center text-xs pb-1 italic font-medium">Sound Effects:</p>
-        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/497092/simple/small/"
-          width="300" height="30"></iframe>
-        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/497093/simple/small/"
-          width="300" height="30"></iframe>
-      </div>
-
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2021</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
@@ -218,5 +262,4 @@
     const currentYearSpan = document.getElementById('current-year')
     currentYearSpan.textContent = new Date().getFullYear()
   </script>
-
 </html>
