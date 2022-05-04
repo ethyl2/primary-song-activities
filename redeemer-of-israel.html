@@ -87,6 +87,18 @@
       .grow:hover {
         transform: scale(1.05);
       }
+
+      #bingo {
+        width: 280px;
+        font-size: 10px;
+      }
+
+      @media(min-width: 640px) {
+        #bingo {
+        width: 640px;
+        font-size: 20px;
+      }
+      }
     </style>
   </head>
 
@@ -113,10 +125,33 @@
         style="background-image: url('./images/wonder/second-coming.jpeg')"></div>
     </div>
     <main
-      class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center space-y-6 rounded-lg md:my-12 md:space-y-10">
+      class="font-sans min-h-screen flex flex-col mx-auto justify-start mt-8 pb-8 mb-8 text-center space-y-6 rounded-lg md:my-12 md:space-y-10">
 
-      <div class="container flex flex-col md:items-start md:justify-between md:flex-row w-full">
-      <div class="whitespace-pre-line order-2 md:order-1 text-xs md:text-sm shrink md:w-1/4 xl:text-base">
+      <section class="shrink-0 container flex flex-col items-center justify-center mx-auto">
+        <h2 class="text-2xl">BINGO</h2>
+        <p>Click on the button to get a random word from the hymn. Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid.</p>
+        <p>Repeat until you get a whole line completed, across, down, or diagonally!</p>
+        <button id="word-button" type="button" class="font-semibold rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">Get Word!</button>
+        <p id="current-word" class="pb-4 text-xl font-bold md:text-2xl lg:text-3xl text-transparent">bingo</p>
+        <div id="bingo" class="text-xs md:text-xl border-2 border-black shadow-lg md:text-xl font-medium md:font-bold grid grid-rows-5 mx-auto">
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <div class="mt-8 mx-auto pt-8 rounded md:hidden">
+        <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/BSrzmS2yuQQ"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen class="mx-auto rounded"></iframe>
+      </div>
+      <div class="mt-12 mx-auto rounded hidden md:block">
+        <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/BSrzmS2yuQQ"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen class="mx-auto rounded"></iframe>
+      </div>
+      
+      <div class="whitespace-pre-line text-xs md:text-sm shrink xl:text-base">
         1. Redeemer of Israel,
         Our only delight,
         On whom for a blessing we call,
@@ -159,35 +194,11 @@
         Filled with his voice,
         Re-echoes the praise of the Lord.
       </div>
-      <section class="order-1 md:order-2 shrink-0">
-        <h2 class="text-2xl">BINGO</h2>
-        <p>Click on the button to get a random word from the hymn. Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid.</p>
-        <p>Repeat until you get a whole line completed!</p>
-        <button id="word-button" type="button" class="rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">Get Word!</button>
-        <p id="current-word"></p>
-        <div id="bingo" class="text-xs md:text-xl border-2 border-black shadow-lg md:text-xl font-medium md:font-bold">
-        </div>
 
-      </section>
-      </div>
       <audio controls>
         <source src="./audio/redeemer-of-israel.mp3" type="audio/mp3">
         Your browser does not support the audio element.
       </audio>
-
-      <!-- VIDEO -->
-      <div class="mt-8 mx-auto pt-8 rounded md:hidden">
-        <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/BSrzmS2yuQQ"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen class="mx-auto rounded"></iframe>
-      </div>
-      <div class="mt-12 mx-auto rounded hidden md:block">
-        <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/BSrzmS2yuQQ"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen class="mx-auto rounded"></iframe>
-      </div>
 
     </main>
     <footer
@@ -259,7 +270,7 @@
       row.classList.add('grid', 'grid-cols-5', 'divide-x-2', 'border-b-2', 'border-black' , 'divide-black', 'border-r-2')
       for (let j = 0; j < 5; j++) {
         const square = document.createElement('div')
-        square.classList.add('h-20', 'w-20', 'flex', 'items-center', 'text-center', 'justify-center', 'md:h-32', 'md:w-32', 'cursor-pointer', 'overflow-hidden')
+        square.classList.add('h-14', 'w-14', 'flex', 'items-center', 'text-center', 'justify-center', 'sm:h-32', 'sm:w-32', 'cursor-pointer', 'overflow-auto')
 
         if (i === 2 && j === 2) {
           square.textContent = 'FREE'
@@ -295,6 +306,8 @@
     wordButton.addEventListener('click', () => {
       const newCurrentWord = getCurrentWord()
       currentWordEl.textContent = newCurrentWord
+      currentWordEl.classList.remove('text-transparent')
+      currentWordEl.classList.add('text-green-600')
       currentWord = newCurrentWord
       Array.from(squareEls).forEach(el => {
         if (el.textContent === currentWord) {
