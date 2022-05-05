@@ -387,15 +387,17 @@
 
     Array.from(squareEls).forEach(squareEl => {
       squareEl.addEventListener('click', () => {
+        let columns = [0, 0, 0, 0, 0]
         Array.from(rowEls).forEach(rowEl => {
           const squaresInRow = rowEl.getElementsByTagName('div')
           let redSquareCount = 0
-          Array.from(squaresInRow).forEach(square => {
+          Array.from(squaresInRow).forEach((square, index) => {
             if(square.classList.contains('bg-red-700')) {
               redSquareCount++
+              columns[index]++
             }
           })
-          if (redSquareCount === 5) {
+          if (redSquareCount === 5 || columns.includes(5)) {
             successMessageEl.classList.remove('hidden')
           }
         })
