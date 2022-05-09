@@ -323,10 +323,12 @@
       'tidings', 'tokens', 'kingdom', 'fear not', 'redemption', 'Savior', 'comfort', 'holy place', 'hope', 'heart', 'angels', 'eternity', 'praise'
     ]
 
+    // Add click handler for reset button
     const resetButton = document.getElementById('reset-button')
     resetButton.addEventListener('click', () => {
       window.location.reload()
     })
+    
     // Create the arrays of winning diagonal coordinates
     const topLeftDiagonalCoords = []
     for (let i = 0; i<5; i++) {
