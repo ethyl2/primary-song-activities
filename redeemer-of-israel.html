@@ -180,10 +180,15 @@
         <h2 class="text-2xl" :class="[toggle === '1' ? 'text-white' : 'text-black']">BINGO</h2>
         <p :class="[toggle === '1' ? 'text-white' : 'text-black']" >Click on the button to get a random word from the hymn. Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid.</p>
         <p :class="[toggle === '1' ? 'text-white' : 'text-black']">Repeat until you get a whole line completed, across, down, or diagonally!</p>
+        <p id="free-space-message" :class="[toggle === '1' ? 'text-yellow-300' : 'text-black']" class="italic font-medium">Don't forget to <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the FREE space!</p>
         <button id="word-button" type="button" class="font-semibold rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">Get Word!</button>
         <p id="current-word" class="pb-4 text-xl font-bold md:text-2xl lg:text-3xl text-transparent">bingo</p>
         <div id="bingo" class="relative text-xs md:text-xl border-2 border-black shadow-lg md:text-xl font-medium md:font-bold grid grid-rows-5 mx-auto bg-opacity-80 bg-white">
-          <p id="success-message" class="text-6xl md:text-9xl font-bold absolute top-24 md:top-56 left-4 text-yellow-400 hidden" style="transform: rotate(-45deg);" >BINGO!!!</p>
+          <p 
+            id="success-message" 
+            class="text-6xl md:text-9xl font-bold absolute top-24 md:top-56 left-4 text-yellow-400 hidden" 
+            style="transform: rotate(-45deg); text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
+          >BINGO!!!</p>
         </div>
       </section>
 
@@ -304,11 +309,31 @@
     const currentYearSpan = document.getElementById('current-year')
     currentYearSpan.textContent = new Date().getFullYear()
 
+    const freeSpaceMessageEl = document.getElementById('free-space-message')
+
     const wordChoices = [
       'redeemer', 'Israel', 'delight', 'blessing', 'shadow', 'pillar', 'king', 'deliverer', 'sheep', 'Zion', 'love', 'valley', 'wilderness', 'wander', 'strangers', 'cry', 'desert', 'foes', 'free', 'children',
       'tidings', 'tokens', 'kingdom', 'fear not', 'redemption', 'Savior', 'comfort', 'holy place', 'hope', 'heart', 'angels', 'eternity', 'praise'
     ]
 
+    // Create the arrays of winning diagonal coordinates
+    const topLeftDiagonalCoords = []
+    for (let i = 0; i<5; i++) {
+      let coords = []
+      coords.push(i)
+      coords.push(i)
+      topLeftDiagonalCoords.push(coords)
+    }
+   
+    const topRightDiagonalCoords = []
+    let columnIndex = 4
+    for (let i = 0; i<5; i++) {
+      let coords = []
+      coords.push(columnIndex)
+      coords.push(i)
+      columnIndex--
+      topRightDiagonalCoords.push(coords)
+    }
 
     // https://stackoverflow.com/questions/17891173/how-to-efficiently-randomly-select-array-item-without-repeats
     function randomNoRepeats(array) {
@@ -327,18 +352,24 @@
     let currentWord = ''
     const wordButton = document.getElementById('word-button')
     const currentWordEl = document.getElementById('current-word')
-
     const bingoBoard = document.getElementById('bingo')
+    const successMessageEl = document.getElementById('success-message')
+    let leftDiagonalCount = 0
+    let rightDiagonalCount = 0
+
+    // Set up board
     for (let i=0; i<5; i++) {
       const row = document.createElement('div')
       row.classList.add('grid', 'grid-cols-5', 'divide-x-2', 'border-b-2', 'border-black' , 'divide-black', 'border-r-2', 'bingo-row')
       for (let j = 0; j < 5; j++) {
         const square = document.createElement('div')
+        square.dataset.row = i
+        square.dataset.column = j
         square.classList.add('h-14', 'w-14', 'flex', 'items-center', 'text-center', 'justify-center', 'sm:h-32', 'sm:w-32', 'cursor-pointer', 'overflow-auto')
 
         if (i === 2 && j === 2) {
           square.textContent = 'FREE'
-          square.classList.add('bg-yellow-300', 'hover:bg-yellow-200')
+          square.classList.add('bg-yellow-300', 'hover:bg-yellow-200', 'square')
           square.addEventListener('click', () => {
             square.classList.toggle('bg-yellow-300')
             square.classList.toggle('hover:bg-yellow-200')
@@ -366,8 +397,7 @@
 
     const squareEls = document.getElementsByClassName('square')
     const rowEls = document.getElementsByClassName('bingo-row')
-    const successMessageEl = document.getElementById('success-message')
-
+    
     wordButton.addEventListener('click', () => {
       const newCurrentWord = getCurrentWord()
       currentWordEl.textContent = newCurrentWord
@@ -386,18 +416,44 @@
     })
 
     Array.from(squareEls).forEach(squareEl => {
-      squareEl.addEventListener('click', () => {
+      squareEl.addEventListener('click', (e) => {
+        const rowClicked = parseInt(e.target.dataset.row)
+        const colClicked = parseInt(e.target.dataset.column)
+        const coords = []
+        
+        coords.push(colClicked)
+        coords.push(rowClicked)
+        topLeftDiagonalCoords.forEach(coordSet => {
+          if ( arrayEquals(coordSet, coords)) {
+            leftDiagonalCount++
+          }
+        })
+        topRightDiagonalCoords.forEach(coordSet => {
+          if ( arrayEquals(coordSet, coords)) {
+            rightDiagonalCount++
+          }
+        })
+        console.log(topLeftDiagonalCoords.includes(coords))
+        // Remove unneeded free space message once free space is clicked and disable future interactions with free space
+        if ( arrayEquals(coords,[2, 2])) {
+          e.target.classList.remove('cursor-pointer')
+          e.target.classList.add('pointer-events-none', 'cursor-not-allowed')
+          freeSpaceMessageEl.classList.add('opacity-0')
+        }
+
+
         let columns = [0, 0, 0, 0, 0]
-        Array.from(rowEls).forEach(rowEl => {
+        Array.from(rowEls).forEach((rowEl, rowIndex) => {
           const squaresInRow = rowEl.getElementsByTagName('div')
           let redSquareCount = 0
           Array.from(squaresInRow).forEach((square, index) => {
+            
             if(square.classList.contains('bg-red-700')) {
               redSquareCount++
               columns[index]++
             }
           })
-          if (redSquareCount === 5 || columns.includes(5)) {
+          if (redSquareCount === 5 || columns.includes(5) || rightDiagonalCount === 5 || leftDiagonalCount === 5) {
             successMessageEl.classList.remove('hidden')
           }
         })
@@ -427,5 +483,12 @@
       }
     }
     setup();
+
+    function arrayEquals(a, b) {
+      return Array.isArray(a) &&
+        Array.isArray(b) &&
+        a.length === b.length &&
+        a.every((val, index) => val === b[index]);
+    }
   </script>
 </html>
