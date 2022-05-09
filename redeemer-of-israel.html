@@ -178,7 +178,9 @@
 
       <section class="shrink-0 container flex flex-col items-center justify-center mx-auto">
         <h2 class="text-2xl" :class="[toggle === '1' ? 'text-white' : 'text-black']">BINGO</h2>
-        <p :class="[toggle === '1' ? 'text-white' : 'text-black']" >Click on the button to get a random word from the hymn. Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid.</p>
+        <p :class="[toggle === '1' ? 'text-white' : 'text-black']" >Click on the button to get a random word from the hymn.</p>
+        <p :class="[toggle === '1' ? 'text-white' : 'text-black']">Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid, 
+          <span class="italic">if it's there</span>.</p>
         <p :class="[toggle === '1' ? 'text-white' : 'text-black']">Repeat until you get a whole line completed, across, down, or diagonally!</p>
         <p id="free-space-message" :class="[toggle === '1' ? 'text-yellow-300' : 'text-black']" class="italic font-medium">Don't forget to <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the FREE space!</p>
         <button id="word-button" type="button" class="font-semibold rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">Get Word!</button>
@@ -190,6 +192,11 @@
             style="transform: rotate(-45deg); text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
           >BINGO!!!</p>
         </div>
+        <button id="reset-button" type="button" class="font-semibold rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">
+          Reset
+        </button>
+       
+
       </section>
 
       <!-- VIDEO -->
@@ -316,6 +323,10 @@
       'tidings', 'tokens', 'kingdom', 'fear not', 'redemption', 'Savior', 'comfort', 'holy place', 'hope', 'heart', 'angels', 'eternity', 'praise'
     ]
 
+    const resetButton = document.getElementById('reset-button')
+    resetButton.addEventListener('click', () => {
+      window.location.reload()
+    })
     // Create the arrays of winning diagonal coordinates
     const topLeftDiagonalCoords = []
     for (let i = 0; i<5; i++) {
