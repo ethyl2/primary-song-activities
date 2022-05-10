@@ -113,8 +113,8 @@
     </style>
   </head>
 
-  <body 
-    class="relative min-h-screen bg-center bg-no-repeat bg-cover" 
+  <body
+    class="relative min-h-screen bg-center bg-no-repeat bg-cover"
     :class="[toggle === '1' ? 'pillar' : 'shadow']"
     x-data="{ toggle: '0' }"
   >
@@ -170,33 +170,35 @@
         </div>
         <p class="text-white text-xs md:text-sm">Our Pillar by Night</p>
       </div>
+      <div class="pt-2">
+        <input type="checkbox" id="audio-permission" name="audio-permission">
+        <label for="audio-permission" class="text-white text-sm">Allow Audio</label>
+      </div>
     </header>
 
-    
+
     <main
       class="font-sans min-h-screen flex flex-col mx-auto justify-start mt-8 pb-8 mb-8 text-center items-center space-y-6 rounded-lg md:my-12 md:space-y-10">
 
       <section class="shrink-0 container flex flex-col items-center justify-center mx-auto">
         <h2 class="text-2xl" :class="[toggle === '1' ? 'text-white' : 'text-black']">BINGO</h2>
         <p :class="[toggle === '1' ? 'text-white' : 'text-black']" >Click on the button to get a random word from the hymn.</p>
-        <p :class="[toggle === '1' ? 'text-white' : 'text-black']">Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid, 
+        <p :class="[toggle === '1' ? 'text-white' : 'text-black']">Then <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the word in the bingo grid,
           <span class="italic">if it's there</span>.</p>
         <p :class="[toggle === '1' ? 'text-white' : 'text-black']">Repeat until you get a whole line completed, across, down, or diagonally!</p>
         <p id="free-space-message" :class="[toggle === '1' ? 'text-yellow-300' : 'text-black']" class="italic font-medium">Don't forget to <span class="md:hidden">touch</span> <span class="hidden md:inline">click on </span> the FREE space!</p>
         <button id="word-button" type="button" class="font-semibold rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">Get Word!</button>
         <p id="current-word" class="pb-4 text-xl font-bold md:text-2xl lg:text-3xl text-transparent">bingo</p>
         <div id="bingo" class="relative text-xs md:text-xl border-2 border-black shadow-lg md:text-xl font-medium md:font-bold grid grid-rows-5 mx-auto bg-opacity-80 bg-white">
-          <p 
-            id="success-message" 
-            class="text-6xl md:text-9xl font-bold absolute top-24 md:top-56 left-4 text-yellow-400 hidden" 
+          <p
+            id="success-message"
+            class="text-6xl md:text-9xl font-bold absolute top-24 md:top-56 left-4 text-yellow-400 hidden"
             style="transform: rotate(-45deg); text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
           >BINGO!!!</p>
         </div>
         <button id="reset-button" type="button" class="font-semibold rounded-lg py-2 px-4 border-2 bg-blue-200 border-black hover:bg-blue-100 my-4">
           Reset
         </button>
-       
-
       </section>
 
       <!-- VIDEO -->
@@ -212,7 +214,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen class="mx-auto rounded"></iframe>
       </div>
-      
+
       <p class="whitespace-pre-line text-xs font-bold md:text-sm shrink bg-opacity-80 bg-white rounded p-4 xl:text-base">
         1. Redeemer of Israel,
         Our only delight,
@@ -310,6 +312,17 @@
       <p class="text-center text-sm text-black md:text-base">Copyright <span id="current-year">2022</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
+
+      <div class="w-full flex items-center justify-around">
+        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/573381/simple/small/" width="200"
+        height="30"></iframe>
+        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/60444/simple/small/" width="200"
+        height="30"></iframe>
+        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/61816/simple/small/" width="200"
+          height="30"></iframe>
+        <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/588234/simple/small/" width="200"
+          height="30"></iframe>
+      </div>
     </footer>
   </body>
   <script>
@@ -326,7 +339,14 @@
     // Add click handler for reset button
     const resetButton = document.getElementById('reset-button')
     resetButton.addEventListener('click', () => {
-      window.location.reload()
+      const audioCheckbox = document.getElementById('audio-permission')
+      if (audioCheckbox.checked) {
+        audio = new Audio(`./audio/reset.wav`)
+        audio.play()
+      }
+      setTimeout(()=> {
+        window.location.reload()
+      }, 400)
     })
 
     // Create the arrays of winning diagonal coordinates
@@ -337,7 +357,7 @@
       coords.push(i)
       topLeftDiagonalCoords.push(coords)
     }
-   
+
     const topRightDiagonalCoords = []
     let columnIndex = 4
     for (let i = 0; i<5; i++) {
@@ -369,6 +389,7 @@
     const successMessageEl = document.getElementById('success-message')
     let leftDiagonalCount = 0
     let rightDiagonalCount = 0
+    let audio = null
 
     // Set up board
     for (let i=0; i<5; i++) {
@@ -389,6 +410,11 @@
             square.classList.toggle('hover:bg-red-600')
             square.classList.toggle('bg-red-700')
             square.classList.toggle('text-white')
+            const audioCheckbox = document.getElementById('audio-permission')
+            if(audioCheckbox.checked) {
+              audio = new Audio(`./audio/correct.wav`)
+              audio.play()
+            }
           })
         } else {
           const wordForSquare = getWordForGrid()
@@ -399,6 +425,11 @@
               square.classList.toggle('bg-red-700')
               square.classList.toggle('hover:bg-red-600')
               square.classList.toggle('text-white')
+              const audioCheckbox = document.getElementById('audio-permission')
+              if (audioCheckbox.checked) {
+                audio = new Audio(`./audio/correct.wav`)
+                audio.play()
+              }
             }
         })
       }
@@ -410,8 +441,13 @@
 
     const squareEls = document.getElementsByClassName('square')
     const rowEls = document.getElementsByClassName('bingo-row')
-    
+
     wordButton.addEventListener('click', () => {
+      const audioCheckbox = document.getElementById('audio-permission')
+      if (audioCheckbox.checked) {
+        audio = new Audio(`./audio/tada.wav`)
+        audio.play()
+      }
       const newCurrentWord = getCurrentWord()
       currentWordEl.textContent = newCurrentWord
       currentWordEl.classList.remove('text-transparent')
@@ -433,7 +469,7 @@
         const rowClicked = parseInt(e.target.dataset.row)
         const colClicked = parseInt(e.target.dataset.column)
         const coords = []
-        
+
         coords.push(colClicked)
         coords.push(rowClicked)
         topLeftDiagonalCoords.forEach(coordSet => {
@@ -446,7 +482,6 @@
             rightDiagonalCount++
           }
         })
-        console.log(topLeftDiagonalCoords.includes(coords))
         // Remove unneeded free space message once free space is clicked and disable future interactions with free space
         if ( arrayEquals(coords,[2, 2])) {
           e.target.classList.remove('cursor-pointer')
@@ -460,7 +495,7 @@
           const squaresInRow = rowEl.getElementsByTagName('div')
           let redSquareCount = 0
           Array.from(squaresInRow).forEach((square, index) => {
-            
+
             if(square.classList.contains('bg-red-700')) {
               redSquareCount++
               columns[index]++
@@ -468,11 +503,18 @@
           })
           if (redSquareCount === 5 || columns.includes(5) || rightDiagonalCount === 5 || leftDiagonalCount === 5) {
             successMessageEl.classList.remove('hidden')
+            const audioCheckbox = document.getElementById('audio-permission')
+            if (audioCheckbox.checked) {
+              setTimeout(() => {
+                audio = new Audio(`./audio/win.wav`)
+                audio.play()
+              }, 400)
+            }
           }
         })
       })
     })
-   
+
 
     // Handle accessibility
     var enableAnimations = false;
