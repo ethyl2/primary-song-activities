@@ -266,8 +266,22 @@
         <p class="hidden bg-yellow-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Strength</p>
         <p class="hidden bg-purple-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Wisdom</p>
         <p class="hidden bg-white bg-opacity-80 rounded p-6 m-2 md:m-4">Eternal Life</p>
-
       </section>
+
+      <!-- VIDEO -->
+      <div class="mt-8 mx-auto pt-8 rounded md:hidden">
+        <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/3--thiRbM_I"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          class="mx-auto rounded"></iframe>
+      </div>
+      <div class="mt-12 mx-auto rounded hidden md:block">
+        <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/3--thiRbM_I"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          class="mx-auto rounded"></iframe>
+      </div>
+
     </main>
     <footer
       class="shadow-lg mt-12 h-52 md:h-40 w-full flex flex-col space-y-2 items-center justify-center pt-2 header-background md:pt-4">
@@ -324,31 +338,7 @@
         blessingsSection.children[counter].classList.remove('hidden')
         counter++
       }
-      console.log(blessingsSection.children.length)
     })
-    // Handle accessibility
-    var enableAnimations = false;
-    var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
-
-    // Handle animation accessibility preferences
-    function setAccessibilityState() {
-      if (reduceMotionQuery.matches) {
-        enableAnimations = false;
-      } else {
-        enableAnimations = true;
-      }
-    }
-    setAccessibilityState();
-
-    reduceMotionQuery.addListener(setAccessibilityState);
-
-    function setup() {
-      if (!enableAnimations) {
-        // Add any animations here
-      }
-    }
-    setup();
-
   </script>
-
 </html>
+
