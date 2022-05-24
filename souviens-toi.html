@@ -27,7 +27,8 @@
     <link rel="manifest" href="https://ethyl2.github.io/primary-song-activities/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
     <style>
@@ -38,20 +39,21 @@
     </style>
   </head>
 
-  <body class="relative min-h-screen bg-center bg-no-repeat bg-cover">
+  <body class="relative min-h-screen bg-center bg-no-repeat bg-cover" style="background-image: url('./images/souviens-toi/clouds.jpg');">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 md:py-10 bg-green-100">
-      <h1 id="title" class="text-bold text-xl md:text-5xl text-center font-bold pb-2 md:pb-4 cursor-pointer">
+    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 md:py-10 bg-green-100" style="font-family: 'Tangerine', cursive;">
+      <h1 id="title" class="text-bold text-2xl md:text-7xl text-center font-bold pb-2 md:pb-4">
         Souviens-toi (Remember)</h1>
     </header>
 
 
     <main
-      class="relative font-sans min-h-screen flex flex-col mx-auto justify-start mt-8 pb-8 mb-8 text-center items-center space-y-6 rounded-lg md:my-12 md:space-y-10">
+      class="relative min-h-screen flex flex-col mx-auto justify-start mt-8 pb-8 mb-8 text-center items-center space-y-6 rounded-lg md:my-12 md:space-y-10"
+    >
       <section id="largo"
-        class="w-11/12 text-center md:w-3/4 mx-auto bg-white rounded p-4 flex flex-col items-center justify-center md:p-6">
+        class="w-11/12 text-center mx-auto bg-white bg-opacity-60 rounded p-4 flex flex-col items-center justify-center md:p-6">
         <p>A very special hymn because of 2 reasons:</p>
         <ul class="list-disc list-inside text-left">
           <li>The melody is Largo from Dvorak's New World Symphony</li>
@@ -60,8 +62,6 @@
 
 
         <div class="flex flex-col items-center justify-center">
-          <img class="w-36 rounded my-2 md:my-4" src="./images/prelude/dad-and-baby.jpg" alt="dad and baby" />
-
             <a class="font-bold hover:underline hover:text-yellow-800"
               href="https://www.churchofjesuschrist.org/music/library/hymns/remember?lang=fra" target="_blank"
               rel="noopener nofollow noreferrer">
@@ -85,8 +85,10 @@
           </p>
         </div>
         <div
-          class="flex flex-col px-2 text-sm py-2 bg-pink-100 my-4 rounded-lg bg-opacity-60 mx-2 font-semibold space-y-3 md:space-y-0 md:my-6 md:flex-row md:text-base md:p-6 md:space-x-6">
-          <div>
+          class="leading-loose flex flex-col px-2 text-sm py-2 bg-green-100 my-4 rounded-lg bg-opacity-60 mx-2 font-semibold space-y-3 md:my-6 md:text-2xl md:p-6"
+          style="font-family: 'Bad Script', cursive;"
+        >
+          <div class="leading-loose">
             <p>Remember, my child : not long ago,</p>
 
             <p>your divine parents held you in their arms.</p>
@@ -99,7 +101,7 @@
 
             <p>because for you the veil is still thin.</p>
           </div>
-          <div>
+          <div class="leading-loose pt-4">
             <p>Remember, my child, the forests, the cities.</p>
 
             <p>Can we down here imagine them?</p>
@@ -112,14 +114,14 @@
 
             <p>and the birdsongs of a forgotten world.</p>
           </div>
-          <div>
+          <div class="leading-loose pt-4">
             <p>Remember, my child: at the dawn of time,</p>
 
             <p>we were friends playing in the wind.</p>
 
             <p>Then one day in joy we chose to accept</p>
 
-            <p>the Lords great plan of life.</p>
+            <p>the Lord's great plan of life.</p>
 
             <p>That night, my child, we promised in love,</p>
 
@@ -133,8 +135,10 @@
             Here</a> are English lyrics by Lisa Bolin Hawkins:
         </p>
         <div
-          class="flex flex-col px-2 text-sm py-2 bg-pink-100 rounded-lg bg-opacity-60 mx-2 font-semibold space-y-3 md:p-6 md:my-6 xl:space-y-0 xl:flex-row xl:text-base xl:space-x-6">
-          <div>
+          class="flex flex-col mb-6 px-2 text-sm py-2 bg-green-100 rounded-lg bg-opacity-60 mx-2 font-semibold space-y-3 md:p-6 md:my-6 xl:text-2xl"
+          style="font-family: 'Bad Script', cursive;"
+          >
+          <div class="leading-loose">
             <p>What do you remember, child, of life before this earth—</p>
 
             <p>When you were a spirit-child before your mortal birth?</p>
@@ -147,7 +151,7 @@
 
             <p>Store those visions in your heart while the veil is thin.</p>
           </div>
-          <div>
+          <div class="leading-loose pt-4">
             <p>Tell me of that blessed place, what do you recall?</p>
 
             <p>Forests, gardens, brooks, and fields? Bright celestial halls?</p>
@@ -160,7 +164,7 @@
 
             <p>Do lamps beckon travelers home to that forgotten world?</p>
           </div>
-          <div>
+          <div class="leading-loose pt-4">
             <p>Now do you remember, child, when we lived as friends?</p>
 
             <p>Where we learned our Savior's plan: love that shall not end—</p>
@@ -173,7 +177,7 @@
 
             <p>Someday, reunited, we will raise our grateful hymn.</p>
           </div>
-          <div>
+          <div class="leading-loose pt-4">
             <p>What do you remember, child?</p>
 
             <p>Always remember Him.</p>
