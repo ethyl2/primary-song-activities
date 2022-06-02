@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keep the Commandments</title>
+    <meta name="description" content="Activity page for the primary song Keep the Commandments">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image"
+      content="https://ethyl2.github.io/primary-song-activities/images/commandments/keep-the-commandments.png">
+    <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/commandments.html">
+    <meta property="og:title" content="Keep the Commandments">
+    <meta property="og:description" content="Activity page for the primary song Keep the Commandments">
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="https://ethyl2.github.io/primary-song-activities/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="https://ethyl2.github.io/primary-song-activities/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="https://ethyl2.github.io/primary-song-activities/favicon-16x16.png">
+    <link rel="manifest" href="https://ethyl2.github.io/primary-song-activities/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
+    <style>
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+
+      .shake:hover {
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.5s;
+
+        /* When the animation is finished, start again */
+        animation-iteration-count: infinite;
+      }
+
+      .grow:hover {
+        transform: scale(1.05);
+      }
+
+      /* https://forum.squarespace.com/topic/165210-css-for-an-image-that-moves-across-the-screen/ */
+      @keyframes fly {
+
+          98.001%, 0% {
+                        display: block;
+            transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+          }
+
+          15% {
+            transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+          }
+
+          15.001%, 18% {
+            transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+          }
+
+          40% {
+            transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+          }
+
+          40.001%, 43% {
+            transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+          }
+
+          65% {
+            transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+          }
+
+          65.001%, 68% {
+            transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+          }
+
+          95% {
+            transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+          }
+        }
+        .flier {
+          animation: fly 80s linear infinite;
+          /* pointer-events: none !important; */
+          top: 0;
+          left: 0;
+          transform: translateX(-120%) translateY(-120%) rotateZ(0);
+          position: fixed;
+          z-index: 999999;
+        }
+
+      .header-background {
+        background:#5a8f00; /* default background for browsers without gradient support */
+        /* css3 */
+        background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+        background:-moz-linear-gradient(#b8db29, #5a8f00);
+        background:-o-linear-gradient(#b8db29, #5a8f00);
+        background:linear-gradient(#b8db29, #5a8f00);
+      }
+
+      /* ============================================================================================================================
+      == BLOCKQUOTE WITH RIGHT-ANGLED TRIANGLE https://nicolasgallagher.com/pure-css-speech-bubbles/demo/
+      ** ============================================================================================================================ */
+
+      .example-right {
+        position:relative;
+        padding:15px 30px;
+        margin:0;
+        color:#fff;
+        background:#5a8f00; /* default background for browsers without gradient support */
+        /* css3 */
+        background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+        background:-moz-linear-gradient(#b8db29, #5a8f00);
+        background:-o-linear-gradient(#b8db29, #5a8f00);
+        background:linear-gradient(#b8db29, #5a8f00);
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        border-radius:10px;
+      }
+
+      /* display of quote author (alternatively use a class on the element following the blockquote) */
+      /* .example-right + p {margin:15px 0 2em 85px; font-style:italic;} */
+
+      /* creates the triangle */
+      .example-right:after {
+        content:"";
+        position:absolute;
+        bottom:-50px;
+        left:50px;
+        border-width:0 20px 50px 0px;
+        border-style:solid;
+        border-color:transparent #5a8f00;
+        /* reduce the damage in FF3.0 */
+        display:block;
+        width:0;
+      }
+
+    </style>
+  </head>
+
+  <body class="relative min-h-screen bg-center bg-no-repeat bg-cover" style="background-image: url('./images/commandments/anchor.jpg')">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 md:py-10 header-background">
+      <h1 id="title" class="text-bold text-xl md:text-5xl text-center font-bold pb-2 md:pb-4 text-white cursor-pointer">
+        Keep the Commandments</h1>
+      <h2 class="container px-4 text-center text-sm md:text-base">Find the picture of the prophet and <span class="md:hidden">touch</span><span class="hidden md:inline">click on</span> it to send blessings.</h2>
+    </header>
+
+
+    <main
+      class="relative font-sans min-h-screen flex flex-col mx-auto justify-start mt-8 pb-8 mb-8 text-center items-center space-y-6 rounded-lg md:my-12 md:space-y-10">
+
+      <!-- VIDEO -->
+      <div class="mt-8 mx-auto pt-8 rounded md:hidden">
+        <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/DcmQReaK8Ek"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen class="mx-auto rounded"></iframe>
+      </div>
+      <div class="mt-12 mx-auto rounded hidden md:block">
+        <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/DcmQReaK8Ek"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen class="mx-auto rounded"></iframe>
+      </div>
+
+      <p
+        class="whitespace-pre-line text-xs font-bold md:text-sm shrink bg-opacity-80 bg-white rounded p-4 xl:text-base">
+          1. Keep the commandments; keep the commandments!
+          In this there is safety; in this there is peace.
+          He will send blessings;
+          He will send blessings.
+          Words of a prophet:
+          Keep the commandments.
+          In this there is safety and peace.
+
+          2. We are His children; we are His children,
+          and we must be tested to show we are true.
+          Hold to His promises;
+          Hold to His promises,
+          Heeding the prophets:
+          Keep the commandments.
+          In this there is safety and peace.
+      </p>
+
+
+      <audio controls>
+        <source src="./audio/keep-the-commandments.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <img src="./images/commandments/mail.png" alt="sending blessings" class="w-24 absolute top-12 hidden" id="blessings-mail" />
+
+      <section class="flex flex-col items-start justify-start md:w-1/3 mx-auto text-xl md:text-2xl container px-4 bg-white bg-opacity-80 rounded p-4">
+        <h2 class="w-full block text-center mx-auto text-3xl text-green-800 py-4 font-bold">Which prophet are we singing about?</h2>
+        <p class="pb-6 text-base">All of the prophets teach us that we should follow the commandments, but Barbara A. McConochie, the author, wrote this song after hearing:</p>
+        <blockquote class="example-right">
+          <p>“The safety of the church lies in the members keeping the commandments. There is nothing more important that I could
+          say. As they keep the commandments, blessings will come.”</p>
+        </blockquote>
+        <p class="pt-12 pl-20 pb-6 text-left w-full block text-sm md:text-lg">President Harold B. Lee (<i>Church News</i>, 15 July 1972, p.3)</p>
+
+        <img src="./images/commandments/harold-b-lee.jpeg" alt="Harold B. Lee" class="rounded md:w-2/3 mx-auto pb-8 grow" id="prophet" />
+        <blockquote class="example-right">
+          <p>“Keeping the commandments is the anchor for our safety amidst the storm. True peace will come to each individual,
+          family, and nation only as we learn obedience to the laws of our Heavenly Father.”</p>
+        </blockquote>
+        <p class="pt-12 pl-20 pb-6 text-left w-full block text-sm md:text-lg">Barbara A. McConochie</p>
+        <img src="./images/commandments/barbara-mcconochie.jpeg" alt="Harold B. Lee" class="rounded md:w-2/3 mx-auto" />
+      </section>
+
+      <section id="blessings" class="hidden text-xl md:text-6xl font-bold flex flex-wrap italic items-center justify-around">
+        <p class="hidden bg-yellow-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Safety</p>
+        <p class="hidden bg-green-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Peace</p>
+        <p class="hidden bg-red-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Freedom</p>
+        <p class="hidden bg-blue-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Personal Growth</p>
+        <p class="hidden bg-indigo-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Happiness</p>
+        <p class="hidden bg-yellow-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Strength</p>
+        <p class="hidden bg-purple-100 bg-opacity-80 rounded p-6 m-2 md:m-4">Wisdom</p>
+        <p class="hidden bg-white bg-opacity-80 rounded p-6 m-2 md:m-4">Eternal Life</p>
+      </section>
+
+      <!-- VIDEO -->
+      <div class="mt-8 mx-auto pt-8 rounded md:hidden">
+        <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/3--thiRbM_I"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          class="mx-auto rounded"></iframe>
+      </div>
+      <div class="mt-12 mx-auto rounded hidden md:block">
+        <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/3--thiRbM_I"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          class="mx-auto rounded"></iframe>
+      </div>
+
+    </main>
+    <footer
+      class="shadow-lg mt-12 h-52 md:h-40 w-full flex flex-col space-y-2 items-center justify-center pt-2 header-background md:pt-4">
+      <div class="flex items-center justify-center space-x-3">
+        <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
+          class="bg-white p-px rounded shadow hover:bg-green-400 shake">
+          <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+          <span class="sr-only">Back to Home</span>
+        </a>
+        <a href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/keep-the-commandments?lang=eng" target="_blank"
+          title="sheet music" class="bg-white p-px rounded shadow hover:bg-yellow-400 shake"
+          rel="noopener nofollow noreferrer">
+          <img src="./images/music-note-icon.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+          <span class="sr-only">Link to Sheet Music</span>
+        </a>
+
+        <a href="https://github.com/ethyl2/primary-song-activities" target="_blank" rel="noopener noreferrer"
+          class="p-px rounded bg-white shadow hover:bg-red-400 shake" title="link to GitHub repository">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            class="w-7 h-7 md:w-10 md:h-10" focusable="false" width="1.73em" height="1.5em" style="
+                                          -ms-transform: rotate(360deg);
+                                          -webkit-transform: rotate(360deg);
+                                          transform: rotate(360deg);
+                                      " preserveAspectRatio="xMidYMid meet" viewBox="0 0 1227.825 1000">
+            <path
+              d="M1078.94-.985c-33.192-.491-110.295 10.777-239.027 96.936c-70.161-17.535-144.812-26.188-219.591-26.188c-82.278 0-165.425 10.448-242.965 31.719C192.534-24.605 110.955 1.234 110.955 1.234c-53.258 133.183-20.347 231.788-10.344 256.277C38.014 325.069-.2 411.338-.2 517.07c0 79.822 9.085 151.416 31.281 213.653c1.231 4.803.832 3.732 2.906 7.844c4.89 12.884 10.327 25.39 16.438 37.468c2.094 4.346 4 7.563 4 7.563c62.395 116.307 185.396 191.438 404.244 215.028l330.995.375c233.392-23.144 345.386-98.499 396.994-215.591l3.281-7.625c4.89-11.828 9.153-24.135 20.813-65.562c11.659-41.427 16.875-113.172 16.875-193.185c0-114.755-43.1-206.577-113.092-276.434c12.231-39.48 28.57-127.158-16.313-239.402c0 0-6.293-1.995-19.281-2.188zM818.1 420.133c53.893-.117 100.057 9.136 134.717 45.499v.031c43.369 45.541 68.749 100.525 68.749 159.778c0 276.658-177.932 284.183-397.4 284.183c-219.506 0-397.4-38.336-397.4-284.183c0-58.861 25.009-113.516 67.843-158.872c71.451-75.59 192.365-35.562 329.558-35.562c70.423-.011 136.564-10.75 193.935-10.875zm-408.807 81.468c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936zm443.649 0c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936z"
+              fill="black" />
+          </svg>
+          <span class="sr-only">GitHub Repo</span>
+        </a>
+      </div>
+
+      <p class="text-center text-sm text-black md:text-base">Copyright <span id="current-year">2022</span>
+        <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
+      </p>
+    </footer>
+  </body>
+  <script>
+    const currentYearSpan = document.getElementById('current-year')
+    currentYearSpan.textContent = new Date().getFullYear()
+
+    const prophetImage = document.getElementById('prophet')
+    const blessingsMailEl = document.getElementById('blessings-mail')
+    const blessingsSection = document.getElementById('blessings')
+    prophetImage.addEventListener('click', () => {
+      blessingsMailEl.classList.remove('hidden')
+      blessingsMailEl.classList.add('flier')
+    })
+
+    let counter = 0
+    blessingsMailEl.addEventListener('click', () => {
+      if (counter < blessingsSection.children.length) {
+        blessingsSection.classList.remove('hidden')
+        blessingsSection.children[counter].classList.remove('hidden')
+        counter++
+      }
+    })
+  </script>
+</html>
+
