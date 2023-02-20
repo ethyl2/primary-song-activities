@@ -247,7 +247,7 @@
         </a>
       </div>
 
-      <p class="text-xs italic text-yellow-200"><span id="visits"></span> visitors</p>
+      <p class="text-xs italic text-yellow-200"><span id="visits"></span> <span id="visitors"></span></p>
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2023</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
@@ -259,6 +259,7 @@
   <script>
     function websiteVisits(response) {
         document.querySelector("#visits").textContent = response.value;
+        document.querySelector('#visitors').textContent = 'visitors';
       }
 
     const lyricClips = [
