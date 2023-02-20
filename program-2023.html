@@ -212,9 +212,15 @@
           <p class="text-white text-base md:text-2xl font-itim">Can you guess which song these words belong to?</p>
           <button id="get-lyrics"
             class="bg-purple-900 text-2xl  font-itim text-white px-2 py-1 rounded-lg hover:bg-purple-800">Listen</button>
-          <button id="show-answer" class="bg-blue-900 text-2xl  font-itim text-white px-2 py-1 rounded-lg hover:bg-blue-800">Show
-            Answer</button>
+          <button id="peak"
+            class="bg-green-900 text-2xl font-itim text-white px-2 py-1 rounded-lg hidden hover:bg-green-800"
+            >Peak</button>
+          <div id="lyrics" class="text-white hidden"></div>
+          <button id="show-answer"
+            class="bg-blue-900 text-2xl font-itim text-white px-2 py-1 rounded-lg hidden hover:bg-blue-800">
+            Show Answer</button>
           <p id="answer" class="neon-yellow text-2xl"></p>
+          <p id="message" class="text-white italic text-sm"></p>
         </div>
 
       </section>
@@ -251,146 +257,8 @@
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2023</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
-
-
     </footer>
   </body>
   <script async src="https://api.countapi.xyz/hit/ethyl2.github.io/8adce465-a43b-4e94-a216-958ffb3a0e14?callback=websiteVisits"></script>
-  <script>
-    function websiteVisits(response) {
-        document.querySelector("#visits").textContent = response.value;
-        document.querySelector('#visitors').textContent = 'visitors';
-      }
-
-    const lyricClips = [
-      // The Miracle
-      { audioFile: './static/audio/Jesus_walked_upon_th_785.mp3',
-        song: 'The Miracle',
-      },
-      {
-        audioFile: './static/audio/He_fed_a_thousand_pe_900.mp3',
-        song: 'The Miracle',
-      },
-      {
-        audioFile: './static/audio/Jesus_is_a_God_of_mi_302.mp3',
-        song: 'The Miracle',
-      },
-      {
-        audioFile: './static/audio/Jesus_bled_and_died__462.mp3',
-        song: 'The Miracle',
-      },
-      {
-        audioFile: './static/audio/Yes_I_can_be_forgiv_250.mp3',
-        song: 'The Miracle',
-      },
-
-      // Gethsemane
-      {
-        audioFile: './static/audio/Jesus_climbed_the_hi_578.mp3',
-        song: 'Gethsemane',
-      },
-      {
-        audioFile: './static/audio/He_felt_all_that_was_849.mp3',
-        song: 'Gethsemane',
-      },
-      {
-        audioFile: './static/audio/Geth_said_man_ee_Je_171.mp3',
-        song: 'Gethsemane',
-      },
-      {
-        audioFile: './static/audio/The_hardest_thing_th_449.mp3',
-        song: 'Gethsemane',
-      },
-      {
-        audioFile: './static/audio/Geth_said_man_ee_Je_215.mp3',
-        song: 'Gethsemane',
-      },
-
-      // Baptism
-      {
-        audioFile: './static/audio/Jesus_came_to_John_t_201..mp3',
-        song: 'Baptism',
-      },
-      {
-        audioFile: './static/audio/To_fulfill_the_law__428.mp3',
-        song: 'Baptism',
-      },
-      {
-        audioFile: './static/audio/Now_we_know_that_we__980.mp3',
-        song: 'Baptism',
-      },
-
-      // If the Savior Stood Beside Me
-      {
-        audioFile: './static/audio/If_the_savior_stood__843.mp3',
-        song: 'If the Savior Stood Beside Me',
-      },
-      {
-        audioFile: './static/audio/Would_I_follow_his_e_671.mp3',
-        song: 'If the Savior Stood Beside Me',
-      },
-      {
-        audioFile: './static/audio/Would_my_words_be_tr_813.mp3',
-        song: 'If the Savior Stood Beside Me',
-      },
-      {
-        audioFile: './static/audio/He_is_always_near_me_973.mp3',
-        song: 'If the Savior Stood Beside Me',
-      },
-      {
-        audioFile: './static/audio/Ill_be_the_kind_of__936.mp3',
-        song: 'If the Savior Stood Beside Me',
-      },
-
-      // Come Follow Me
-      {
-        audioFile: './static/audio/I_would_have_followe_744.mp3',
-        song: 'Come Follow Me',
-      },
-      {
-        audioFile: './static/audio/As_I_read_the_script_652.mp3',
-        song: 'Come Follow Me',
-      },
-      {
-        audioFile: './static/audio/Come_follow_me_the_440.mp3',
-        song: 'Come Follow Me',
-      },
-      {
-        audioFile: './static/audio/_let_us_in_his_foots_376.mp3',
-        song: 'Come Follow Me',
-      },
-
-      // Behold the Great Redeemer Die
-      {
-        audioFile: './static/audio/Bee_hold_the_great_R_472.mp3',
-        song: 'Behold the Great Redeemer Die',
-      },
-      {
-        audioFile: './static/audio/He_dies_a_sacrifice__251.mp3',
-        song: 'Behold the Great Redeemer Die',
-      },
-    ]
-
-    const getLyricsButton = document.getElementById('get-lyrics')
-    const showAnswerButton = document.getElementById('show-answer')
-    const answerEl = document.getElementById('answer')
-
-    getLyricsButton.addEventListener('click', () => {
-      answerEl.classList.add('hidden')
-      const randomClip = lyricClips[Math.floor(Math.random() * lyricClips.length)]
-      const audio = new Audio(randomClip.audioFile)
-      audio.play()
-
-      answerEl.classList.add('flex')
-      answerEl.textContent = randomClip.song
-    })
-
-    showAnswerButton.addEventListener('click', () => {
-      answerEl.classList.remove('hidden')
-    })
-
-    const currentYearSpan = document.getElementById('current-year')
-    currentYearSpan.textContent = new Date().getFullYear()
-  </script>
-
+  <script src="./js/program-2023.js"></script>
 </html>
