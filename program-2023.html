@@ -247,7 +247,7 @@
         </a>
       </div>
 
-
+      <p class="text-xs italic text-yellow-200"><span id="visits"></span> visitors</p>
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2023</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
@@ -255,7 +255,12 @@
 
     </footer>
   </body>
+  <script async src="https://api.countapi.xyz/hit/ethyl2.github.io/8adce465-a43b-4e94-a216-958ffb3a0e14?callback=websiteVisits"></script>
   <script>
+    function websiteVisits(response) {
+        document.querySelector("#visits").textContent = response.value;
+      }
+
     const lyricClips = [
       // The Miracle
       { audioFile: './static/audio/Jesus_walked_upon_th_785.mp3',
