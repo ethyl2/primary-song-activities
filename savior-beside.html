@@ -42,19 +42,24 @@
     </header>
 
     <main class="min-h-screen flex flex-col items-center justify-start mt-8 md:mt-12 space-y-6 md:space-y-24 px-4 md:px-auto">
-      <img src="./images/beautiful-savior/gentle-healer.jpg" alt="Jesus" class="rounded-xl">
+      <div class="px-4 md:px-auto">
+        <img src="./images/beautiful-savior/gentle-healer.jpg" alt="Jesus" class="rounded-xl">
+      </div>
+      
       <div class="flex flex-col items-center justify-center space-y-2">
-        <h2>Here is our Primary music leader. Say hi!</h2>
+        <h2 id="teacher-intro" class="text-center font-bold text-lg md:text-2xl pb-2">
+          Here is our Primary music leader. <br class="md:hidden" /> Say hi!
+        </h2>
         <img
           id="teacher"
           class="rounded-xl h-80 w-80"
           src="./static/images/teacher/teacher-1.png"
           alt="Primary music leader"
         >
-        <p>She has a game for you!</p>
-        <p>Sing along to each verse.</p>
-        <p>While you sing, she will go away and come back with something different about her.</p>
-        <p>See if you can figure out what it is!</p>
+        <p class="font-bold md:text-lg">She has a game for you!</p>
+        <p class="font-bold md:text-lg">Sing along to each verse.</p>
+        <p class="font-bold md:text-lg">While you sing, she will go away and come back with something different about her.</p>
+        <p class="font-bold md:text-lg">See if you can figure out what it is!</p>
       </div>
 
 
@@ -64,8 +69,8 @@
           <source src="./static/audio/savior-stood-v-1.mp3" type="audio/mp3">
           Your browser does not support the audio element.
         </audio>
-        <p class="whitespace-pre-line">
-          If the savior stood beside me
+        <p class="whitespace-pre-line text-sm md:text-base">
+          If the Savior stood beside me
           Would I do the things I do?
           Would I think of his commandments and try harder to be true?
           Would I follow his example?
@@ -89,17 +94,22 @@
           <source src="./static/audio/savior-stood-v-2.mp3" type="audio/mp3">
           Your browser does not support the audio element.
         </audio>
-        <p class="whitespace-pre-line">
-          If the savior stood beside me
-          Would I say the things I say?
-          Would my words be true and kind if he were never far away?
+        <p class="whitespace-pre-line text-sm md:text-base">
+          If the Savior stood beside me
+          Would I <span class="font-bold">say</span> the things I say?
+          Would my <span class="font-bold">words</span> be true and kind if he were never far away?
           Would I try to share the gospel?
-          Would I speak more reverently if I could see the savior standing nigh
+          Would I <span class="font-bold">speak</span> more reverently 
+          If I could see the Savior standing nigh
           Watching over me?
         </p>
         <img id="teacher-2" class="rounded-xl h-80 w-80" src="./static/images/teacher/teacher-1.png" alt="Primary music leader">
-        <button type="button" id="reveal-teacher-2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button 
+          type="button" 
+          id="reveal-teacher-2" 
+          class="hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Reveal Change</button>
+        <p id="change-2" class="font-bold text-lg hidden"></p>
       </div>
 
       <div class="flex flex-col items-center justify-center space-y-2 border-t pt-4">
@@ -108,7 +118,7 @@
           <source src="./static/audio/savior-stood-v-3.mp3" type="audio/mp3">
           Your browser does not support the audio element.
         </audio>
-        <p class="whitespace-pre-line">
+        <p class="whitespace-pre-line text-sm md:text-base">
           He is always near me, though I do not see him there
           And because he loves me dearly
           I am in his watchful care
@@ -118,9 +128,25 @@
           If I could see the Savior standing nigh watching over me
         </p>
         <img id="teacher-3" class="rounded-xl h-80 w-80" src="./static/images/teacher/teacher-1.png" alt="Primary music leader">
-        <button type="button" id="reveal-teacher-3"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button 
+          type="button" 
+          id="reveal-teacher-3"
+          class="hidden bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+        >
           Reveal Change</button>
+        <p id="change-3" class="font-bold text-lg hidden"></p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center w-full max-w-md font-bold md:text-lg px-4 md:px-auto">
+        <p class="pb-4 text-center">Now that you've practiced looking at things closely, you can look at your life closely and see if there is anything you would like to change to become more like Jesus -- more like the kind of person that you would like to be!
+        </p>
+        <div class="flex flex-col items-center justify-center space-y-3 lg:space-y-0 lg:flex-row lg:space-x-3">
+          <img src="./images/wonder/service.jpeg" alt="service" class="rounded" />
+          <img src="./images/wonder/jesus-with-children4.jpeg" alt="Jesus with children" class="rounded" />
+          <img src="./images/wonder/jesus-hug.jpeg" alt="hug" class="rounded" />
+          
+        </div>
+        <p class="text-center pt-2">What is one thing you can do today to be more like Jesus?</p>
       </div>
 
     </main>
@@ -164,20 +190,42 @@
     currentYearSpan.textContent = new Date().getFullYear()
 
     const teacherImage = document.getElementById('teacher')
-    const verseOneAudioEl = document.getElementById("verse-1");
+    const teacherIntroEl = document.getElementById('teacher-intro')
+
+    const verseOneAudioEl = document.getElementById("verse-1")
+    const verseTwoAudioEl = document.getElementById("verse-2")
+    const verseThreeAudioEl = document.getElementById("verse-3")
+
     const teacherVerseOneImage = document.getElementById('teacher-1')
+    const teacherVerseTwoImage = document.getElementById('teacher-2')
+    const teacherVerseThreeImage = document.getElementById('teacher-3')
+
     const revealTeacherOneButton = document.getElementById('reveal-teacher-1')
+    const revealTeacherTwoButton = document.getElementById('reveal-teacher-2')
+    const revealTeacherThreeButton = document.getElementById('reveal-teacher-3')
+
     const revealOneEl = document.getElementById('change-1')
+    const revealTwoEl = document.getElementById('change-2')
+    const revealThreeEl = document.getElementById('change-3')
 
     let teacherNum = 1
 
+    // verse 1
     verseOneAudioEl.addEventListener('play', function () {
       teacherImage.classList.add('hidden')
+      teacherIntroEl.classList.add('hidden')
+
       teacherVerseOneImage.classList.add('hidden')
+      teacherVerseTwoImage.classList.add('hidden')
+      teacherVerseThreeImage.classList.add('hidden')
+      revealOneEl.classList.add('hidden')
+      revealTwoEl.classList.add('hidden')
+      revealThreeEl.classList.add('hidden')
+      revealTeacherOneButton.classList.add('hidden')
+      revealTeacherTwoButton.classList.add('hidden')
+      revealTeacherThreeButton.classList.add('hidden')
       setTimeout(() => {
         teacherNum = getRandomNumber()
-        console.log(teacherNum)
-        console.log(teacherDiffrences[teacherNum])
         teacherVerseOneImage.src = './static/images/teacher/teacher-' + teacherNum + '.png'
         teacherVerseOneImage.classList.remove('hidden')
         revealTeacherOneButton.classList.remove('hidden')
@@ -186,42 +234,104 @@
 
     revealTeacherOneButton.addEventListener('click', () => {
       revealOneEl.classList.remove('hidden')
-      revealOneEl.textContent = teacherDiffrences[teacherNum]
+      revealOneEl.textContent = teacherDifferences[teacherNum]
+      revealTeacherOneButton.classList.add('hidden')
     })
 
-    const teacherDiffrences = [
-      'ring',
-      'nothing!',
-      'Jesus is written on her paper',
-      'hat',
-      'orange and blue sneakers',
-      'flower earring',
-      'pearl necklace',
-      'socks',
-      'bracelets',
-      'lipstick',
-      'barette',
-      'wig',
-      'flower design on skirt',
-      'shorts',
-      'belt',
-      'pink pleated skirt',
-      'jean skirt',
-      'orange skirt and belt',
-      'blue sneakers',
-      'purse',
-      'striped scarf',
-      'winter scarf',
-      'cowgirl hat',
-      'boots',
-      'freckles',
-      'heart sunglasses',
-      'pineapple sunglasses',
-      'dog on leash',
+    // verse 2
+
+    verseTwoAudioEl.addEventListener('play', function () {
+      teacherImage.classList.add('hidden')
+      teacherIntroEl.classList.add('hidden')
+
+      teacherVerseOneImage.classList.add('hidden')
+      teacherVerseTwoImage.classList.add('hidden')
+      teacherVerseThreeImage.classList.add('hidden')
+      revealOneEl.classList.add('hidden')
+      revealTwoEl.classList.add('hidden')
+      revealThreeEl.classList.add('hidden')
+      revealTeacherOneButton.classList.add('hidden')
+      revealTeacherTwoButton.classList.add('hidden')
+      revealTeacherThreeButton.classList.add('hidden')
+      setTimeout(() => {
+        teacherNum = getRandomNumber()
+        teacherVerseTwoImage.src = './static/images/teacher/teacher-' + teacherNum + '.png'
+        teacherVerseTwoImage.classList.remove('hidden')
+        revealTeacherTwoButton.classList.remove('hidden')
+      }, 3000)
+    })
+
+    revealTeacherTwoButton.addEventListener('click', () => {
+      revealTwoEl.classList.remove('hidden')
+      revealTwoEl.textContent = teacherDifferences[teacherNum]
+      revealTeacherTwoButton.classList.add('hidden')
+    })
+
+    // verse 3
+
+    verseThreeAudioEl.addEventListener('play', function () {
+      teacherImage.classList.add('hidden')
+      teacherIntroEl.classList.add('hidden')
+
+      teacherVerseOneImage.classList.add('hidden')
+      teacherVerseTwoImage.classList.add('hidden')
+      teacherVerseThreeImage.classList.add('hidden')
+      revealOneEl.classList.add('hidden')
+      revealTwoEl.classList.add('hidden')
+      revealThreeEl.classList.add('hidden')
+      revealTeacherOneButton.classList.add('hidden')
+      revealTeacherTwoButton.classList.add('hidden')
+      revealTeacherThreeButton.classList.add('hidden')
+      setTimeout(() => {
+        teacherNum = getRandomNumber()
+        teacherVerseThreeImage.src = './static/images/teacher/teacher-' + teacherNum + '.png'
+        teacherVerseThreeImage.classList.remove('hidden')
+        revealTeacherThreeButton.classList.remove('hidden')
+      }, 3000)
+    })
+
+    revealTeacherThreeButton.addEventListener('click', () => {
+      revealThreeEl.classList.remove('hidden')
+      revealThreeEl.textContent = teacherDifferences[teacherNum]
+      revealTeacherThreeButton.classList.add('hidden')
+    })
+
+    
+
+    
+    const teacherDifferences = [
+      'ring', // 0
+      'nothing!', // 1
+      'Jesus is written on her paper', // 2
+      'hat', // 3
+      'orange and blue sneakers', // 4      
+      'flower earring', // 5
+      'pearl necklace', // 6
+      'socks', // 7
+      'bracelets', // 8
+      'lipstick', // 9
+      'barette', // 10
+      'wig', // 11
+      'flower design on skirt', // 12
+      'shorts', // 13
+      'belt', // 14
+      'pink pleated skirt', // 15
+      'jean skirt', // 16
+      'orange skirt and belt', // 17
+      'blue sneakers', // 18
+      'purse', // 19
+      'dog on leash', // 20
+      'striped scarf', // 21
+      'winter scarf', // 22
+      'cowgirl hat', // 23
+      'boots', // 24
+      'freckles', // 25
+      'heart sunglasses', // 26
+      'pineapple sunglasses', // 27
     ]
 
     function getRandomNumber() {
-      const randomNum =  Math.floor(Math.random() * 28)
+      const randomNum =  Math.floor(Math.random() * teacherDifferences.length)
       console.log(randomNum)
       return randomNum
     }
