@@ -7,12 +7,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>I Am a Child of God</title>
+        <title>I Am a Child of God | Primary Song Activities</title>
         <meta name="description" content="Activity page for the Primary song I Am A Child of God">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/images/wonder/little-one.jpeg">
         <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/child-of-god.html">
-        <meta property="og:title" content="I Am a Child of God">
+        <meta property="og:title" content="I Am a Child of God  | Primary Song Activities">
         <meta property="og:description" content="Activity page for the Primary song I Am A Child of God">
         <meta property="og:type" content="website" />
         <link rel="icon" type="image/x-icon" href="favicon.ico?">
@@ -49,61 +49,61 @@
 
             #item1 {
                 background-color: rgb(26, 196, 63);
-                border: 10px solid #0066CC; 
+                border: 10px solid #0066CC;
             }
 
             #item1:active {
                 border-color: #003A75;
-                background-color: #08b0b6; 
+                background-color: #08b0b6;
             }
 
             #item2 {
                 background-color: rgb(190, 68, 238);
-                border: 10px solid #932dc2; 
+                border: 10px solid #932dc2;
             }
 
             #item2:active {
-                background-color: rgb(162, 26, 196); 
+                background-color: rgb(162, 26, 196);
                 border-color: #5c057e;
             }
 
             #item3 {
                 background-color: rgb(238, 159, 68);
-                border: 10px solid #150986; 
+                border: 10px solid #150986;
             }
 
             #item3:active {
-                background-color: rgb(196, 26, 69); 
+                background-color: rgb(196, 26, 69);
                 border-color: #470461;
             }
 
             #item4 {
                 background-color: rgb(238, 68, 153);
-                border: 10px solid #961741; 
+                border: 10px solid #961741;
             }
 
             #item4:active {
-                background-color: rgb(196, 26, 91); 
+                background-color: rgb(196, 26, 91);
                 border-color: #6e0c35;
             }
 
             #item5 {
                 background-color: rgb(21, 156, 219);
-                border: 10px solid #302dc2; 
+                border: 10px solid #302dc2;
             }
 
             #item5:active {
-                background-color: rgb(26, 196, 91); 
+                background-color: rgb(26, 196, 91);
                 border-color: #115d5f;
             }
 
             #item6 {
                 background-color: rgb(238, 94, 68);
-                border: 10px solid #f7ec5c; 
+                border: 10px solid #f7ec5c;
             }
 
             #item6:active {
-                background-color: rgb(196, 52, 26); 
+                background-color: rgb(196, 52, 26);
                 border-color: #d1d40c;
             }
 
@@ -131,31 +131,31 @@
                 <div id="item5" class="z-10 item flex items-center justify-center text-center  font-bold">Help</div>
                 <div id="item6" class="z-10 item flex items-center justify-center text-center  font-bold">Live</div>
             </div>
-            
+
 
         </main>
         <footer class="z-50 h-96 w-full bg-gradient-to-b from-green-500 to-purple-900 flex flex-col space-y-2 items-center justify-start pt-2 md:pt-4">
             <div class="flex items-center justify-center space-x-3 z-50">
-                <a 
-                href="https://ethyl2.github.io/primary-song-activities/" 
+                <a
+                href="https://ethyl2.github.io/primary-song-activities/"
                 title="back to home"
                 class="bg-white p-px rounded hover:bg-green-400"
             >
                 <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
                 <span class="sr-only">Back to Home</span>
             </a>
-                <a 
-                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-am-a-child-of-god" 
-                target="_blank" 
+                <a
+                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-am-a-child-of-god"
+                target="_blank"
                 title="sheet music"
                 class="bg-white p-px rounded hover:bg-yellow-400"
             >
                 <img src="./images/music-note-icon.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
                 <span class="sr-only">Link to Sheet Music</span>
             </a>
-            
-            <a  href="https://github.com/ethyl2/primary-song-activities" 
-                target="_blank" 
+
+            <a  href="https://github.com/ethyl2/primary-song-activities"
+                target="_blank"
                 rel="noopener noreferrer"
                 class="p-px rounded bg-white hover:bg-red-400"
                 title="link to GitHub repository"
@@ -173,7 +173,7 @@
                 <span class="sr-only">GitHub Repo</span>
             </a>
             </div>
-            
+
             <p class="z-50 text-center text-sm md:text-base">Copyright <span id="current-year">2022</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
         </footer>
         <script type="text/javascript">
@@ -191,7 +191,7 @@
             let counter5 = 0;
             let counter6 = 0;
 
-            // Listening for the mouse and touch events 
+            // Listening for the mouse and touch events
             Array.from(items).forEach( item => {
                 // mouse events
                 item.addEventListener("mousedown", pressingDown, {passive: true});
@@ -201,8 +201,8 @@
                 // touch events
                 item.addEventListener("touchstart", pressingDown, {passive: true});
                 item.addEventListener("touchend", notPressingDown, {passive: true});
-            })   
-            
+            })
+
             function pressingDown(e) {
                 e.target.classList.remove('z-10')
                 e.target.classList.add('z-30')
@@ -229,7 +229,7 @@
                             break
                         default:
                             console.error('unknown id')
-                    }  
+                    }
                 });
 
                 // e.preventDefault();
@@ -264,7 +264,7 @@
                 timerID = requestAnimationFrame(timer2)
                 counter2++
                 item2.style.setProperty("--scale-value", 1 + counter2 / 50)
-                
+
             }
 
             function timer3() {

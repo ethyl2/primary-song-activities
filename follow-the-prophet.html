@@ -7,12 +7,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Follow the Prophet</title>
+        <title>Follow the Prophet | Primary Song Activities</title>
         <meta name="description" content="Activity page for the Primary song Follow the Prophet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/images/prophet/daniel.jpeg">
         <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/follow-the-prophet.html">
-        <meta property="og:title" content="Follow the Prophet">
+        <meta property="og:title" content="Follow the Prophet | Primary Song Activities">
         <meta property="og:description" content="Activity page for the Primary song Follow the Prophet">
         <meta property="og:type" content="website" />
         <link rel="icon" type="image/x-icon" href="favicon.ico?">
@@ -51,26 +51,26 @@
         </main>
         <footer class="z-50 h-96 w-full bg-gradient-to-b from-yellow-500 to-red-900 flex flex-col space-y-2 items-center justify-start pt-2 md:pt-4">
             <div class="flex items-center justify-center space-x-3 z-50">
-                <a 
-                href="https://ethyl2.github.io/primary-song-activities/" 
+                <a
+                href="https://ethyl2.github.io/primary-song-activities/"
                 title="back to home"
                 class="bg-white p-px rounded hover:bg-green-400"
             >
                 <img src="./images/home.png" alt="music note" class="rounded w-7 h-7 md:w-10 md:h-10" />
                 <span class="sr-only">Back to Home</span>
             </a>
-                <a 
-                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/follow-the-prophet" 
-                target="_blank" 
+                <a
+                href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/follow-the-prophet"
+                target="_blank"
                 title="sheet music"
                 class="bg-white p-px rounded hover:bg-yellow-400"
             >
                 <img src="./images/music-note-icon.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
                 <span class="sr-only">Link to Sheet Music</span>
             </a>
-            
-            <a  href="https://github.com/ethyl2/primary-song-activities" 
-                target="_blank" 
+
+            <a  href="https://github.com/ethyl2/primary-song-activities"
+                target="_blank"
                 rel="noopener noreferrer"
                 class="p-px rounded bg-white hover:bg-red-400"
                 title="link to GitHub repository"
@@ -88,7 +88,7 @@
                 <span class="sr-only">GitHub Repo</span>
             </a>
             </div>
-            
+
             <p class="z-50 text-center text-sm md:text-base">Copyright <span id="current-year">2021</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
         </footer>
         <script type="text/javascript">
@@ -130,12 +130,12 @@
                 {solution: 'following his ways', imgUrl: 'adam-served-the-lord.jpeg'},
                 {solution: 'he helped things to grow', imgUrl: 'eden.jpeg'},
                 {solution: 'latter days', imgUrl: 'adam-served-the-lord.jpeg'},
-               
-                // Verse 2: Enoch 
+
+                // Verse 2: Enoch
                 {solution: 'Enoch', imgUrl: 'enoch-follow-the-prophet.jpeg'},
                 {solution: 'righteous', imgUrl: 'enoch-live-with-him.jpeg'},
                 {solution: 'live with him', imgUrl: 'enoch-live-with-him.jpeg'},
-               
+
                 // Verse 3: Noah
                 {solution: 'Noah', imgUrl: 'noah-repentance.jpeg'},
                 {solution: 'nobody heard', imgUrl: 'noah-repentance.jpeg'},
@@ -162,7 +162,7 @@
                 {solution: 'promised land', imgUrl: 'moses-part-water.jpeg'},
                 {solution: 'wilderness', imgUrl: 'moses-wilderness.jpeg'},
                 {solution: 'forty years', imgUrl: 'moses-wilderness2.jpeg'},
-               
+
 
                 // Verse 6: Samuel
                 {solution: 'Samuel', imgUrl: 'samuel-the-prophet.jpeg'},
@@ -198,7 +198,7 @@
                 // Chorus
                 {solution: 'Follow the prophet', imgUrl: 'president-nelson.jpeg'},
                 {solution: 'He knows the way', imgUrl: 'president-nelson.jpeg'},
-                {solution: 'heed the prophets', imgUrl: 'president-nelson.jpeg'}, 
+                {solution: 'heed the prophets', imgUrl: 'president-nelson.jpeg'},
             ]
             const wordContainerEl = document.getElementById('word-container')
             let newWord = ''
@@ -237,7 +237,7 @@
                 imgEl.alt = 'guess'
                 letters.forEach(letter => {
                     const letterEl = document.createElement('span')
-                    
+
                     if (letter !== ' ') {
                     letterEl.textContent = '__'
                     } else {
@@ -247,7 +247,7 @@
                     letterEl.setAttribute('data-letter', letter)
                     wordContainerEl.append(letterEl)
                 })
-                
+
             }
 
             // Handle alphabet grid click
@@ -275,7 +275,7 @@
                         Array.from(document.querySelectorAll('.rainbow-color'))[errorsCount].classList.add('opacity-0')
                         errorsCount++
                     }
-                } 
+                }
             }
 
             function getAllIndices(arr, val) {
@@ -283,7 +283,7 @@
                 for(i = 0; i < arr.length; i++) {
                     if (arr[i] === val) {
                         indexes.push(i)
-                    } 
+                    }
                 }
                 return indexes;
             }
