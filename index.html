@@ -23,7 +23,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="bg-black text-white min-h-screen" style="font-family: 'Mali', cursive;">
@@ -32,12 +32,12 @@
         <![endif]-->
         <header>
           <div class="bg-contain bg-top bg-no-repeat h-16 sm:h-36 lg:h-52" style="background-image: url('./images/primary-song-activities.png'); background-color: #FCB708;"></div>
-          <h1 class="py-8 text-center text-yellow-300 text-lg font-bold md:text-4xl">Interactive Activities to Learn Primary Songs & Hymns</h1>
+          <h1 class="px-4 py-8 text-center text-yellow-300 text-lg font-bold md:text-4xl">Interactive Activities to Learn Primary Songs & Hymns</h1>
         </header>
         <main class="min-h-screen">
           <nav
             id="song-nav"
-            class="text-center text-base md:text-lg flex flex-col md:w-1/2 mx-auto md:grid md:grid-cols-2"
+            class="text-center text-base md:text-lg flex flex-col mx-auto sm:grid sm:grid-cols-2 px-4 lg:grid-cols-3 lg:container"
           >
           </nav>
           <a href="./program-2023.html"
@@ -111,9 +111,9 @@
         </footer>
         <script>
           const songs = [
-            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/bells.html", name: 'Christmas Bells', newTab: true },
-            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/picture-a-christmas.html", name: 'Picture a Christmas', newTab: true},
-            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/qa.html", name: 'He Sent His Son', newTab: true},
+            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/bells.html", name: 'Christmas Bells'},
+            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/picture-a-christmas.html", name: 'Picture a Christmas'},
+            { siteLink: "https://ethyl2.github.io/primary-christmas-2021/qa.html", name: 'He Sent His Son'},
             { siteLink: "./do-as-im-doing.html", name:"Do As I'm Doing"},
             { siteLink: "./smile.html", name:'Smiles'},
             { siteLink: "./snowman.html", name:'Once There Was a Snowman'},
@@ -134,6 +134,7 @@
             { siteLink: "./love-one-another.html", name: 'Love One Another'},
             { siteLink: "./redeemer-of-israel.html", name: 'Redeemer of Israel'},
             { siteLink: "./commandments.html", name: 'Keep the Commandments' },
+            { siteLink: "./savior-beside.html", name: 'If the Savior Stood Beside Me' },
           ]
           songs.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
@@ -145,6 +146,16 @@
             'yellow-700',
             'red-700',
             'pink-700',
+            'orange-700',
+            'amber-700',
+            'lime-700',
+            'emerald-700',
+            'teal-700',
+            'cyan-700',
+            'sky-700',
+            'violet-700',
+            'fuchsia-700',
+            'rose-700',
           ]
           let bgColorIndex = 0
 
@@ -152,12 +163,9 @@
           songs.forEach(song => {
             const songLink = document.createElement('a')
             songLink.href = song.siteLink
-            if (song.newTab) {
-              songLink.rel = 'nofollow noreferrer noopener'
-              songLink.target = '_blank'
-            }
+            songLink.target = '_blank'
             songLink.textContent = song.name
-            songLink.classList.add('px-4', 'py-2', 'rounded')
+            songLink.classList.add('px-4', 'py-2', 'rounded', 'bg-gray-900', 'm-1')
             songLink.classList.add(`hover:bg-${bgColors[bgColorIndex]}`)
             bgColorIndex = (bgColorIndex + 1) % bgColors.length
             songNav.append(songLink)
