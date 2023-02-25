@@ -15,11 +15,40 @@ const lyricClips = [
       'He made the lame to walk, the blind to see',
     ],
   },
+  { audioFile: './static/audio/Jesus_walked_upon_t_435.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'Jesus walked upon the water',
+      'He stilled the storm and calmed the angry sea',
+    ],
+  },
+  { audioFile: './static/audio/With_His_hands_He_h_642.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'With His hands He healed the leper',
+      'He made the lame to walk, the blind to see',
+    ],
+  },
   {
     audioFile: './static/audio/He_fed_a_thousand_pe_900.mp3',
     song: 'The Miracle',
     lyrics: [
       'He fed a thousand people with a loaf or two of bread',
+      "And when the ruler's daughter died,",
+      'He raised her from the dead',
+    ]
+  },
+  {
+    audioFile: './static/audio/He_fed_a_thousand_pe_882.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'He fed a thousand people with a loaf or two of bread',
+    ]
+  },
+  {
+    audioFile: './static/audio/And_when_the_rulers_730.mp3',
+    song: 'The Miracle',
+    lyrics: [
       "And when the ruler's daughter died,",
       'He raised her from the dead',
     ]
@@ -36,11 +65,57 @@ const lyricClips = [
     ]
   },
   {
+    audioFile: './static/audio/Of_all_His_miracles_123.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'Of all His miracles the most incredible must be',
+      'The miracle that rescues me',
+    ]
+  },
+  {
+    audioFile: './static/audio/Jesus_is_a_God_of_m_591.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'Jesus is a God of miracles',
+      'Nothing is at all impossible to Him',
+    ]
+  },
+  {
+    audioFile: './static/audio/Jesus_is_a_God_of_m_208.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'Jesus is a God of miracles',
+    ]
+  },
+  {
+    audioFile: './static/audio/Nothing_is_at_all_im_614.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'Nothing is at all impossible to Him',
+    ]
+  },
+  {
     audioFile: './static/audio/Jesus_bled_and_died__462.mp3',
     song: 'The Miracle',
     lyrics: [
       'Jesus bled and died to save me',
       'A price that I could never pay alone',
+      'When He rose again, He gave me',
+      'The greatest gift the world has ever known',
+    ]
+  },
+  {
+    audioFile: './static/audio/Jesus_bled_and_died_249.mp3',
+    song: 'The Miracle',
+    lyrics: [
+      'Jesus bled and died to save me',
+      'A price that I could never pay alone',
+    ]
+  },
+  {
+    audioFile: './static/audio/When_He_rose_again__331.mp3',
+    song: 'The Miracle',
+    lyrics: [
       'When He rose again, He gave me',
       'The greatest gift the world has ever known',
     ]
@@ -95,11 +170,34 @@ const lyricClips = [
     ]
   },
   {
+    audioFile: './static/audio/The_fight_was_won_by_864.mp3',
+    song: 'Gethsemane',
+    lyrics: [
+      'The fight was won by Jesus!',
+    ]
+  },
+  {
     audioFile: './static/audio/Geth_said_man_ee_Je_215.mp3',
     song: 'Gethsemane',
     lyrics: [
       'Gethsemane. Jesus loves me,',
       'So He gives His gift to me from Gethsemane.',
+    ]
+  },
+  {
+    audioFile: './static/audio/He_felt_all_that_was_796.mp3',
+    song: 'Gethsemane',
+    lyrics: [
+      'He felt all that was sad, wicked, or bad,',
+      'All the pain we would ever know.',
+    ]
+  },
+  {
+    audioFile: './static/audio/While_His_friends_w_201.mp3',
+    song: 'Gethsemane',
+    lyrics: [
+      'While His friends were asleep, He fought to keep',
+      'His promise made long ago.'
     ]
   },
 
@@ -232,6 +330,200 @@ const lyricClips = [
     lyrics: [
       'He dies a sacrifice for sin,',
       'That man may live and glory win.',
+    ]
+  },
+
+  // Tell Me the Stories of Jesus
+  {
+    audioFile: './static/audio/Things_I_would_ask_h_811.mp3',
+    song: 'Tell Me the Stories of Jesus',
+    lyrics: [
+      'Things I would ask him to tell me if he were here.',
+      'Scenes by the wayside, tales of the sea.',
+    ],
+  },
+  {
+    audioFile: './static/audio/Oh_let_me_hear_how__249.mp3',
+    song: 'Tell Me the Stories of Jesus',
+    lyrics: [
+      'Oh, let me hear how the children stood round his knee.',
+      'I shall imagine his blessings resting on me;',
+    ]
+  },
+  {
+    audioFile: './static/audio/Words_full_of_kindne_683.mp3',
+    song: 'Tell Me the Stories of Jesus',
+    lyrics: [
+      'Words full of kindness, deeds full of grace,',
+      'All in the love-light of Jesus\' face.',
+    ]
+  },
+  {
+    audioFile: './static/audio/Tell_me_in_accents__244.mp3',
+    song: 'Tell Me the Stories of Jesus',
+    lyrics: [
+      'Tell me, in accents of wonder, how rolled the sea,',
+      'Tossing the boat in a tempest on Galilee!',
+    ]
+  },
+  {
+    audioFile: './static/audio/And_how_the_Master__135.mp3',
+    song: 'Tell Me the Stories of Jesus',
+    lyrics: [
+      'And how the Master, ready and kind,',
+      'Chided the billows and hushed the wind.',
+    ]
+  },
+
+  // My Heavenly Father Loves Me
+  {
+    audioFile: './static/audio/Whenever_I_hear_the__277.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'Whenever I hear the song of a bird',
+      'Or look at the blue, blue sky,',
+    ],
+  },
+  {
+    audioFile: './static/audio/Whenever_I_feel_the__531.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'Whenever I feel the rain on my face',
+      'Or the wind as it rushes by,',
+    ],
+  },
+  {
+    audioFile: './static/audio/Whenever_I_touch_a_v_217.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'Whenever I touch a velvet rose',
+      'Or walk by our lilac tree,',
+    ]
+  },
+  {
+    audioFile: './static/audio/Tell_me_in_accents__244.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'Tell me, in accents of wonder, how rolled the sea,',
+      'Tossing the boat in a tempest on Galilee!',
+    ]
+  },
+  {
+    audioFile: './static/audio/Im_glad_that_I_live_761.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'I\'m glad that I live in this beautiful world',
+      'Heav\'nly Father created for me.',
+    ]
+  },
+  {
+    audioFile: './static/audio/He_gave_me_my_eyes_t_940.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'He gave me my eyes that I might see',
+      'The color of butterfly wings.',
+    ],
+  },
+  {
+    audioFile: './static/audio/He_gave_me_my_ears_t_162.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'He gave me my ears that I might hear',
+      'The magical sound of things.',
+    ],
+  },
+  {
+    audioFile: './static/audio/He_gave_me_my_life__788.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'He gave me my life, my mind, my heart:',
+      'I thank him rev\'rently',
+    ]
+  },
+  {
+    audioFile: './static/audio/For_all_his_creation_620.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'For all his creations, of which I\'m a part.',
+      'Yes, I know Heav\'nly Father loves me.',
+    ]
+  },
+  {
+    audioFile: './static/audio/I_thank_hhim_rev_ren_790.mp3',
+    song: 'My Heavenly Father Loves Me',
+    lyrics: [
+      'I thank him rev\'rently',
+      'For all his creations, of which I\'m a part.',
+    ]
+  },
+
+  // I'm Trying to Be Like Jesus
+  {
+    audioFile: './static/audio/Im_following_in_his_195.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'I\'m following in his ways.',
+      'I\'m trying to love as he did, in all that I do and say.',
+    ]
+  },
+  {
+    audioFile: './static/audio/At_times_I_am_tempte_624.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'At times I am tempted to make a wrong choice,',
+      'But I try to listen as the still small voice whispers,',
+    ]
+  },
+  {
+    audioFile: './static/audio/But_I_try_to_liste_347.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'But I try to listen as the still small voice whispers,',
+      '"Love one another as Jesus loves you.',
+    ]
+  },
+  {
+    audioFile: './static/audio/Try_to_show_kindness_720.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'Try to show kindness in all that you do.',
+    ]
+  },
+  {
+    audioFile: './static/audio/Be_gentle_and_loving_401.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'Be gentle and loving in deed and in thought,',
+      'For these are the things Jesus taught."',
+    ]
+  },
+  {
+    audioFile: './static/audio/Im_trying_to_love_m_362.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'I\'m trying to love my neighbor;',
+    ]
+  },
+  {
+    audioFile: './static/audio/Im_learning_to_serv_916.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'I\'m learning to serve my friends.',
+    ]
+  },
+  {
+    audioFile: './static/audio/I_watch_for_the_day__773.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'I watch for the day of gladness when Jesus will come again.',
+    ]
+  },
+  {
+    audioFile: './static/audio/I_try_to_remember_th_978.mp3',
+    song: 'I\'m Trying to Be Like Jesus',
+    lyrics: [
+      'I try to remember the lessons he taught.',
+      'Then the Holy Spirit enters into my thoughts',
     ]
   },
 ]
