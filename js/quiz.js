@@ -73,7 +73,7 @@ const questions = [
     referenceUrl: 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=46-47#p46'
   },
   {
-    question: `After Jesus was baptized by John the Baptist, which animal come to show that the Holy Ghost was there?`,
+    question: `After Jesus was baptized by John the Baptist, which animal came to show that the Holy Ghost was there?`,
     answers: [
       { text: "a dove", correct: true },
       { text: "a deer", correct: false },
@@ -83,6 +83,30 @@ const questions = [
     image: './static/images/stories-of-jesus/jesus-baptism.jpeg',
     referenceText: 'Matthew 3:16',
     referenceUrl: 'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/3?lang=eng&id=16#p16'
+  },
+  {
+    question: `When Jesus was teaching a large crowd, what food did he bless and break into pieces, that ended up being more than enough food for everyone?`,
+    answers: [
+      { text: "figs and grapes", correct: false },
+      { text: "loaves of bread and grapes", correct: false },
+      { text: "honeycomb and fish", correct: false },
+      { text: "loaves of bread and fish", correct: true },
+    ],
+    image: './static/images/stories-of-jesus/loaves-and-fishes.jpeg',
+    referenceText: 'Matthew 14:13-21',
+    referenceUrl: 'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng&id=13-21#p13'
+  },
+  {
+    question: `Who in Jairus's family did Jesus raise from the dead?`,
+    answers: [
+      { text: "his mother", correct: false },
+      { text: "his daughter", correct: true },
+      { text: "his grandma", correct: false },
+      { text: "his aunt", correct: false },
+    ],
+    image: './static/images/stories-of-jesus/jesus-jairus-daughter.jpeg',
+    referenceText: 'Mark 5:22-43',
+    referenceUrl: 'https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng&id=22-43#p22'
   },
 ]
 
