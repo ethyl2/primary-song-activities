@@ -65,7 +65,7 @@
             NO
           </button>
         </div>
-        <div id="answer1" class="opacity-0 transition-opacity duration-700 ease-in-out">
+        <div id="answer1" class="hidden opacity-0 transition-opacity duration-700 ease-in-out">
           <h4 class="text-lg md:text-2xl font-bold pb-2 italic">That's right!</h4>
           <p class="text-base md:text-lg">Yes, when the third day came,</p>
           <p class="text-base md:text-lg"> He wakened and he left the tomb;</p>
@@ -89,7 +89,7 @@
             NO
           </button>
         </div>
-        <div id="answer2" class="opacity-0 transition-opacity duration-700 ease-in-out">
+        <div id="answer2" class="hidden opacity-0 transition-opacity duration-700 ease-in-out">
           <h4 class="text-lg md:text-2xl font-bold pb-2 italic">That's right!</h4>
           <p class="text-base md:text-lg">Yes, people touched his feet,</p>
           <p class="text-base md:text-lg">And of the fish and honeycomb</p>
@@ -119,7 +119,7 @@
             NO
           </button>
         </div>
-        <div id="answer3" class="opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center">
+        <div id="answer3" class="hidden opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center">
           <h4 class="text-lg md:text-2xl font-bold pb-2 italic">That's right!</h4>
           <p class="text-base md:text-lg">Oh yes! And so shall I!</p>
           <img class="w-11/12 mt-4 rounded shadow mx-auto md:w-1/2" src="./images/live-again/second-coming.jpeg"
@@ -190,28 +190,6 @@
           href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
     </footer>
   </body>
-  <script>
-    const currentYearSpan = document.getElementById('current-year')
-    currentYearSpan.textContent = new Date().getFullYear()
-    const button1 = document.getElementById('button1')
-    const answer1 = document.getElementById('answer1')
-    button1.addEventListener('click', () => {
-      answer1.classList.remove('opacity-0')
-      answer1.classList.add('opacity-100')
-    })
-
-    const button2 = document.getElementById('button2')
-    const answer2 = document.getElementById('answer2')
-    button2.addEventListener('click', () => {
-      answer2.classList.remove('opacity-0')
-      answer2.classList.add('opacity-100')
-    })
-
-    const button3= document.getElementById('button3')
-    const answer3 = document.getElementById('answer3')
-    button3.addEventListener('click', () => {
-      answer3.classList.remove('opacity-0')
-      answer3.classList.add('opacity-100')
-    })
-  </script>
+  <script src="./js/live-again.js"></script>
+  <script src="./js/footer.js" async defer></script>
 </html>
