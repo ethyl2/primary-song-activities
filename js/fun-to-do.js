@@ -179,9 +179,83 @@ const activities = [
         'name': 'Swimming around',
         'slug': 'swimming-around'
     },
+    {
+        'name': 'Planting a seed',
+        'slug': 'planting-a-seed'
+    },
+    {
+        'name': 'Flying a plane',
+        'slug': 'flying-a-plane'
+    },
+    {
+        'name': 'Folding some paper',
+        'slug': 'folding-some-paper'
+    },
+    {
+        'name': 'Picking some fruit',
+        'slug': 'picking-some-fruit'
+    },
+    {
+        'name': 'Roasting a marshmallow',
+        'slug': 'roasting-a-marshmallow'
+    },
+    {
+        'name': 'Hunting for eggs',
+        'slug': 'hunting-for-eggs'
+    },
+    {
+        'name': 'Giving a hug',
+        'slug': 'giving-a-hug'
+    },
+    {
+        'name': 'Skating around',
+        'slug': 'skating-around'
+    },
+    {
+        'name': 'Sending a letter',
+        'slug': 'sending-a-letter'
+    },
+    {
+        'name': 'Slurping some jello',
+        'slug': 'slurping-some-jello'
+    },
+    {
+        'name': 'Exploring a cave',
+        'slug': 'exploring-a-cave'
+    },
+    {
+        'name': 'Blowing a pinwheel',
+        'slug': 'blowing-a-pinwheel'
+    },
+    {
+        'name': 'Riding a horse',
+        'slug': 'riding-a-horse'
+    },
+    {
+        'name': 'Jumping in leaves',
+        'slug': 'jumping-in-leaves'
+    },
+    {
+        'name': 'Playing with slime',
+        'slug': 'playing-with-slime'
+    },
+    {
+        'name': 'Carving a pumpkin',
+        'slug': 'carving-a-pumpkin'
+    },
+    {
+        'name': 'Wrapping a gift',
+        'slug': 'wrapping-a-gift'
+    },
+    {
+        'name': 'Holding a baby',
+        'slug': 'holding-a-baby'
+    },
   ]
   const buttonSection = document.getElementById('button-section')
   const currentActivityTextEls = document.querySelectorAll('.current-activity')
+  const currentActivityMainImage = document.getElementById('current-activity-main-img')
+  const randomPickButton = document.getElementById('random-pick')
 
   const shuffledActivities = activities.sort((a, b) => 0.5 - Math.random())
 
@@ -200,7 +274,16 @@ const activities = [
   singingButton.focus()
 
   function handleClick(event) {
+    // Change the current activity image and text
+    const newBackgroundImage = event.target.style['background-image']
+    currentActivityMainImage.style['background-image'] = newBackgroundImage
     currentActivityTextEls.forEach(el => {
       el.textContent = event.target.getAttribute('data-activity')
     })
   }
+
+randomPickButton.addEventListener('click', () => {
+    const randomActivity = activities[Math.floor(Math.random() * activities.length)] 
+    const randomActivityButton = document.querySelector(`button[data-activity="${randomActivity.name}"]`)   
+    randomActivityButton.click()
+})
