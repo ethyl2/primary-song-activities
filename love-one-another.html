@@ -99,7 +99,10 @@
         class="text-bold text-xl md:text-5xl text-center font-bold pb-2 md:pb-4 text-white cursor-pointer shake">
         As I Have Loved You...</h1>
     </header>
-    <img src="./images/love-one-another/love-one-anther-og.png" alt="love one another" class="block mx-auto" />
+    <img src="./images/love-one-another/love-one-anther-og.png" 
+      alt="love one another" 
+      class="block mx-auto max-w-xs sm:max-w-sm md:max-w-3xl" 
+    />
 
     <main
       class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center space-y-6 rounded-lg w-11/12 md:w-5/6 md:my-12 md:space-y-10 xl:w-5/6">
@@ -107,7 +110,7 @@
       <p>Find the Bible and click on it to see where the words of this song come from!</p>
 
       <div id="text-box"
-        class="leading-loose font-bold text-white bg-pink-600 p-4 rounded shadow-lg text-base md:text-lg">
+        class="leading-loose font-bold text-white bg-pink-600 p-4 rounded shadow-lg text-sm md:text-lg">
         <p class="leading-loose">As I have loved you,
 
         <p class="leading-loose">Love one another</p>
@@ -237,51 +240,11 @@
         </a>
       </div>
 
-      <p class="text-center text-sm text-black md:text-base">Copyright <span id="current-year">2022</span>
+      <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2022</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
     </footer>
   </body>
-  <script>
-    const currentYearSpan = document.getElementById('current-year')
-    currentYearSpan.textContent = new Date().getFullYear()
-
-    const bibleEl = document.getElementById('bible')
-    const scriptureEls = document.getElementsByClassName('scripture')
-    bibleEl.addEventListener('click', toggleScripture)
-    bibleEl.addEventListener('keyup', (e) => {
-       if (e.keyCode === 13) {
-        toggleScripture()
-       }
-    })
-
-    function toggleScripture() {
-        Array.from(scriptureEls).forEach(el => {
-            el.classList.toggle('hidden')
-        })
-    }
-    // Handle accessibility
-    var enableAnimations = false;
-    var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
-
-    // Handle animation accessibility preferences
-    function setAccessibilityState() {
-      if (reduceMotionQuery.matches) {
-        enableAnimations = false;
-      } else {
-        enableAnimations = true;
-      }
-    }
-    setAccessibilityState();
-
-    reduceMotionQuery.addListener(setAccessibilityState);
-
-
-    function setup() {
-      if (!enableAnimations) {
-        bibleEl.classList.remove('grow')
-      }
-    }
-    setup();
-  </script>
+  <script src="./js/love-one-another.js" async defer></script>
+  <script src="./js/footer.js" async defer></script>
 </html>
