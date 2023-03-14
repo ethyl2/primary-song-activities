@@ -149,6 +149,13 @@
     <main
       class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center md:mt-16"
     >
+
+    <label class="relative block text-base cursor-pointer select-none pl-9 checkbox-container pb-4"
+      >Sound Effects On
+      <input type="checkbox" name="allow-audio" id="allow-audio" checked/>
+      
+    </label>
+
     <div class="w-full h-16 mb-0 bg-repeat-x shadow-lg" style="background: url('./images/program-2022/dots2.png');"></div>
     <div
       class="grid grid-cols-2 gap-3 container shadow-lg mx-auto pb-8 md:pb-24 sm:grid-cols-3 sm:gap-8 md:px-24 min-h-screen w-11/12 md:w-5/6 md:my-12 xl:w-5/6"
@@ -303,53 +310,7 @@
 
     </footer>
   </body>
-  <script>
-    const songLinks = {
-      'loa': './love-one-another.html',
-      'iltstt': './temple.html',
-      'ctstl': './choose-to-serve-the-lord.html',
-      'iws': './i-will-shine.html',
-      'acp': 'https://www.churchofjesuschrist.org/music/library/childrens-songbook/a-childs-prayer?lang=eng',
-      'hshs': 'https://ethyl2.github.io/primary-christmas-2021/qa.html',
-      'ktc': './commandments.html',
-      'iwbv': './valiant.html',
-      'roi': './redeemer-of-israel.html'
-    }
-
-    const pocketEls = document.getElementsByClassName('pocket')
-    Array.from(pocketEls).forEach(pocket => {
-      pocket.addEventListener('click', e =>  {
-        const currentPocket = e.target
-        const animal = currentPocket.previousElementSibling
-        if (animal.classList.contains('animal-down')) {
-          const audio = new Audio(`./audio/up.wav`)
-          audio.play()
-          animal.classList.remove('animal-down')
-          animal.classList.add('animal-up')
-          animal.href =  songLinks[currentPocket.id]
-
-          setTimeout(() => {
-            let windowReference = window.open()
-            getUrl(currentPocket.id).then(function(url) {
-              windowReference.target = "_blank"
-              windowReference.location = url
-            })
-          }, 1600)
-        } else {
-          const audio = new Audio(`./audio/down.wav`)
-          audio.play()
-          animal.classList.remove('animal-up')
-          animal.classList.add('animal-down')
-        }
-      })
-    })
-
-    async function getUrl(key) {
-      return songLinks[key]
-    }
-
-    const currentYearSpan = document.getElementById('current-year')
-    currentYearSpan.textContent = new Date().getFullYear()
-  </script>
+  <script src="./js/program-2022.js" async defer></script>
+  <script src="./js/footer.js" async defer></script>
 
 </html>
