@@ -172,6 +172,3 @@ items.forEach(item => {
   audioSrcSection.append(audioLink)
 })
 footer.prepend(audioSrcSection)
-
-const currentYearSpan = document.getElementById('current-year')
-currentYearSpan.textContent = new Date().getFullYear()
