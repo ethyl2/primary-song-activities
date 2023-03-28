@@ -33,7 +33,7 @@
             <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">Smiles</h1>
             <h2 class="text-semibold text-base md:text-2xl text-center px-2">Click on the face to change the frown to a smile, and the smile to a frown.</h2>
         </header>
-        <main class="container flex flex-col items-center justify-center space-y-3 py-8">
+        <main class="container flex flex-col items-center justify-center space-y-3 py-8 mx-auto">
             <audio controls>
                 <source src="./audio/smiles.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
@@ -158,8 +158,7 @@
             smileEl.addEventListener('click', () => {
                 smileEl.classList.toggle('rotate-180')
             })
-            const currentYearSpan = document.getElementById('current-year')
-            currentYearSpan.textContent = new Date().getFullYear()
         </script>
+        <script src="./js/footer.js" async defer></script>
     </body>
 </html>

@@ -32,7 +32,17 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
     <style>
-
+      .glow {
+          color: #444;
+          text-shadow: 
+              1px 0px 1px #93e4f4, 0px 1px 1px #18cbd4, 
+              2px 1px 1px #93e4f4, 1px 2px 1px #18cbd4,
+              3px 2px 1px #93e4f4, 2px 3px 1px #18cbd4,
+              4px 3px 1px #93e4f4, 3px 4px 1px #18cbd4,
+              5px 4px 1px #93e4f4, 4px 5px 1px #18cbd4,
+              6px 5px 1px #93e4f4, 5px 6px 1px #18cbd4,
+              7px 6px 1px #93e4f4;
+          }
       .grow:hover {
         transform: scale(1.05);
       }
@@ -43,8 +53,8 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 md:py-10 bg-green-100" style="font-family: 'Tangerine', cursive;">
-      <h1 id="title" class="text-bold text-4xl md:text-7xl text-center font-bold pb-2 md:pb-4">
+    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 md:py-10 bg-white" style="font-family: 'Tangerine', cursive; background: #d0eff5;">
+      <h1 id="title" class="text-bold text-4xl md:text-7xl text-center font-bold pb-2 md:pb-4 glow">
         Souviens-toi (Remember)</h1>
     </header>
 
@@ -52,8 +62,8 @@
     <main
       class="relative min-h-screen flex flex-col mx-auto justify-start mt-8 pb-8 mb-8 text-center items-center space-y-6 rounded-lg md:my-12 md:space-y-10"
     >
-      <section id="largo"
-        class="w-11/12 text-center mx-auto bg-white bg-opacity-60 rounded p-4 flex flex-col items-center justify-center md:p-6">
+      <section
+        class="w-11/12 text-center mx-auto bg-white bg-opacity-70 rounded p-4 flex flex-col items-center justify-center md:p-6">
         <p class="font-medium text-base md:text-lg pb-2">A very special hymn because of 2 reasons:</p>
         <ul class="list-disc list-inside text-left text-sm md:text-base">
           <li>The melody is Largo from Dvorak's New World Symphony</li>
@@ -61,7 +71,7 @@
         </ul>
 
         <a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/premortality?lang=eng" rel="nofollow noreferrer noopener" target="_blank">
-          <img src="./images/souviens-toi/earth_from_space.jpeg" alt="earth from space" class="shadow-lg rounded my-4" />
+          <img src="./images/souviens-toi/earth_from_space.jpeg" alt="earth from space" class="shadow-lg rounded-3xl my-4" />
         </a>
 
 
@@ -138,7 +148,7 @@
           <img
             src="./images/souviens-toi/space.png"
             alt="space"
-            class="rounded my-4"
+            class="rounded my-4 rounded-3xl"
             style="-webkit-mask-image: linear-gradient(black, transparent);
                     mask-image: linear-gradient(black, transparent);"
           />
@@ -179,7 +189,7 @@
 
             <p>Do lamps beckon travelers home to that forgotten world?</p>
           </div>
-          <img src="./images/souviens-toi/premortal-council.jpeg" alt="premortal council" class="rounded md:w-1/4 mx-auto my-4" style="-webkit-mask-image: linear-gradient(black, transparent);
+          <img src="./images/souviens-toi/premortal-council.jpeg" alt="premortal council" class="rounded md:w-3/4 mx-auto my-4" style="-webkit-mask-image: linear-gradient(black, transparent);
                     mask-image: linear-gradient(black, transparent);"/>
           <div class="leading-loose pt-4">
             <p>Now do you remember, child, when we lived as friends?</p>
@@ -198,7 +208,7 @@
             <p>What do you remember, child?</p>
 
             <p>Always remember Him.</p>
-            <img src="./images/live-again/second-coming2.jpeg" alt="Jesus" class="rounded shadow mt-4 w-11/12 mx-auto md:w-1/2" style="-webkit-mask-image: linear-gradient(black, transparent);
+            <img src="./images/live-again/second-coming2.jpeg" alt="Jesus" class="rounded shadow mt-4 w-11/12 mx-auto md:w-3/4" style="-webkit-mask-image: linear-gradient(black, transparent);
                     mask-image: linear-gradient(black, transparent);"/>
           </div>
         </div>
@@ -208,64 +218,74 @@
             target="blank" rel="noopener nofollow noreferrer">here</a>.
         </p>
 
-        <img src="./images/souviens-toi/pre_existence_people_white_robes.jpeg" alt="pre-existence people" class="rounded md:w-1/3 my-4 mx-auto" style="-webkit-mask-image: linear-gradient(black, transparent);
+        <div class="bg-white bg-opacity-50 rounded-3xl md:w-1/3 my-4 mx-auto">
+          <img src="./images/souviens-toi/pre_existence_people_white_robes.jpeg" alt="pre-existence people" class="rounded-3xl w-full" style="-webkit-mask-image: linear-gradient(black, transparent);
                     mask-image: linear-gradient(black, transparent);"/>
+        </div>
 
         <p class="py-4">And finally, here is a video in French and one in English:</p>
         <div class="flex flex-col md:space-y-4 2xl:flex-row 2xl:space-x-2 2xl:space-y-0">
-          <div class="my-4 md:hidden">
+          <div class="shadow my-4 md:hidden">
             <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/XlCqTrCuaUE"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              class="rounded"
+              class="rounded shadow"
               allowfullscreen></iframe>
           </div>
-          <div class="hidden md:block rounded">
+          <div class="shadow hidden md:block rounded">
             <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/XlCqTrCuaUE"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              class="rounded"></iframe>
+              class="rounded shadow"></iframe>
           </div>
-          <div class="my-4 md:hidden">
+          <div class="shadow my-4 md:hidden">
             <iframe id="video-iframe" width="300" height="200" src="https://www.youtube.com/embed/L456ehZe6dM"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              class="rounded"
+              class="rounded shadow"
               allowfullscreen></iframe>
           </div>
-          <div class="hidden md:block">
+          <div class="shadow hidden md:block">
             <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/L456ehZe6dM"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              class="rounded"
+              class="rounded shadow"
               allowfullscreen></iframe>
           </div>
         </div>
       </section>
     </main>
+    <footer
+      class="shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-gray-700 md:pt-4">
+      <div class="flex items-center justify-center space-x-3">
+        <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
+          class="bg-white p-px rounded shadow hover:bg-green-400 shake">
+          <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+          <span class="sr-only">Back to Home</span>
+        </a>
 
+        <a href="https://github.com/ethyl2/primary-song-activities" target="_blank" rel="noopener noreferrer"
+          class="p-px rounded bg-white shadow hover:bg-red-400 shake" title="link to GitHub repository">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            class="w-7 h-7 md:w-10 md:h-10" focusable="false" width="1.73em" height="1.5em" style="
+                                          -ms-transform: rotate(360deg);
+                                          -webkit-transform: rotate(360deg);
+                                          transform: rotate(360deg);
+                                      " preserveAspectRatio="xMidYMid meet" viewBox="0 0 1227.825 1000">
+            <path
+              d="M1078.94-.985c-33.192-.491-110.295 10.777-239.027 96.936c-70.161-17.535-144.812-26.188-219.591-26.188c-82.278 0-165.425 10.448-242.965 31.719C192.534-24.605 110.955 1.234 110.955 1.234c-53.258 133.183-20.347 231.788-10.344 256.277C38.014 325.069-.2 411.338-.2 517.07c0 79.822 9.085 151.416 31.281 213.653c1.231 4.803.832 3.732 2.906 7.844c4.89 12.884 10.327 25.39 16.438 37.468c2.094 4.346 4 7.563 4 7.563c62.395 116.307 185.396 191.438 404.244 215.028l330.995.375c233.392-23.144 345.386-98.499 396.994-215.591l3.281-7.625c4.89-11.828 9.153-24.135 20.813-65.562c11.659-41.427 16.875-113.172 16.875-193.185c0-114.755-43.1-206.577-113.092-276.434c12.231-39.48 28.57-127.158-16.313-239.402c0 0-6.293-1.995-19.281-2.188zM818.1 420.133c53.893-.117 100.057 9.136 134.717 45.499v.031c43.369 45.541 68.749 100.525 68.749 159.778c0 276.658-177.932 284.183-397.4 284.183c-219.506 0-397.4-38.336-397.4-284.183c0-58.861 25.009-113.516 67.843-158.872c71.451-75.59 192.365-35.562 329.558-35.562c70.423-.011 136.564-10.75 193.935-10.875zm-408.807 81.468c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936zm443.649 0c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936z"
+              fill="black" />
+          </svg>
+          <span class="sr-only">GitHub Repo</span>
+        </a>
+      </div>
+
+      <p class="text-xs italic text-yellow-200"><span id="visits"></span> <span id="visitors"></span></p>
+      <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2023</span>
+        <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
+      </p>
+    </footer>
   </body>
-  <script>
-    const currentYearSpan = document.getElementById('current-year')
-    currentYearSpan.textContent = new Date().getFullYear()
-
-    const prophetImage = document.getElementById('prophet')
-    const blessingsMailEl = document.getElementById('blessings-mail')
-    const blessingsSection = document.getElementById('blessings')
-    prophetImage.addEventListener('click', () => {
-      blessingsMailEl.classList.remove('hidden')
-      blessingsMailEl.classList.add('flier')
-    })
-
-    let counter = 0
-    blessingsMailEl.addEventListener('click', () => {
-      if (counter < blessingsSection.children.length) {
-        blessingsSection.classList.remove('hidden')
-        blessingsSection.children[counter].classList.remove('hidden')
-        counter++
-      }
-    })
-  </script>
-
+  <script src="./js/footer.js" async defer></script>
 </html>

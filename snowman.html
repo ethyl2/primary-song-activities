@@ -24,13 +24,26 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            .glow {
+                color: #444;
+                text-shadow: 
+                    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+                    2px 1px 1px #ccc, 1px 2px 1px #eee,
+                    3px 2px 1px #ccc, 2px 3px 1px #eee,
+                    4px 3px 1px #ccc, 3px 4px 1px #eee,
+                    5px 4px 1px #ccc, 4px 5px 1px #eee,
+                    6px 5px 1px #ccc, 5px 6px 1px #eee,
+                    7px 6px 1px #ccc;
+            }
+        </style>
     </head>
     <body class="bg-black text-white" style="font-family: 'Mali', cursive;">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header class="bg-blue-600 py-4 md:py-12">
-            <h1 class="text-bold text-lg md:text-3xl text-center font-bold pb-2">Once There Was a Snowman</h1>
+            <h1 class="text-bold text-2xl md:text-3xl text-center font-bold pb-2 glow lg:text-5xl xl:text-6xl">Once There Was a Snowman</h1>
             <h2 class="text-semibold text-base md:text-2xl text-center px-2">Click to build a snowman and make him tall, tall, tall!</h2>
             <h2 class="text-semibold text-base md:text-2xl text-center px-2">Click on the sun to make him small, small, small!</h2>
         </header>
@@ -112,52 +125,7 @@
 
             <p class="text-center text-sm md:text-base">Copyright <span id="current-year">2021</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
         </footer>
-        <script type="text/javascript">
-            const buildContainerEl = document.getElementById('build-container')
-            const puddleEl = document.getElementById('puddle')
-
-            function snowball(event) {
-                if (event.target.classList.contains('sun')) {
-                    const snowballs = document.querySelectorAll('.snowball')
-                    snowballs.forEach( snowball => {
-                        snowball.classList.remove('bg-white', 'shadow')
-                    })
-                    console.log('sun')
-                }
-                else if (event.target.classList.contains('snowball')) {
-                   event.target.classList.toggle('bg-white')
-                   event.target.classList.toggle('shadow')
-                } else {
-                    let snowballEl = document.createElement('div')
-                    snowballEl.classList.add('h-24', 'w-24', 'rounded-full', 'bg-white', 'absolute', 'shadow', 'snowball', 'transform' , 'duration-500')
-                    snowballEl.style.left = event.offsetX - 48 + 'px'
-                    snowballEl.style.top = event.offsetY - 48 + 'px'
-                    buildContainerEl.append(snowballEl)
-                }
-                const snowballs = document.querySelectorAll('.snowball')
-                let visibleSnowballCount = 0
-                snowballs.forEach( snowball => {
-                    if (snowball.classList.contains('bg-white')) {
-                        visibleSnowballCount++
-                    }
-                })
-
-                if (snowballs.length === 0 || visibleSnowballCount === 0) {
-                    // No snowballs, so display puddle
-                    setTimeout(() => {
-                        puddleEl.classList.remove('hidden')
-                    puddleEl.classList.add('block')
-                    }, 500)
-                } else {
-                     // If snowballs are present and visible, remove puddle
-                    puddleEl.classList.remove('block')
-                    puddleEl.classList.add('hidden')
-                }
-            }
-
-            buildContainerEl.addEventListener('click', snowball)
-            const currentYearSpan = document.getElementById('current-year')
-            currentYearSpan.textContent = new Date().getFullYear()
-        </script>
+        <script src="./js/snowman.js" async defer></script>
+        <script src="./js/footer.js" async defer></script>
     </body>
 </html>
