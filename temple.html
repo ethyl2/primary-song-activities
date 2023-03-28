@@ -158,57 +158,7 @@
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2021</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
-
-
     </footer>
   </body>
-  <script>
-    const songLinks = {
-      'loa': 'https://www.churchofjesuschrist.org/music/library/hymns/love-one-another?lang=eng',
-      'iltstt': 'https://ethyl2.github.io/primary-presentation-2021/#temple',
-      'ctstl': './choose-to-serve-the-lord.html',
-      'iws': './i-will-shine.html',
-      'acp': 'https://www.churchofjesuschrist.org/music/library/childrens-songbook/a-childs-prayer?lang=eng',
-      'hshs': 'https://ethyl2.github.io/primary-christmas-2021/qa.html',
-      'ktc': 'https://www.churchofjesuschrist.org/music/library/childrens-songbook/keep-the-commandments?lang=eng',
-      'iwbv': './valiant.html',
-      'roi': 'https://www.churchofjesuschrist.org/music/library/hymns/redeemer-of-israel?lang=eng'
-    }
-
-    const pocketEls = document.getElementsByClassName('pocket')
-    Array.from(pocketEls).forEach(pocket => {
-      pocket.addEventListener('click', e => {
-        const currentPocket = e.target
-        const animal = currentPocket.previousElementSibling
-        if (animal.classList.contains('animal-down')) {
-          const audio = new Audio(`./audio/up.wav`)
-          audio.play()
-          animal.classList.remove('animal-down')
-          animal.classList.add('animal-up')
-          animal.href = songLinks[currentPocket.id]
-
-          setTimeout(() => {
-            let windowReference = window.open()
-            getUrl(currentPocket.id).then(function (url) {
-              windowReference.target = "_blank"
-              windowReference.location = url
-            })
-          }, 1600)
-        } else {
-          const audio = new Audio(`./audio/down.wav`)
-          audio.play()
-          animal.classList.remove('animal-up')
-          animal.classList.add('animal-down')
-        }
-      })
-    })
-
-    async function getUrl(key) {
-      return songLinks[key]
-    }
-
-    const currentYearSpan = document.getElementById('current-year')
-    currentYearSpan.textContent = new Date().getFullYear()
-  </script>
-
+  <script src="./js/footer.js" async defer></script>
 </html>
