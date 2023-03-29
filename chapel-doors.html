@@ -112,8 +112,10 @@
     <script>
         const chapelImage = document.querySelector('#chapel')
         const speechBubble = document.querySelector('#speech-bubble')
+        const shhAudio = new Audio('./static/audio/shh.wav')
         chapelImage.addEventListener('click', () => {
             speechBubble.classList.toggle('invisible')
+            shhAudio.play()
         })
     </script>
     <script src="./js/program-2023.js"></script>
