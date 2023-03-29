@@ -79,6 +79,13 @@
         
         “Sh, be still.” 
     </p>
+    <div class="flex items-center justify-center py-6">
+        <audio controls>
+            <source src="./static/audio/the-chapel-doors.mp3" type="audio/mp3">
+            
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
     <footer
       class="mt-12 md:mt-48 shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-gray-900">
       <div class="flex items-center justify-center space-x-3">
@@ -108,12 +115,17 @@
       <p class="text-center text-sm text-white md:text-base">Copyright <span id="current-year">2023</span>
         <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a>
       </p>
+      <a href="https://www.churchofjesuschrist.org/music/library/childrens-songbook/the-chapel-doors?lang=eng" target="_blank"
+        class="text-center text-3xl rounded p-0.5 hover:bg-white">🚪🚪</a>
+      <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/321588/simple/small/" width="375" height="30"></iframe>
     </footer>
     <script>
         const chapelImage = document.querySelector('#chapel')
         const speechBubble = document.querySelector('#speech-bubble')
+        const shhAudio = new Audio('./static/audio/shh.wav')
         chapelImage.addEventListener('click', () => {
             speechBubble.classList.toggle('invisible')
+            shhAudio.play()
         })
     </script>
     <script src="./js/program-2023.js"></script>
