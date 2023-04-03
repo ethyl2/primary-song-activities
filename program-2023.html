@@ -132,8 +132,118 @@
     </header>
 
     <main
-      class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center md:mt-16"
+      class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center"
     >
+    
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-itim neon-blue pb-8">Lyrics</h2>
+      <!-- Modal buttons -->
+      <div class="flex items-center justify-center flex-wrap pb-8 md:pb-16">
+        <button data-song="miracle" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          The Miracle
+        </button>
+
+        <button data-song="gethsemane" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-purple-800 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          Gethsemane
+        </button>
+
+        <button data-song="baptism" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          Baptism
+        </button>
+
+        <button data-song="beside" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-yellow-800 hover:bg-yellow-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          If the Savior Stood Beside Me
+        </button>
+
+        <button data-song="follow" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-pink-800 hover:bg-pink-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          Come Follow Me
+        </button>
+
+        <button data-song="redeemer" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-emerald-800 bg-emerald-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          Behold the Great Redeemer Die
+        </button>
+
+        <button data-song="stories" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-indigo-800 hover:bg-indigo-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          Tell Me the Stories of Jesus
+        </button>
+
+        <button data-song="loves" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          Heavenly Father Loves Me
+        </button>
+
+        <button data-song="trying" 
+          data-modal-target="defaultModal" 
+          data-modal-toggle="defaultModal" 
+          class="neon-border open-modal m-2 font-itim flex text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          type="button"
+        >
+          I'm Trying to Be Like Jesus
+        </button>
+
+      </div>
+      <div class="w-full">
+        <!-- Main modal -->
+        <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:top-4 md:left-4 md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-2xl md:max-w-7xl md:h-auto">
+                <!-- Modal content -->
+                <div class="relative shadow bg-gray-900 neon-border">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 border-b">
+                        <h3 id="modal-title" class="text-xl font-semibold text-white font-itim md:text-3xl">
+                        </h3>
+                        <button id="close-modal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div id="modal-body" class="p-6 space-y-6 text-white whitespace-pre-line">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
       <div id="playlist" class="w-5/6 md:w-1/2 lg:w-2/5 mx-auto flex flex-col items-center justify-center">
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-itim neon-blue pb-8">Playlist</h2>
         <iframe style="border-radius:12px"
@@ -213,16 +323,15 @@
           </li>
           <li class="neon-border p-4 md:p-8 rounded text-white w-full md:w-auto m-4 flex flex-col items-center justify-center space-y-3">
             <h3 class="neon-yellow">6. Behold the Great Redeemer Die</h3>
-            <iframe class="md:hidden" width="300" height="200" src="https://www.youtube.com/embed/kuHI7dhWEYQ" title="YouTube video player"
+            <iframe class="md:hidden" width="300" height="200" src="https://www.youtube.com/embed/NfYQPVp7gH8" title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
-            <iframe class="hidden md:flex" width="560" height="315" src="https://www.youtube.com/embed/kuHI7dhWEYQ" title="YouTube video player"
+            <iframe class="hidden md:flex" width="560" height="315" src="https://www.youtube.com/embed/NfYQPVp7gH8" title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </li>
-
 
           <li
             class="neon-border p-4 md:p-8 rounded text-white w-full md:w-auto m-4 flex flex-col items-center justify-center space-y-3">
@@ -365,4 +474,56 @@
   </body>
   <script async src="https://api.countapi.xyz/hit/ethyl2.github.io/8adce465-a43b-4e94-a216-958ffb3a0e14?callback=websiteVisits"></script>
   <script src="./js/program-2023.js"></script>
+  <script>
+    const songs = {
+      miracle: {
+        title: 'The Miracle',
+        lyrics: `Jesus walked upon the water
+He stilled the storm and calmed the angry sea
+With His hands He healed the leper
+He made the lame to walk, the blind to see
+
+He fed a thousand people with a loaf or two of bread
+And when the ruler's daughter died
+He raised her from the dead
+Jesus is a God of miracles
+Nothing is at all impossible to Him
+But I know this
+Of all His miracles, the most incredible must be
+The miracle that rescues me
+
+Jesus bled and died to save me
+A price that I could never pay alone
+When He rose again, He gave me
+The greatest gift the world has ever known
+Yes, I can be forgiven every time that I repent
+And someday He will lift me up to live with Him again
+
+Jesus is a God of miracles
+Nothing is at all impossible to Him
+But I know this:
+Of all His miracles the most incredible must be
+The miracle that rescues me
+The miracle that rescues you and me`
+      },
+    }
+   
+    const modalEl = document.getElementById('defaultModal')
+    const closeModalButton = document.getElementById('close-modal')
+    const modalTitle = document.getElementById('modal-title')
+    const modalBody = document.getElementById('modal-body')
+    const modalButtons = document.querySelectorAll('.open-modal')
+    modalButtons.forEach(modalButton => {
+      modalButton.addEventListener('click', (event) => {
+        const buttonChosen =  event.target
+        const songChosen = buttonChosen.dataset.song
+        modalTitle.textContent = songs[songChosen].title
+        modalBody.textContent = songs[songChosen].lyrics
+        modalEl.classList.toggle('hidden')
+      })
+    })
+    closeModalButton.addEventListener('click', () => {
+      modalEl.classList.add('hidden')
+    })
+  </script>
 </html>
