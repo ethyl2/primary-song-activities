@@ -106,17 +106,20 @@
     </style>
   </head>
 
-  <body class="min-h-screen bg-black">
+  <body class="min-h-screen bg-black relative">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 px-4 md:py-10 bg-black neon-yellow">
-      <h1 id="title" class="p-4 md:p-12 text-xl md:text-5xl text-center lg:text-6xl font-itim neon-border">
+    <header class="flex flex-col shadow-lg items-center justify-center py-2 pt-4 px-4 md:pt-10 bg-black neon-yellow sticky top-0 border-b border-gray-900">
+      <h1 id="title" class="p-2 sm:p-4 md:p-12 text-lg md:text-5xl text-center lg:text-6xl font-itim neon-border">
         Lindon 13th Ward Primary Presentation 2023</h1>
       <nav class="pt-4">
-        <ul class="flex flex-row justify-center list-none">
+        <ul class="flex md:flex-row justify-center list-none text-xs md:text-base">
           <li class="mx-2 hover:bg-gray-900 rounded p-1">
             <a href="./index.html" class="md:text-2xl lg:text-3xl font-itim neon-blue" target="_blank">Home</a>
+          </li>
+          <li class="mx-2 hover:bg-gray-900 rounded p-1">
+            <a href="#lyrics" class="md:text-2xl lg:text-3xl font-itim neon-blue">Lyrics</a>
           </li>
           <li class="mx-2 hover:bg-gray-900 rounded p-1">
             <a href="#playlist" class="md:text-2xl lg:text-3xl font-itim neon-blue">Playlist</a>
@@ -135,13 +138,13 @@
       class="font-sans min-h-screen flex flex-col items-center mx-auto justify-start mt-8 pb-8 mb-8 text-center"
     >
     
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-itim neon-blue pb-8">Lyrics</h2>
+      <h2 id="lyrics" class="text-2xl md:text-3xl lg:text-4xl font-itim neon-blue pb-8">Lyrics</h2>
       <!-- Modal buttons -->
-      <div class="flex items-center justify-center flex-wrap pb-8 md:pb-16">
+      <div class="container flex items-center justify-center flex-wrap pb-8 md:pb-16 md:max-w-6xl">
         <button data-song="miracle" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           The Miracle
@@ -150,7 +153,7 @@
         <button data-song="gethsemane" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-purple-800 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-purple-800 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           Gethsemane
@@ -159,7 +162,7 @@
         <button data-song="baptism" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           Baptism
@@ -168,7 +171,7 @@
         <button data-song="beside" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-yellow-800 hover:bg-yellow-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-yellow-800 hover:bg-yellow-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           If the Savior Stood Beside Me
@@ -177,7 +180,7 @@
         <button data-song="follow" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-pink-800 hover:bg-pink-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-pink-800 hover:bg-pink-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           Come Follow Me
@@ -186,7 +189,7 @@
         <button data-song="redeemer" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-emerald-800 bg-emerald-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-emerald-800 bg-emerald-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           Behold the Great Redeemer Die
@@ -195,7 +198,7 @@
         <button data-song="stories" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-indigo-800 hover:bg-indigo-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-indigo-800 hover:bg-indigo-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           Tell Me the Stories of Jesus
@@ -204,16 +207,16 @@
         <button data-song="loves" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
-          Heavenly Father Loves Me
+          My Heavenly Father Loves Me
         </button>
 
         <button data-song="trying" 
           data-modal-target="defaultModal" 
           data-modal-toggle="defaultModal" 
-          class="neon-border open-modal m-2 font-itim flex text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center"
+          class="neon-border open-modal m-2 font-itim flex text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:text-base px-2 md:px-5 py-2 md:py-2.5 text-center"
           type="button"
         >
           I'm Trying to Be Like Jesus
@@ -222,8 +225,8 @@
       </div>
       <div class="w-full">
         <!-- Main modal -->
-        <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:top-4 md:left-4 md:inset-0 h-[calc(100%-1rem)] md:h-full">
-            <div class="relative w-full h-full max-w-2xl md:max-w-7xl md:h-auto">
+        <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:top-4 lg:left-32 xl:left-64 2xl:left-96 md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-2xl md:max-w-5xl md:h-auto">
                 <!-- Modal content -->
                 <div class="relative shadow bg-gray-900 neon-border">
                     <!-- Modal header -->
@@ -236,8 +239,9 @@
                         </button>
                     </div>
                     <!-- Modal body -->
-                    <div id="modal-body" class="p-6 space-y-6 text-white whitespace-pre-line">
+                    <div id="modal-body" class="p-6 space-y-6 text-white whitespace-pre-line font-itim">
                     </div>
+                    <img src="./static/images/jesus-circle-stained-glass.jpg" alt="circular stained glass with Jesus" class="mx-auto w-2/3 md:w-1/2 lg:w-1/5 mt-8 mb-4 rounded-full" />
                 </div>
             </div>
         </div>
@@ -506,6 +510,223 @@ Of all His miracles the most incredible must be
 The miracle that rescues me
 The miracle that rescues you and me`
       },
+      gethsemane: {
+        title: 'Gethsemane',
+        lyrics: `Jesus climbed the hill to the garden still.
+His steps were heavy and slow.
+Love and a prayer took Him there
+To the place only He could go.
+Gethsemane. Jesus loves me,
+So He went willingly to Gethsemane.
+
+He felt all that was sad, wicked, or bad,
+All the pain we would ever know.
+While His friends were asleep, He fought to keep
+His promise made long ago.
+Gethsemane. Jesus loves me,
+So He went willingly to Gethsemane.
+
+The hardest thing that ever was done,
+The greatest pain that ever was known,
+The biggest battle that ever was won—
+This was done by Jesus!
+The fight was won by Jesus!
+
+Gethsemane. Jesus loves me,
+So He gave His gift to me in Gethsemane.
+
+Gethsemane. Jesus loves me,
+So He gives His gift to me from Gethsemane.`
+      },
+      baptism: {
+        title: 'Baptism',
+        lyrics: `1. Jesus came to John the Baptist,
+In Judea long ago,
+And was baptized by immersion
+In the River Jordan's flow.
+
+2. “To fulfill the law,” said Jesus,
+When the Baptist questioned why,
+“And to enter with my Father
+In the kingdom up on high.”
+
+3. Now we know that we must also
+Witness faith in Jesus' word,
+Be baptized to show obedience,
+As was Jesus Christ, our Lord.`
+      },
+      beside: {
+        title: 'If the Savior Stood Beside Me',
+        lyrics: `If the Savior stood beside me
+Would I do the things I do?
+Would I think of his commandments and try harder to be true?
+Would I follow his example?
+Would I live more righteously if I could see the Savior standing nigh
+Watching over me?
+
+If the Savior stood beside me
+Would I say the things I say?
+Would my words be true and kind if he were never far away?
+Would I try to share the gospel?
+Would I speak more reverently if I could see the Savior standing nigh
+Watching over me?
+
+If the Savior stood beside me, would my thoughts be clean and pure?
+Would his presence give me strength and hope and courage to endure?
+Would his counsel guide my actions?
+Would I choose more worthily if I could see the Savior standing nigh
+Watching over me?
+
+He is always near me, though I do not see him there
+And because he loves me dearly
+I am in his watchful care
+So I'll be the kind of person that I know I'd like to be
+If I could see the Savior standing nigh watching over me
+So I'll be the kind of person that I know I'd like to be
+If I could see the Savior standing nigh watching over me`
+      },
+      follow: {
+        title: 'Come Follow Me',
+        lyrics: `1. “Come, follow me,” the Savior said.
+Then let us in his footsteps tread,
+For thus alone can we be one
+With God's own loved, begotten Son.
+
+2. “Come, follow me,” a simple phrase,
+Yet truth's sublime, effulgent rays
+Are in these simple words combined
+To urge, inspire the human mind.
+
+3. Is it enough alone to know
+That we must follow him below,
+While trav'ling thru this vale of tears?
+No, this extends to holier spheres.
+
+4. Not only shall we emulate
+His course while in this earthly state,
+But when we're freed from present cares,
+If with our Lord we would be heirs.
+
+5. We must the onward path pursue
+As wider fields expand to view,
+And follow him unceasingly,
+Whate'er our lot or sphere may be.
+
+6. For thrones, dominions, kingdoms, pow'rs,
+And glory great and bliss are ours,
+If we, throughout eternity,
+Obey his words, “Come, follow me.”`
+      },
+      redeemer: {
+        title: 'Behold the Great Redeemer Die',
+        lyrics: `1. Behold the great Redeemer die,
+A broken law to satisfy.
+He dies a sacrifice for sin,
+He dies a sacrifice for sin,
+That man may live and glory win.
+
+2. While guilty men his pains deride,
+They pierce his hands and feet and side;
+And with insulting scoffs and scorns,
+And with insulting scoffs and scorns,
+They crown his head with plaited thorns.
+
+3. Although in agony he hung,
+No murm'ring word escaped his tongue.
+His high commission to fulfill,
+His high commission to fulfill,
+He magnified his Father's will.
+
+4. “Father, from me remove this cup.
+Yet, if thou wilt, I'll drink it up.
+I've done the work thou gavest me,
+I've done the work thou gavest me;
+Receive my spirit unto thee.”
+
+5. He died, and at the awful sight
+The sun in shame withdrew its light!
+Earth trembled, and all nature sighed,
+Earth trembled, and all nature sighed
+In dread response, “A God has died!”
+
+6. He lives—he lives. We humbly now
+Around these sacred symbols bow
+And seek, as Saints of latter days,
+And seek, as Saints of latter days,
+To do his will and live his praise.`
+      },
+      stories: {
+        title: 'Tell Me the Stories of Jesus',
+        lyrics: `1. Tell me the stories of Jesus I love to hear,
+Things I would ask him to tell me if he were here.
+Scenes by the wayside, tales of the sea,
+Stories of Jesus, tell them to me.
+
+2. Oh, let me hear how the children stood round his knee.
+I shall imagine his blessings resting on me;
+Words full of kindness, deeds full of grace,
+All in the love-light of Jesus' face.
+
+3. Tell me, in accents of wonder, how rolled the sea,
+Tossing the boat in a tempest on Galilee!
+And how the Master, ready and kind,
+Chided the billows and hushed the wind.
+
+4. Into the city I'd follow the children's band,
+Waving a branch of the palm tree high in my hand;
+One of his heralds, yes, I would sing
+Loudest hosannas, "Jesus is King!"
+
+5. Tell how the sparrow that twitters on yonder tree,
+And the sweet meadow-side lily may speak to me—
+Give me their message, for I would hear
+How Jesus taught us our Father's care.
+
+6. Show me that scene in the garden, of bitter pain;
+Show me the cross where my Savior for me was slain;
+Sad ones or bright ones, so that they be
+Stories of Jesus—tell them to me.`
+      },
+      loves: {
+        title: 'My Heavenly Father Loves Me',
+        lyrics: `1. Whenever I hear the song of a bird
+Or look at the blue, blue sky,
+Whenever I feel the rain on my face
+Or the wind as it rushes by,
+Whenever I touch a velvet rose
+Or walk by our lilac tree,
+I'm glad that I live in this beautiful world
+Heav'nly Father created for me.
+
+2. He gave me my eyes that I might see
+The color of butterfly wings.
+He gave me my ears that I might hear
+The magical sound of things.
+He gave me my life, my mind, my heart:
+I thank him rev'rently
+For all his creations, of which I'm a part.
+Yes, I know Heav'nly Father loves me.`
+      },
+      trying: {
+        title: 'I\'m Trying to Be Like Jesus',
+        lyrics: `1. I'm trying to be like Jesus;
+I'm following in his ways.
+I'm trying to love as he did, in all that I do and say.
+At times I am tempted to make a wrong choice,
+But I try to listen as the still small voice whispers,
+
+[Chorus]
+“Love one another as Jesus loves you.
+Try to show kindness in all that you do.
+Be gentle and loving in deed and in thought,
+For these are the things Jesus taught.”
+
+2. I'm trying to love my neighbor;
+I'm learning to serve my friends.
+I watch for the day of gladness when Jesus will come again.
+I try to remember the lessons he taught.
+Then the Holy Spirit enters into my thoughts, saying:`
+      },
     }
    
     const modalEl = document.getElementById('defaultModal')
@@ -517,6 +738,7 @@ The miracle that rescues you and me`
       modalButton.addEventListener('click', (event) => {
         const buttonChosen =  event.target
         const songChosen = buttonChosen.dataset.song
+        console.log(songChosen)
         modalTitle.textContent = songs[songChosen].title
         modalBody.textContent = songs[songChosen].lyrics
         modalEl.classList.toggle('hidden')
