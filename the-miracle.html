@@ -6,8 +6,8 @@
     <title>The Miracle | Primary Song Activities</title>
     <meta name="description" content="Activity page for The Miracle">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/static/images/chapel-doors/shh-be-still.png">
-    <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/chapel-doors.html">
+    <meta property="og:image" content="https://ethyl2.github.io/primary-song-activities/static/images/miracle/jesus-nephite-woman-copped.jpeg">
+    <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/the-miracle.html">
     <meta property="og:title" content="The Miracle | Primary Song Activities">
     <meta property="og:description" content="Activity page for The Miracle">
     <meta property="og:type" content="website" />
@@ -23,33 +23,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="manifest" href="https://ethyl2.github.io/primary-song-activities/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .glow {
-            color: #444;
-            text-shadow: 
-                1px 0px 1px #ccc, 0px 1px 1px #eee, 
-                2px 1px 1px #ccc, 1px 2px 1px #eee,
-                3px 2px 1px #ccc, 2px 3px 1px #eee,
-                4px 3px 1px #ccc, 3px 4px 1px #eee,
-                5px 4px 1px #ccc, 4px 5px 1px #eee,
-                6px 5px 1px #ccc, 5px 6px 1px #eee,
-                7px 6px 1px #ccc;
-        }
-    </style>
 </head>
 <body>
-    <header class="flex items-center justify-center h-24 bg-gray-900">
-        <h1 class="text-3xl text-white font-bold">The Miracle</h1>
-        <img src="./images/music-note.png" alt="music note" class="w-10 h-10" />
-        </header>
-    <main class="container mx-auto flex items-start justify-center min-h-screen pt-12">
-        <section id="lyrics-chunks">
+    <header class="flex items-center justify-center py-4 bg-gray-900 flex-col text-white">
+        <h1 class="text-3xl text-white font-bold md:text-5xl">
+            <span class="text-blue-500">T</span>
+            <span class="text-purple-400">h</span>
+            <span class="text-purple-300 pr-2 md:pr-5">e</span>
+
+            <span class="text-blue-500">M</span>
+            <span class="text-blue-400">i</span>
+            <span class="text-green-300">r</span>
+            <span class="text-green-500">a</span>
+            <span class="text-blue-500">c</span>
+            <span class="text-purple-300">l</span>
+            <span class="text-purple-500">e</span></h1>
+        <p class="text-sm md:text-base px-4 text-center">Look at each picture and see if you can guess what part of the song it goes to. Then click on it to see if you were right!</p>
+    </header>
+    <main class="mx-auto flex items-start justify-center min-h-screen pt-12 flex-col px-4">
+        <section id="lyrics-chunks" class="flex flex-wrap items-center justify-center w-full">
         </section>
+        <iframe class="md:hidden mx-auto pt-4" width="300" height="200" src="https://www.youtube.com/embed/zZ2djzQ9J64" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <iframe class="hidden md:flex mx-auto pt-6" width="560" height="315" src="https://www.youtube.com/embed/zZ2djzQ9J64" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+        </iframe>
+        <p class="whitespace-pre-line text-center text-xs mx-auto text-purple-700 font-semibold px-4 md:text-sm">
+        Jesus walked upon the water
+        He stilled the storm and calmed the angry sea
+        With His hands He healed the leper
+        He made the lame to walk, the blind to see
+    </p>
+        <p class="whitespace-pre-line text-center text-xs mx-auto text-blue-700 font-semibold px-4 md:text-sm">
+        He fed a thousand people with a loaf or two of bread
+        And when the ruler's daughter died
+        He raised her from the dead
+        Jesus is a God of miracles
+        Nothing is at all impossible to Him
+        But I know this
+        Of all His miracles, the most incredible must be
+        The miracle that rescues me
+    </p>
+        <p class="whitespace-pre-line text-center text-xs mx-auto text-green-700 font-semibold px-4 md:text-sm">
+        Jesus bled and died to save me
+        A price that I could never pay alone
+        When He rose again, He gave me
+        The greatest gift the world has ever known
+        Yes, I can be forgiven every time that I repent
+        And someday He will lift me up to live with Him again
+    </p>
+        <p class="whitespace-pre-line text-center text-xs mx-auto text-black font-semibold px-4 md:text-sm">
+        Jesus is a God of miracles
+        Nothing is at all impossible to Him
+        But I know this:
+        Of all His miracles the most incredible must be
+        The miracle that rescues me
+        The miracle that rescues you and me
+    </p>
+    <img src="./static/images/miracle/picture_of_jesus_smiling.png" alt="Jesus smiling" class="mx-auto rounded-full py-4 w-64 h-64 md:w-96 md:h-96 object-cover"/>
     </main>
     <footer
-      class="mt-12 md:mt-48 shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-gray-900">
+      class="mt-12 md:mt-24 shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-gray-900">
       <div class="flex items-center justify-center space-x-3">
-        <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
+        <a href="./index.html" title="back to home"
           class="bg-white p-px rounded shadow hover:bg-green-400 shake">
           <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
           <span class="sr-only">Back to Home</span>
@@ -78,64 +118,7 @@
       
     </footer>
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=qFD8E6Ji"></script>
-    
-    <script>
-        const lyrics = `Jesus walked upon the water
-        He stilled the storm and calmed the angry sea
-        With His hands He healed the leper
-        He made the lame to walk, the blind to see
-        
-        He fed a thousand people with a loaf or two of bread
-        And when the ruler's daughter died
-        He raised her from the dead
-        Jesus is a God of miracles
-        Nothing is at all impossible to Him
-        But I know this
-        Of all His miracles, the most incredible must be
-        The miracle that rescues me
-        
-        Jesus bled and died to save me
-        A price that I could never pay alone
-        When He rose again, He gave me
-        The greatest gift the world has ever known
-        Yes, I can be forgiven every time that I repent
-        And someday He will lift me up to live with Him again
-        
-        Jesus is a God of miracles
-        Nothing is at all impossible to Him
-        But I know this:
-        Of all His miracles the most incredible must be
-        The miracle that rescues me
-        The miracle that rescues you and me`
-
-    const lyricsInChunks = [
-        `Jesus walked upon the water`,
-        `He stilled the storm and calmed the angry sea`,
-        `With His hands He healed the leper`,
-        `He made the lame to walk, the blind to see`,
-        `He fed a thousand people with a loaf or two of bread`,
-        `And when the ruler's daughter died He raised her from the dead`,
-        `Jesus is a God of miracles`,
-        `Nothing is at all impossible to Him`,
-        `But I know this, of all His miracles, the most incredible must be The miracle that rescues me`,
-        `Jesus bled and died to save me A price that I could never pay alone`,
-        `When He rose again, He gave me The greatest gift the world has ever known`,
-        `Yes, I can be forgiven every time that I repent`,
-        `And someday He will lift me up to live with Him again`,
-        `The miracle that rescues you and me`
-        ]
-
-        const chunkContainer = document.getElementById('lyrics-chunks')
-
-        lyricsInChunks.forEach(chunk => {
-            const button = document.createElement("button")
-            button.classList.add('py-2', 'px-4', 'bg-blue-500', 'text-white', 'rounded', 'shadow-lg', 'hover:bg-blue-700', 'focus:outline-none', 'focus:ring-2', 'focus:ring-blue-400', 'focus:ring-opacity-75', 'mr-2', 'mb-2')
-            button.innerText = chunk
-            button.addEventListener("click", () => {
-                responsiveVoice.speak(chunk)
-            })
-            chunkContainer.appendChild(button)
-        })
-    </script>
+    <script src="./js/the-miracle.js" async defer></script>
+    <script src="./js/footer.js" async defer></script>
 </body>
 </html>

@@ -27,6 +27,7 @@ const songs = [
   { siteLink: "./come-follow-me.html", name: 'Come Follow Me' },
   { siteLink: "./chapel-doors.html", name: 'The Chapel Doors' },
   { siteLink: "./trying-to-be-like-jesus.html", name: 'I\'m Trying to Be Like Jesus' },
+  { siteLink: "./the-miracle.html", name: 'The Miracle' },
 ]
 songs.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
