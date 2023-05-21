@@ -27,63 +27,104 @@
         dialog {
             border-radius: 0.25rem;
         }
-        dialog::backdrop {
-          background-color: hsla(229, 88%, 29%, 0.25);
+        #modal-image {
+          width: 300px;
+          height: 300px;
+        }
+        @media (min-width: 700px) {
+          #modal-image {
+            width: 500px;
+            height: 500px;
+          }
+        }
+        @media (min-width: 900px) {
+          #modal-image {
+            width: 800px;
+            height: 800px;
+          }
         }
     </style>
 </head>
-<body>
+<body class=" bg-gradient-to-r from-cyan-200 to-blue-200">
     <header class="flex items-center justify-center py-4 bg-gray-900 flex-col text-white">
-        <h1 class="text-3xl text-blue-300 font-bold md:text-5xl">
+        <h1 class="text-3xl text-white font-bold md:text-5xl text-center px-4">
             Behold the Great Redeemer Die</h1>
     </header>
-    <main class="mx-auto flex items-start justify-center min-h-screen pt-12 flex-col px-4">
+    <main class="mx-auto min-h-screen pt-8">
+      <div class="flex flex-col items-start justify-start px-4">
         <dialog>
             <div class="flex flex-col items-end justify-start">
             <button id="close-modal" formmethod="dialog" title="Close" class="rounded p-1 bg-gray-100 mb-2">📕</button>
-            <div class="w-64 h-64 sm:w-96 sm:h-96 bg-cover bg-no-repeat bg-center" id="modal-image"></div>
+            <div class="bg-cover bg-no-repeat bg-center" id="modal-image"></div>
+            <p id="line" class="text-center self-center pt-2 italic"></p>
             </div>
-          </dialog>
-        <section class="container mx-auto md:max-w-sm md:text-lg">
-            <p class="whitespace-pre-line">
-                1. Behold the <span class="open-modal bg-yellow-200 p-1 rounded cursor-pointer hover:bg-yellow-400" id="redeemer">great Redeemer</span> <span class="open-modal bg-yellow-200 p-1 rounded cursor-pointer hover:bg-yellow-400" id="die">die</span>,
-                A broken law to satisfy.
-                He dies a sacrifice for sin,
-                He dies a sacrifice for sin,
-                That man may live and glory win.
+        </dialog>
+        <audio controls class="mx-auto">
+          <source src="./static/audio/behold-the-great-redeemer-die.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+        <section class="container mx-auto md:text-lg flex flex-col md:flex-row md:items-start md:justify-center md:space-x-6">
+            <p class="whitespace-pre-line leading-relaxed">
+                1. Behold the <span class="open-modal bg-yellow-200 p-0.5 rounded cursor-pointer hover:bg-yellow-400" id="redeemer">great Redeemer</span> <span class="open-modal bg-orange-200 p-0.5 rounded cursor-pointer hover:bg-orange-400" id="die">die</span>,
+                A broken <span class="open-modal bg-red-200 p-0.5 rounded cursor-pointer hover:bg-red-400" id="law">law</span> to satisfy.
+                He <span class="open-modal bg-purple-200 p-0.5 rounded cursor-pointer hover:bg-purple-400" id="die2">dies</span> a sacrifice for sin,
+                He <span class="open-modal bg-indigo-200 p-0.5 rounded cursor-pointer hover:bg-indigo-400" id="die3">dies</span>dies a sacrifice for sin,
+                That man may <span class="open-modal bg-fuchsia-200 p-0.5 rounded cursor-pointer hover:bg-fuchsia-400" id="live">live</span> and <span class="open-modal bg-green-200 p-0.5 rounded cursor-pointer hover:bg-green-400" id="glory">glory</span> win.
 
                 2. While guilty men his pains deride,
-                They pierce his hands and feet and side;
+                They <span class="open-modal bg-yellow-200 p-0.5 rounded cursor-pointer hover:bg-yellow-400" id="pierce">pierce</span> his <span class="open-modal bg-green-200 p-0.5 rounded cursor-pointer hover:bg-green-400" id="hands">hands</span> and <span class="open-modal bg-fuchsia-200 p-0.5 rounded cursor-pointer hover:bg-fuchsia-400" id="feet">feet</span> and <span class="open-modal bg-indigo-200 p-0.5 rounded cursor-pointer hover:bg-indigo-400" id="side">side</span>;
+                And with <span class="open-modal bg-purple-200 p-0.5 rounded cursor-pointer hover:bg-purple-400" id="scoffs">insulting scoffs and scorns</span>,
                 And with insulting scoffs and scorns,
-                And with insulting scoffs and scorns,
-                They crown his head with <span class="open-modal bg-yellow-200 p-1 rounded cursor-pointer hover:bg-yellow-400" id="thorns">plaited thorns</span>.
+                They <span class="open-modal bg-red-200 p-0.5 rounded cursor-pointer hover:bg-red-400" id="crown">crown</span> his head with <span class="open-modal bg-orange-200 p-0.5 rounded cursor-pointer hover:bg-orange-400" id="thorns">plaited thorns</span>.
 
-                3. Although in agony he hung,
+                3. Although in agony he <span class="open-modal bg-yellow-200 p-0.5 rounded cursor-pointer hover:bg-yellow-400" id="hung">hung</span>,
                 No murm'ring word escaped his tongue.
                 His high commission to fulfill,
                 His high commission to fulfill,
-                He magnified his Father's will.
+                He magnified his <span class="open-modal bg-orange-200 p-0.5 rounded cursor-pointer hover:bg-orange-400" id="father2">Father</span>'s will.
+                </p>
 
-                4. “Father, from me remove this cup.
+                <p class="whitespace-pre-line">
+                4. “<span class="open-modal bg-red-200 p-0.5 rounded cursor-pointer hover:bg-red-400" id="father">Father</span>, from me remove this cup.
                 Yet, if thou wilt, I'll drink it up.
-                I've done the work thou gavest me,
-                I've done the work thou gavest me;
+                I've done the <span class="open-modal bg-purple-200 p-0.5 rounded cursor-pointer hover:bg-purple-400" id="work1">work</span> thou gavest me,
+                I've done the <span class="open-modal bg-indigo-200 p-0.5 rounded cursor-pointer hover:bg-indigo-400" id="work2">work</span> thou gavest me;
                 Receive my spirit unto thee.”
 
                 5. He died, and at the awful sight
-                The sun in shame withdrew its light!
-                Earth trembled, and all nature sighed,
-                Earth trembled, and all nature sighed
-                In dread response, “A God has died!”
+                The sun in shame <span class="open-modal bg-fuchsia-200 p-0.5 rounded cursor-pointer hover:bg-fuchsia-400" id="dark">withdrew its light</span>!
+                Earth <span class="open-modal bg-green-200 p-0.5 rounded cursor-pointer hover:bg-green-400" id="trembled">trembled</span>, and all nature sighed,
+                Earth <span class="open-modal bg-yellow-200 p-0.5 rounded cursor-pointer hover:bg-yellow-400" id="trembled2">trembled</span>, and all nature sighed
+                In <span class="open-modal bg-orange-200 p-0.5 rounded cursor-pointer hover:bg-orange-400" id="response">dread response</span>, “A <span class="open-modal bg-red-200 p-0.5 rounded cursor-pointer hover:bg-red-400" id="god">God</span> has died!”
 
-                6. He lives—he lives. We humbly now
-                Around these sacred symbols bow
-                And seek, as Saints of latter days,
-                And seek, as Saints of latter days,
-                To do his will and live his praise.
+                6. <span class="open-modal bg-purple-200 p-0.5 rounded cursor-pointer hover:bg-purple-400" id="lives3">He</span> <span class="open-modal bg-indigo-200 p-0.5 rounded cursor-pointer hover:bg-indigo-400" id="lives1">lives</span>—he <span class="open-modal bg-fuchsia-200 p-0.5 rounded cursor-pointer hover:bg-fuchsia-400" id="lives2">lives</span>. <span class="open-modal bg-green-200 p-0.5 rounded cursor-pointer hover:bg-green-400" id="deacons">We</span> humbly now
+                Around these <span class="open-modal bg-yellow-200 p-0.5 rounded cursor-pointer hover:bg-yellow-400" id="symbols2">sacred</span> <span class="open-modal bg-orange-200 p-0.5 rounded cursor-pointer hover:bg-orange-400" id="symbols">symbols</span> <span class="open-modal bg-red-200 p-0.5 rounded cursor-pointer hover:bg-red-400" id="bow">bow</span>
+                And seek, as <span class="open-modal bg-purple-200 p-0.5 rounded cursor-pointer hover:bg-purple-400" id="saints1">Saints</span> of latter days,
+                And seek, as <span class="open-modal bg-indigo-200 p-0.5 rounded cursor-pointer hover:bg-indigo-400" id="saints2">Saints</span> of latter days,
+                To do <span class="open-modal bg-fuchsia-200 p-0.5 rounded cursor-pointer hover:bg-fuchsia-400" id="jesus1">his</span> <span class="open-modal bg-green-200 p-0.5 rounded cursor-pointer hover:bg-green-400" id="will">will</span> and live <span class="open-modal bg-yellow-200 p-0.5 rounded cursor-pointer hover:bg-yellow-400" id="jesus2">his</span> <span class="open-modal bg-orange-200 p-0.5 rounded cursor-pointer hover:bg-orange-400" id="praise">praise</span>.
             </p>
         </section>
+        </div>
+        <section class="bg-black w-full py-12 mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+          <img src="./static/images/behold-the-great-redeemer/easter_meme3.jpeg" alt="In a coming day, LONELINESS will die. Because of Him" class="rounded" />
+          <img src="./static/images/behold-the-great-redeemer/easter_meme4.jpeg" alt="In a coming day, FEAR will die. Because of Him" class="rounded "/>
+          <img src="./static/images/behold-the-great-redeemer/easter_meme2.jpeg" alt="In a coming day, SICKNESS will die. Because of Him" class="rounded" />
+          <img src="./static/images/behold-the-great-redeemer/easter_meme.jpeg" alt="In a coming day, DEATH will die. Because of Him" class="rounded" />
+        </section>
+        <div class="flex items-center justify-center py-8">
+          <iframe class="md:hidden" width="300" height="200" src="https://www.youtube.com/embed/NfYQPVp7gH8" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+          </iframe>
+          <iframe class="hidden md:flex" width="560" height="315" src="https://www.youtube.com/embed/NfYQPVp7gH8" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+          </iframe>
+        </div>
     </main>
+    
     <footer
       class="mt-12 md:mt-24 shadow-lg mt-12 h-64 w-full flex flex-col space-y-3 items-center justify-center pt-2 bg-gray-900">
       <div class="flex items-center justify-center space-x-3">
@@ -117,11 +158,83 @@
     </footer>
     <script>
         const modalImage = document.getElementById("modal-image")
+        const modalDescription = document.getElementById('line')
 
         const lookup = {
-            'thorns': './static/images/behold-the-great-redeemer/crown-of-thorns.jpeg',
-            'redeemer': './static/images/behold-the-great-redeemer/redeemer.jpeg',
-            'die': './static/images/behold-the-great-redeemer/crucify.jpeg',
+            'thorns': { imgUrl : './static/images/behold-the-great-redeemer/crown-of-thorns.jpeg',
+              line: 'They crown his head with plaited thorns.'},
+            'redeemer': { imgUrl : './static/images/behold-the-great-redeemer/redeemer.jpeg',
+              line: 'Behold the great Redeemer'},
+            'die': { imgUrl : './static/images/behold-the-great-redeemer/crucify.jpeg',
+              line: 'Behold the great Redeemer die.'},
+            'pierce': { imgUrl : './static/images/behold-the-great-redeemer/crucifixion_nails.jpeg',
+              line: 'They pierce his hands and feet'},
+            'hands': { imgUrl : './static/images/behold-the-great-redeemer/christus_hand_lds.jpeg',
+              line: 'They pierce his hands'},
+            'feet': { imgUrl : './static/images/behold-the-great-redeemer/christus_foot_lds.jpeg',
+              line: 'They pierce his hands and feet'},
+            'scoffs': { imgUrl : './static/images/behold-the-great-redeemer/soldiers_mock_jesus_paul_mann.jpeg',
+              line: 'And with insulting scoffs and scorns, they crown his head with plaited thorns.'},
+            'hung': { imgUrl : './static/images/behold-the-great-redeemer/jesus_dies_cross_mann.jpeg',
+              line: 'Although in agony he hung, no murm\'ring word escaped his tongue.'},
+            'response': { imgUrl : './static/images/behold-the-great-redeemer/earthquake_frightens_soldiers_paul_mann.jpeg',
+              line: 'Earth trembled, and all nature sighed in dread response, “A God has died!”'},
+            'lives1': { imgUrl : './static/images/behold-the-great-redeemer/jesus_and_mary_at_the_tomb.jpeg',
+              line: 'He lives'},
+            'lives2': { imgUrl : './static/images/behold-the-great-redeemer/jesus_apostles_new_testament_stories.jpeg',
+              line: 'He lives'},
+            'crown': { imgUrl : './static/images/behold-the-great-redeemer/bible_videos_jesus_carrying_cross.jpeg',
+              line: 'They crown his head with plaited thorns.'},
+            'bow': { imgUrl : './static/images/behold-the-great-redeemer/bow-before-sacrament.jpeg',
+              line: 'We humbly now around these sacred symbols bow'},
+            'symbols': { imgUrl : './static/images/behold-the-great-redeemer/bread-and-water.jpeg',
+              line: 'We humbly now around these sacred symbols bow'},
+            'saints1': { imgUrl : './static/images/behold-the-great-redeemer/norway_sacrament_meeting_blessing_bread.jpeg',
+              line: 'And seek, as Saints of latter days, to do his will and live his praise.'},
+            'lives3': { imgUrl : './static/images/behold-the-great-redeemer/resurrected_christ_wilson_ong.jpeg',
+              line: 'He lives'},
+            'saints2': { imgUrl : './static/images/behold-the-great-redeemer/south_africa_sabbath_day_members_church_sacrament.jpeg',
+              line: 'And seek, as Saints of latter days, to do his will and live his praise.'},
+            'deacons': { imgUrl : './static/images/behold-the-great-redeemer/deacons_sacrament_paraguay.jpeg',
+              line: 'We humbly now around these sacred symbols bow'},
+            'will': { imgUrl : './static/images/behold-the-great-redeemer/madagascar_baptism_font_young_man.jpeg',
+              line: 'And seek, as Saints of latter days, to do his will' },
+            'praise': { imgUrl : './static/images/behold-the-great-redeemer/at-the-temple.jpeg',
+              line: 'And seek, as Saints of latter days, to do his will and live his praise.'},
+            'jesus1': { imgUrl : './static/images/behold-the-great-redeemer/jesus_christ.jpeg',
+              line: 'And seek, as Saints of latter days, to do his will'},
+            'jesus2': { imgUrl : './static/images/behold-the-great-redeemer/pictures_of_jesus_smiling.jpeg',
+              line: 'And seek, as Saints of latter days, to do his will and live his praise.'},
+            'work2': { imgUrl : './static/images/behold-the-great-redeemer/jesus_praying_in_gethsemane.jpeg',
+              line: '"I\'ve done the work thou gavest me"'},
+            'work1': { imgUrl : './static/images/behold-the-great-redeemer/christ_healing_the_blind_man.jpeg',
+              line: '"I\'ve done the work thou gavest me"'},
+            'glory': { imgUrl : './static/images/behold-the-great-redeemer/the_second_coming.jpeg',
+              line: 'He dies a sacrifice for sin, that man may live and glory win.'},
+            'die2': { imgUrl : './static/images/behold-the-great-redeemer/jesus_cross_mann.jpeg',
+              line: 'He dies a sacrifice for sin'},
+            'die3': { imgUrl : './static/images/behold-the-great-redeemer/jesus_tells_john_mother_mann.jpeg',
+              line: 'He dies a sacrifice for sin'},
+            'live': { imgUrl : './static/images/behold-the-great-redeemer/resurrection_new_testament_stories.jpeg',
+              line: 'He dies a sacrifice for sin, that man may live'},
+            'law': { imgUrl : './static/images/behold-the-great-redeemer/adam-eve.jpeg',
+              line: 'A broken law to satisfy'},
+            'father': { imgUrl : './static/images/behold-the-great-redeemer/heavenly-father.jpeg',
+              line: '"Father, from me remove this cup. Yet if thou wilt, I\'ll drink it up.',},
+            'god': { imgUrl : './images/beautiful-savior/jesus-creator-barrett.jpg',
+              line: '"A God has died!"'},
+            'trembled': { imgUrl : './static/images/behold-the-great-redeemer/nephites_art_destruction.jpeg',
+              line: 'Earth trembled, and all nature sighed in dread response, "A God has died!"'},
+            'dark': { imgUrl : './static/images/behold-the-great-redeemer/nephites_art_darkness.jpeg',
+              line: 'The sun in shame withdrew its light!'},
+            'trembled2': { imgUrl : './static/images/behold-the-great-redeemer/nephites_art_storm_earthquake.jpeg',
+              line: 'Earth trembled, and all nature sighed in dread response, "A God has died!"'},
+            'father2': { imgUrl : './static/images/behold-the-great-redeemer/jesus-and-father.png',
+              line: 'He magnified his Father\'s will.'},
+            'symbols2': { imgUrl : './images/love-one-another/last-supper.jpeg',
+              line: 'We humbly now around these sacred symbols bow'},
+            'side': { imgUrl : './static/images/behold-the-great-redeemer/Christus.jpg',
+              line: 'They pierce his hands and feet and side'},
         }
 
         const dialog = document.querySelector("dialog")
@@ -129,8 +242,8 @@
         btns.forEach(btn => {
             btn.addEventListener("click", () => {
                 dialog.showModal()
-                console.log(btn.id)
-                modalImage.style.backgroundImage = `url("${lookup[btn.id]}")`
+                modalImage.style.backgroundImage = `url("${lookup[btn.id]['imgUrl']}")`
+                modalDescription.textContent = lookup[btn.id]['line']
             })
         })
         
