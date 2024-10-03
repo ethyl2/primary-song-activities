@@ -4,67 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primary Song Activities Program 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6, .title {
+            font-family: "Kanit", sans-serif;
+            }
+
+            body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 235, 219, 0.8);
+    background-image: url('./static/images/program-2024/parchment.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: -1;
+    opacity: 0.3;
+}
+    </style>
 </head>
 <body class="bg-yellow-50">
     <header class="bg-teal-700 text-white p-4">
-        <h1 class="text-3xl">Primary Program 2024</h1>
+        <h1 class="text-3xl sm:bg-blue-100 md:bg-yellow-500 lg:bg-green-200 xl:bg-black 2xl:bg-red-200">Lindon 13th Ward Primary Program 2024</h1>
     </header>
-    <main class="p-4 container mx-auto md:pt-12">
-        <div class="flex flex-col space-y-4 md:space-y-0 md:space-x-16 md:flex-row">
-            <img src="./static/images/program-2024/follow-jesus.jpg" alt="Jesus with children in the Book of Mormon" class="max-w-2xl"/>
-            <div class="flex flex-col items-start justify-start space-y-4">
-                <h2 class="font-bold text-xl md:text-3xl">Songs for 2024</h2>
-                <a class="bg-teal-700 text-white p-2 px-3 rounded-full hover:bg-teal-500 md:text-lg md:px-4" href="./docs/program-lyrics-2024.pdf" target="_blank" download>Download PDF</a>
-                <div class="flex items-start justify-start flex-col space-y-3">
-                    <a href="#book-of-mormon-stories" class="hover:text-teal-800">
-                        <h3 class="font-bold text-lg md:text-2xl">Book of Mormon Stories</h3> 
-                        <p>Verses 1, 2, 6, & 8</p>
+    <main class="py-4 container mx-auto md:pt-12">
+        <div class="w-full flex flex-col space-y-4 items-start justify-start md:space-y-0 md:space-x-4 md:flex-row md:items-start xl:items-center xl:justify-between">
+            <div class="flex flex-col items-center justify-center space-y-4 w-full">
+                <img src="./static/images/program-2024/follow-jesus.jpg" alt="Jesus with children in the Book of Mormon" class="w-full max-w-sm md:max-w-xs xl:max-w-sm 2xl:max-w-md"/> 
+                <img src="./static/images/program-2024/jesus-heals.jpg" alt="Jesus healing children in the Book of Mormon" class="w-full hidden md:flex md:max-w-xs xl:hidden"/>
+            </div>
+            
+            <div class="flex flex-col items-start justify-start space-y-4 shrink-0 px-4 mx-auto text-lg md:text-2xl lg:text-3xl title">
+                <nav class="flex items-start justify-start flex-col space-y-3 shrink-0">
+                    <a href="#book-of-mormon-stories" class="hover:text-teal-800 title">
+                       Book of Mormon Stories 
                     </a>
 
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">I Feel My Savior's Love</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">I Feel My Savior's Love</h3>
                         <p>All 3 verses</p>
                     </div>
 
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">Nephi's Courage</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">Nephi's Courage</h3>
                         <p>All verses</p>
                     </div>
 
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">A Child's Prayer</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">A Child's Prayer</h3>
                         <p>Both verses & the two parts together for the third verse</p>
                     </div>
                     
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">We'll Bring the World His Truth</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">We'll Bring the World His Truth</h3>
                         <p>all verses</p>
                     </div>
                     
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">He Sent His Son</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">He Sent His Son</h3>
                         <p>Whole song</p> 
                     </div>
                     
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">My Own Sacred Grove</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">My Own Sacred Grove</h3>
                         <p>All verses</p>
                     </div>
                     
                     <div>
-                        <h3 class="font-bold text-lg md:text-2xl">Testimony</h3>
+                        <h3 class="font-bold text-lg md:text-2xl lg:text-3xl">Testimony</h3>
                         <p>All verses</p>
                     </div>
-                </div>
+                </nav>
+                <a class="bg-teal-700 text-white p-2 px-3 rounded-full hover:bg-teal-500 md:text-lg md:px-4" href="./docs/program-lyrics-2024.pdf" target="_blank" download>Download Lyrics PDF</a>
+            </div>
+
+            <div class="w-full flex items-center justify-center">
+                <img src="./static/images/program-2024/jesus-heals.jpg" alt="Jesus healing children in the Book of Mormon" class="w-full max-w-sm md:hidden xl:flex xl:max-w-sm 2xl:max-w-md"/>
             </div>
         </div>
 
-        <section class="pt-8 border-t mt-8">
-            <div id="book-of-mormon-stories" class="flex flex-col items-center justify-center space-y-2">
-                <h3 class="font-bold text-lg md:text-xl">Book of Mormon Stories</h3>
-                <p>Pages 118-119</p>
-                <p class="whitespace-pre-line">
+        <section class="pt-8 border-t border-black mt-8">
+            <div id="book-of-mormon-stories" class="flex flex-col items-center justify-center space-y-2 border-b border-black pb-4 md:pb-8">
+                <h3 class="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">Book of Mormon Stories</h3>
+                <p><a href="https://www.churchofjesuschrist.org/media/music/songs/book-of-mormon-stories?lang=eng" target="_blank" class="md:text-lg hover:text-cyan-600">Pages 118-119</a> | Verses 1, 2, 6, & 8</p>
+                
+                <p class="whitespace-pre-line md:text-lg lg:text-xl">
                 1. Book of Mormon stories that my teacher tells to me
                 Are about the Lamanites in ancient history.
                 Long ago their fathers came from far across the sea,
@@ -86,12 +125,25 @@
                 And they lived in the land righteously.
                 </p>
 
-                <div>
-                    <h4 class="font-bold">Scriptures</h4>
-                    <ul>
+                <div class="flex flex-col items-center justify-center space-y-2 py-6">
+                    <h4 class="font-bold text-lg md:text-2xl lg:text-3xl">Scriptures</h4>
+                    <ul class="list-disc list-inside md:text-lg">
                         <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng" target="_blank" class="hover:text-teal-800">Joseph Smith—History 1:34</a></li>
-                        <li><a href="">Articles of Faith 1:8</a></li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng" target="_blank" class="hover:text-teal-800">Articles of Faith 1:8</a></li>
                     </ul>
+                </div>
+
+                <div class="w-full md:max-w-4xl mx-auto px-4">
+                    <div class="relative w-full h-0 overflow-hidden max-w-full bg-black" style="padding-bottom: 56.25%">
+                        <iframe class="absolute top-0 left-0 w-full h-full" 
+                            src="https://www.youtube.com/embed/_vi7E6eltUU?si=8ObaLiluB6Jgr5B-" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
