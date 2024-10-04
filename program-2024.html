@@ -61,7 +61,7 @@ body::before {
                 <img src="./static/images/program-2024/follow-jesus.jpg" alt="Jesus with children in the Book of Mormon" class="w-full max-w-sm md:max-w-xs xl:max-w-sm 2xl:max-w-md"/> 
             </div>
             
-            <div class="flex flex-col items-center justify-start space-y-4 shrink-0 px-4 mx-auto text-lg sm:items-start xl:items-center md:text-2xl md:space-y-6 lg:text-3xl title lg:space-y-12">
+            <div class="flex flex-col items-center justify-start space-y-4 shrink-0 px-4 mx-auto text-lg sm:items-start md:text-2xl md:space-y-6 lg:text-3xl lg:space-y-8 xl:items-center title">
                 <nav class="flex items-start justify-start flex-col space-y-3 shrink-0">
                     <a href="#book-of-mormon-stories" class="hover:text-teal-800 title underline underline-offset-4">
                        Book of Mormon Stories 
@@ -96,6 +96,14 @@ body::before {
                     </a>
                 </nav>
                 <a class="bg-teal-700 text-white p-2 px-3 rounded-full hover:bg-teal-500 md:text-lg md:px-4 lg:text-xl lg:px-12" href="./docs/program-lyrics-2024.pdf" target="_blank" download>Download Lyrics PDF</a>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1gn9xgPkqkE8rjTZ1QOX5x?utm_source=generator&theme=0" 
+                    title="Spotify Playlist"
+                    width="100%" 
+                    height="100" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
             </div>
 
             <div class="w-full flex items-center justify-center px-4 sm:pl-0">
@@ -558,9 +566,13 @@ body::before {
             </a>
           </div>
 
-          <p>&copy; 2024 <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+          <p>&copy; <span id="current-year">2024</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
     </footer>
 
     <a href="#top" class="fixed bottom-4 right-4 bg-teal-700 text-white p-2 px-3 rounded-full hover:bg-teal-500">Back to Top</a>
+    <script>
+        const currentYearSpan = document.getElementById('current-year')
+        currentYearSpan.textContent = new Date().getFullYear()
+    </script>
 </body>
 </html>
