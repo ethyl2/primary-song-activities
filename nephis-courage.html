@@ -34,8 +34,28 @@
         </div>
         
     </header>
-    <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 divide-y pb-16 md:pb-20">
+    <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 pb-16 md:pb-20">
+        <h2 class="px-4 text-lg md:text-2xl">First, pick an avatar:</h2>
+        <div class="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 mx-auto px-4 justify-items-center items-center">
+            <div id="person-1" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(1)"><img src="./static/images/program-2024/person-1.png" alt="person #1" class="h-full"/></div>
+            <div id="person-2" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(2)"><img src="./static/images/program-2024/person-2.png" alt="person #2" class="h-full"/></div>
+            <div id="person-3" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(3)"><img src="./static/images/program-2024/person-3.png" alt="person #3" class="h-full" /></div>
+            <div id="person-4" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(4)"><img src="./static/images/program-2024/person-4.png" alt="person #4" class="h-full" /></div>
+            <div id="person-5" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(5)"><img src="./static/images/program-2024/person-5.png" alt="person #5" class="h-full" /></div>
+            <div id="person-6" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(6)"><img src="./static/images/program-2024/person-6.png" alt="person #6" class="h-full" /></div>
+            <div id="person-7" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(7)"><img src="./static/images/program-2024/person-7.png" alt="person #7" class="h-full"/></div>
+            <div id="person-8" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(8)"><img src="./static/images/program-2024/person-8.png" alt="person #8" class="h-full" /></div>
+            <div id="person-9" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(9)"><img src="./static/images/program-2024/person-9.png" alt="person #9" class="h-full"/></div>
+            <div id="person-10" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(10)"><img src="./static/images/program-2024/person-10.png" alt="person #10" class="h-full" /></div>
+            <div id="person-11" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(11)"><img src="./static/images/program-2024/person-11.png" alt="person #11" class="h-full" /></div>
+            <div id="person-12" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(12)"><img src="./static/images/program-2024/person-12.png" alt="person #12" class="h-full" ></div>
+            <div id="person-13" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(13)"><img src="./static/images/program-2024/person-13.png" alt="person #13" class="h-full"/></div>
+            <div id="person-14" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(14)"><img src="./static/images/program-2024/person-14.png" alt="person #14" class="h-full"/></div>
+            <div id="person-15" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(15)"><img src="./static/images/program-2024/person-15.png" alt="person #15" class="h-full"/></div>
+            <div id="person-16" class="w-24 h-32 md:w-32 md:h-48 border flex items-center justify-center py-2 hover:bg-gray-200" onClick="chooseAvatar(16)"><img src="./static/images/program-2024/person-16.png" alt="person #16" class="h-full"/></div>
+        </div>
         
+        <h2 class="px-4 text-lg md:text-2xl">Next, sing or read:</h2>
         <div class="bg-gray-700 w-full text-white grid grid-cols-3 shadow-sm">
             <div class="col-span-1 p-4 md:p-8 flex flex-col items-start justify-start space-y-4">
                 <p class="whitespace-pre-line md:text-lg lg:text-xl ">
@@ -112,17 +132,30 @@
                     When I'm discouraged, and think I cannot try,
                     I will be courageous, and I will reply:
                 </p>
-                <p class="md:text-lg lg:text-xl text-yellow-400 italic">What is your reply? (Click on the person, who is standing in for you, to find out!)</p>
+                <p class="md:text-lg lg:text-xl text-yellow-400 italic">What is your reply? (Click on the avatar, who is standing in for you, to find out!)</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 col-span-2 bg-green-200">
                 <div class="col-span-1 flex items-end justify-center bg-teal-500 hover:bg-teal-600"  onClick="showSpeechBubble('response-3')">
-                    <img id="nephi-2" src="./static/images/program-2024/book-of-mormon-character.png" alt="Nephi." class=""/>
+                    <img id="nephi-3" src="./static/images/program-2024/book-of-mormon-character.png" alt="Nephi." class=""/>
                 </div>
                 
                 <div class="col-span-1 order-first lg:order-last">
                     <img id="response-3" src="./static/images/program-2024/speech-bubble-1.png" alt="Your Response" class="hidden w-full"/>
                 </div>
             </div>
+        </div>
+
+        <h2 class="px-4 text-lg md:text-2xl">What else would you say?</h2>
+        <!-- <div class="flex items-center justify-center sm:justify-start bg-contain bg-center bg-gray-100 bg-no-repeat text-black p-4 text-center flex flex-col space-y-2 w-full h-96" style="background-image: url('./static/images/program-2024/speech-bubble.png')">
+            <p id="your-response-in-speech-bubble" class="text-sm w-56 h-28 sm:w-96 sm:h-56 sm:pt-8 overflow-auto bg-yellow-100"></p>
+        </div> -->
+
+        <div class="flex items-center justify-center sm:justify-start bg-contain bg-center bg-gray-100 bg-no-repeat text-black p-4 text-center flex flex-col space-y-2 w-full h-96 relative" 
+            style="background-image: url('./static/images/program-2024/speech-bubble.png'); object-fit: contain;">
+            <p id="your-response-in-speech-bubble" class="text-sm w-4/5 sm:w-3/5 lg:w-2/5 xl:w-1/5 max-w-full h-32 sm:h-56 sm:pt-8 overflow-auto text-center mx-auto"></p>
+        </div>
+        <div class="w-full px-4">
+            <input id="your-response" type="text" class="w-full p-4 text-black bg-white border" placeholder="Type your response here..." oninput="updateResponse()"/>
         </div>
     </main>
     
@@ -161,6 +194,30 @@
         function showSpeechBubble(id) {
             const speechBubble = document.getElementById(id)
             speechBubble.classList.toggle('hidden')
+        }
+
+        let avatar = null
+        const me = document.getElementById('nephi-3')
+
+        function chooseAvatar(number) {
+            avatar = number
+            const person = document.getElementById(`person-${number}`)
+            person.classList.add('bg-yellow-200')
+            person.classList.remove('hover:bg-gray-200')
+            for (let i = 1; i <= 16; i++) {
+                if (i !== number) {
+                    const otherPerson = document.getElementById(`person-${i}`)
+                    otherPerson.classList.remove('bg-yellow-200')
+                    otherPerson.classList.add('hover:bg-gray-200')
+                }
+            }
+            me.src = `./static/images/program-2024/person-${number}.png`
+        }
+
+        function updateResponse() {
+            const response = document.getElementById('your-response').value
+            const speechBubble = document.getElementById('your-response-in-speech-bubble')
+            speechBubble.textContent = response
         }
     </script>
 </body>
