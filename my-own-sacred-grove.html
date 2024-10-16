@@ -29,39 +29,152 @@
                 font-family: "Kanit", sans-serif;
                 }
 
-                body {
-        position: relative;
-    }
+            body {
+                position: relative;
+            }
+
+            .grid button {
+                position: relative;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            .grid button.fade-out {
+                opacity: 0;
+            }
+
+            .transition-image {
+                width: 100%;
+                height: auto;
+                transition: opacity 0.5s ease-in-out;
+            }
     </style>
 </head>
-<body class="bg-cover bg-center bg-no-repeat" style="background-image: url('./static/images/program-2024/forest.jpg')">
+<body >
     <header class="w-full py-8 bg-black text-white font-bold text-xl md:text-4xl">
         <div class="container flex items-center justify-center mx-auto">
             <h1>My Own Sacred Grove</h1>
         </div>
         
     </header>
-    <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 divide-y">
-        <section class="flex flex-col items-center justify-center mx-auto space-y-4 md:space-y-8 w-full md:w-1/2 bg-white bg-opacity-70 rounded p-4">
-            <h2 class="text-2xl md:text-4xl font-bold">Find a special spot, your own sacred grove</h2>
-            <div class="grid grid-cols-4">
-                <img src="./static/images/program-2024/trees-1.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-2.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-3.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-4.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-5.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-6.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-7.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-8.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-9.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-10.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-11.png" alt="Trees" class="" />
-                <img src="./static/images/program-2024/trees-12.png" alt="Trees" class="" />
+    <div class="w-full bg-cover bg-center bg-no-repeat" style="background-image: url('./static/images/program-2024/forest.jpg')">
+        <main class="container mx-auto py-8 md:py-12 min-h-screen flex flex-col space-y-4 md:space-y-8 divide-y px-4">
+            <audio controls class="mx-auto">
+                <source src="./static/audio/program-2024/forest.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <section class="flex flex-col items-center justify-center mx-auto space-y-4 md:space-y-8 w-full lg:w-1/2 bg-white bg-opacity-70 rounded p-4 pb-8">
+                <h2 id="headline" class="text-2xl md:text-4xl font-bold text-center">Find a special spot, your own sacred grove</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-1.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-2.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-3.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-4.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-5.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-6.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-7.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-8.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-9.png" alt="Trees" /></button>   
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-10.png" alt="Trees" /></button>  
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-11.png" alt="Trees" /></button>  
+                    <button class="border border-green-800 hover:bg-blue-200"><img src="./static/images/program-2024/trees-12.png" alt="Trees" /></button>  
+                </div>
+                <p id="chorus" class="whitespace-pre-line text-lg md:text-xl lg:text-2xl invisible">
+                    I will find my own sacred grove
+                    Away from all of the noise of the world.
+                    I will turn to prayer
+                    For I know He's there.
+                    I will find my own sacred grove.
+                </p>
+            </section>
+        </main>
+    </div> 
+    
+    <section class="bg-gradient-to-b from-green-700 to-green-900 py-8 md:py-16 flex flex-col items-center justify-center">
+        <h2 class="text-2xl md:text-4xl font-bold text-center text-white">Joseph found a sacred grove</h2>
+        <p class="px-4 whitespace-pre-line text-sm sm:text-base md:text-lg lg:text-xl text-white pb-8">
+            Joseph Smith went to a grove full of trees.
+            Seeking God's wisdom, he fell to his knees.
+            As he pled with the heavens, the sky filled with light
+            And the Father appeared with His Son Jesus Christ
+            Standing above in the air
+            Coming to answer his prayer.
+        </p>
+        <div class="w-full md:max-w-4xl mx-auto px-4">
+            <div class="relative w-full h-0 overflow-hidden max-w-full bg-black" style="padding-bottom: 56.25%">
+                <iframe class="absolute top-0 left-0 w-full h-full" 
+                    src="https://www.youtube.com/embed/1V9IyiJehfE?si=F2JZ_2WN8ID_9gc-" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="bg-yellow-700 py-8 md:py-16 flex flex-col items-center justify-center space-y-4">
+        <h2  class="text-2xl md:text-4xl font-bold text-center text-white">So many choices. . .</h2>
+        <div class="w-full flex items-center justify-center space-x-5">
+            <button id="direction-0" class="text-2xl md:text-4xl lg:text-6xl flex items-center justify-center">↪️</button>
+            <button id="direction-1" class="text-2xl md:text-4xl lg:text-6xl flex items-center justify-center">⬆️</button>
+            <button id="direction-2" class="text-2xl md:text-4xl lg:text-6xl flex items-center justify-center">➡️</button>
+            <button id="direction-3" class="text-2xl md:text-4xl lg:text-6xl flex items-center justify-center">↩️</button>
+            <button id="direction-4" class="text-2xl md:text-4xl lg:text-6xl flex items-center justify-center">⬅️</button>
+            <button id="direction-5" class="text-2xl md:text-4xl lg:text-6xl flex items-center justify-center">⬇️</button>
+        </div>
         
-       
-    </main>
+        <p class="px-4 whitespace-pre-line text-sm sm:text-base md:text-lg lg:text-xl text-white pb-8">
+        So many choices with so much at stake.
+        Life's full of pathways, but which should I take?
+        If I lift up in prayer in the name of the Son.
+        Through the power of the Holy Ghost, answers will come.
+        </p>
+
+        <img id="choice" src="./static/images/program-2024/going-to-logan-temple.webp" alt="going to the temple" class="w-full md:max-w-2xl mx-auto px-4" />
+        <p id="choice-text" class="text-white text-center px-4"></p>
+    </section>
+
+    <section class="bg-black py-8 md:py-16 flex flex-col items-center justify-center">
+        <div class="text-white bg-gray-800 px-4 py-2 rounded-md text-lg md:text-3xl  flex flex-col items-center justify-center font-mono space-y-4">
+            <p class="text-sm md:text-3xl">🕰️ Sometimes the answers take time ⏰</p>
+            <p id="clock">
+            </p>
+        </div>
+
+        <p class="px-4 whitespace-pre-line text-sm sm:text-base md:text-lg lg:text-xl text-white pb-8">
+        Sometimes the answers take time
+        So I'll listen in heart ❤️ and mind 💭.
+        Revelation will come my way
+        As I wait patiently in faith.
+
+        Heavenly Father is there
+        Ready to answer my prayer.
+        I will find my own sacred grove
+        Away from all of the noise of the world.
+        I will turn to prayer
+        For I know He's there.
+        I will find my own sacred grove.
+        </p>
+
+        <img src="./static/images/program-2024/girl-praying.jpeg" alt="girl praying." class="w-full md:max-w-2xl mx-auto px-4" />
+    </section>
+
+    <section class="w-full bg-cover bg-center bg-no-repeat py-16" style="background-image: url('./static/images/program-2024/forest.jpg')">
+        <div class="w-full md:max-w-4xl mx-auto px-4">
+            <div class="relative w-full h-0 overflow-hidden max-w-full bg-black" style="padding-bottom: 56.25%">
+                <iframe class="absolute top-0 left-0 w-full h-full" 
+                    src="https://www.youtube.com/embed/yFwMFWKxN9g?si=eJhL1kNK6GlApjw4" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
     
     <footer class="bg-gray-800 text-white p-4 text-center flex flex-col space-y-2">
         
@@ -88,15 +201,96 @@
             </a>
           </div>
 
-          <p>&copy; <span id="current-year">2024</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+            <p><a class="hover:text-yellow-100" href="https://freesound.org/people/klankbeeld/sounds/628326/" target="_blank">forest edge spring NL 1111AM 220414_0336.flac</a> 
+            by <a class="hover:text-yellow-100" href="https://freesound.org/people/klankbeeld/" target="_blank">klankbeeld</a> | License: <a class="hover:text-yellow-100" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0</a>
+            </p>
+
+          <p>&copy; <span id="current-year">2024</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:text-green-200">Heather Nuffer</a></p>
     </footer>
     <script>
         const currentYearSpan = document.getElementById('current-year')
         currentYearSpan.textContent = new Date().getFullYear()
         
-        function showEnglish(line) {
-            document.getElementById(line).classList.toggle('hidden')
+        const buttons = document.querySelectorAll('.grid button')
+        const grid = document.querySelector('.grid')
+        const chorus = document.getElementById('chorus')
+        const headline = document.getElementById('headline')
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+            const img = this.querySelector('img');
+            const imgSrc = img.src
+            
+            const newImg = document.createElement('img')
+            newImg.src = imgSrc
+            newImg.alt = img.alt
+            newImg.classList.add('transition-image', 'max-w-sm')
+
+            this.classList.add('fade-out')
+
+            setTimeout(() => {
+                grid.replaceWith(newImg);
+                chorus.classList.remove('invisible')
+                headline.textContent = 'You can find your own sacred grove'
+            }, 500)
+            })
+        })
+
+        const clockElement = document.getElementById('clock');
+
+        function updateClock() {
+            const now = new Date()
+        
+            let hours = String(now.getHours()).padStart(2, '0')
+            const minutes = String(now.getMinutes()).padStart(2, '0')
+            const seconds = String(now.getSeconds()).padStart(2, '0')
+        
+            // Determine AM or PM
+            const ampm = hours >= 12 ? 'PM' : 'AM'
+            
+            // Convert 24-hour format to 12-hour format
+            hours = hours % 12;
+            hours = hours ? hours : 12; // Convert 0 to 12 (midnight case)
+            
+            // Ensure hours are always 2 digits
+            hours = String(hours).padStart(2, '0')
+            
+         
+            clockElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`
         }
+
+        setInterval(updateClock, 1000)
+        
+        updateClock()
+
+        const choiceImage = document.getElementById('choice')
+        const directions = document.querySelectorAll('button[id^="direction-"]')
+        const choiceText = document.getElementById('choice-text')
+        
+        const  directionImages = [
+            './static/images/program-2024/kindness-at-camp.webp',
+            './static/images/program-2024/going-to-logan-temple.webp',
+            './static/images/program-2024/gifting-crafts.webp',
+            './static/images/program-2024/raking-leaves.jpeg',
+            './static/images/program-2024/boy-holding-door.jpeg',
+            './static/images/program-2024/missionaries.jpeg'
+        ]
+
+        const directionText = [
+            'Paths of kindness',
+            'Paths to the temple',
+            'Paths of giving',
+            'Paths of service',
+            'Paths of friendship',
+            'Paths of missionary service around the world'
+        ]
+
+        directions.forEach((button, index) => {
+            button.addEventListener('click', function() {
+                choiceImage.src = directionImages[index]
+                choiceText.textContent = directionText[index]
+            })
+        })
     </script>
 </body>
 </html>
