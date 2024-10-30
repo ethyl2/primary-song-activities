@@ -37,7 +37,7 @@
     <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 pb-16 md:pb-20">
         <div class="w-5/6 mx-auto bg-white grid grid-cols-4">
             
-            <img src="./static/images/program-2024/dove.png" onclick="highlight(event)" alt="dove" />
+            <img src="./static/images/program-2024/dove.png" alt="dove" />
             <img src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" />
             <img src="./static/images/program-2024/jesus-second-coming.webp" alt="Jesus in the second coming" />
             <img src="./static/images/program-2024/president-nelson.webp" alt="President Nelson" />
@@ -45,9 +45,13 @@
             <img src="./static/images/program-2024/heart-is-full-2.png" alt="my heart is full" />
         </div>
 
-        <div class="bg-contain bg-center bg-repeat w-[60vw] h-[80vh] mx-auto rounded overflow-hidden relative" style="background-image: url('./static/images/program-2024/collage-2.png');">
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/dove.png" alt="dove" class="absolute top-12 rounded left-24 w-32"/></button>
-            <img src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" class="absolute bottom-12 rounded right-24 w-32"/>
+        <div class="bg-contain bg-center bg-repeat w-[100vw] h-[100vh] md:w-[60vw] md:h-[80vh] mx-auto rounded overflow-hidden relative" style="background-image: url('./static/images/program-2024/collage-2.png');">
+            <button onclick="highlight(event)"><img src="./static/images/program-2024/dove.png" alt="dove" class="absolute top-12 rounded left-24 w-24 md:w-32"/></button>
+            <button onclick="highlight(event)"><img src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" class="absolute bottom-48 rounded right-4 w-20 md:w-32 sm:right-24 md:right-8"/></button>
+            <button onclick="highlight(event)"><img src="./static/images/program-2024/jesus-second-coming.webp" alt="Jesus in the second coming" class="absolute top-48 rounded right-16 w-16 md:w-32"/></button>
+            <button onclick="highlight(event)"><img src="./static/images/program-2024/president-nelson.webp" alt="President Nelson" class="absolute bottom-96 md:bottom-12 rounded right-56 md:left-24 w-16 md:w-32"/></button>
+            <button onclick="highlight(event)"><img src="./static/images/program-2024/tears.png" alt="my eyes are wet" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-32"/></button>
+            <button onclick="highlight(event)"><img src="./static/images/program-2024/heart-is-full-2.png" alt="my heart is full" class="absolute top-1/3 left-1/4 transform -translate-x-1/3 -translate-y-1/4 w-20 md:w-32"/></button>
         </div>
            
         <div>
