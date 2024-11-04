@@ -35,26 +35,96 @@
         
     </header>
     <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 pb-16 md:pb-20">
-        <div class="w-5/6 mx-auto bg-white grid grid-cols-4">
+        <h2 class="mx-auto text-center text-lg md:text-2xl">Can you find these objects from this song in the collage below?</h2>
+        <div class="w-auto gap-4 mx-auto bg-white grid grid-cols-4 px-4">
+            <div id="item-0" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/dove.png" alt="dove" />
+                <p class="text-center">the witness of Holy Ghost</p>
+            </div>
+
+            <div id="item-1" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/lift.png" alt="Has lifted me again to thee" />
+                <p class="text-center">has lifted me again to thee</p>
+            </div>
+
+            <div id="item-2" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" />
+                <p class="text-center">Father of my soul</p>
+            </div>
+
+            <div id="item-3" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/jesus-second-coming.webp" alt="Jesus in the second coming" />
+                <p class="text-center">the Savior reigns</p>
+            </div>
+
+            <div id="item-4" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/president-nelson.webp" alt="President Nelson" />
+                <p class="text-center">a prophet speaks to us</p>
+            </div>
+
+            <div id="item-5" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/tears.png" alt="my eyes are wet" />
+                <p class="text-center">my eyes are wet</p>
+            </div>
+
+            <div id="item-6" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/heart-is-full-2.png" alt="my heart is full" />
+                <p class="text-center">my heart is full</p>
+            </div>
+
+            <div id="item-7" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/speech-bubble.png" alt="The Spirit speaks today" />
+                <p class="text-center">The Spirit speaks today</p>
+            </div>
+
+            <div id="item-8" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/life-renew.png" alt="my life renew" />
+                <p class="text-center">my life renew</p>
+            </div>
             
-            <img src="./static/images/program-2024/dove.png" alt="dove" />
-            <img src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" />
-            <img src="./static/images/program-2024/jesus-second-coming.webp" alt="Jesus in the second coming" />
-            <img src="./static/images/program-2024/president-nelson.webp" alt="President Nelson" />
-            <img src="./static/images/program-2024/tears.png" alt="my eyes are wet" />
-            <img src="./static/images/program-2024/heart-is-full-2.png" alt="my heart is full" />
+            <div id="item-9" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/days.png" alt="dulls the pain of days" />
+                <p class="text-center">it dulls the pain of days</p>
+            </div>
+
+            <div id="item-10" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/heaven.png" alt="heaven's view" />
+                <p class="text-center">heaven's view</p>
+            </div>
+            
+            <div id="item-11" class="text-xs md:text-sm flex flex-col items-center justify-center">
+                <img class="w-20 h-20 object-contain" src="./static/images/program-2024/gaze.png" alt="appears before my gaze" />
+                <p class="text-center">appears before my gaze</p>
+            </div>
         </div>
 
-        <div class="bg-contain bg-center bg-repeat w-[100vw] h-[100vh] md:w-[60vw] md:h-[80vh] mx-auto rounded overflow-hidden relative" style="background-image: url('./static/images/program-2024/collage-2.png');">
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/dove.png" alt="dove" class="absolute top-12 rounded left-24 w-24 md:w-32"/></button>
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" class="absolute bottom-48 rounded right-4 w-20 md:w-32 sm:right-24 md:right-8"/></button>
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/jesus-second-coming.webp" alt="Jesus in the second coming" class="absolute top-48 rounded right-16 w-16 md:w-32"/></button>
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/president-nelson.webp" alt="President Nelson" class="absolute bottom-96 md:bottom-12 rounded right-56 md:left-24 w-16 md:w-32"/></button>
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/tears.png" alt="my eyes are wet" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-32"/></button>
-            <button onclick="highlight(event)"><img src="./static/images/program-2024/heart-is-full-2.png" alt="my heart is full" class="absolute top-1/3 left-1/4 transform -translate-x-1/3 -translate-y-1/4 w-20 md:w-32"/></button>
+        <div class="bg-contain bg-center bg-repeat w-full min-w-[100vw] h-[100vh] md:min-w-[60vw] md:h-[80vh] mx-auto rounded overflow-hidden relative" style="background-image: url('./static/images/program-2024/collage-2.png');">
+            <button onclick="highlight(event)"><img id="0" src="./static/images/program-2024/dove.png" alt="dove" class="absolute top-12 rounded left-24 w-24 md:w-32"/></button>
+
+            <button onclick="highlight(event)"><img id="1" src="./static/images/program-2024/lift.png" alt="Has lifted me again to thee" class="absolute left-1/2 transform -translate-x-1/2  w-10"/></button>
+
+            <button onclick="highlight(event)"><img id="2"  src="./static/images/program-2024/heavenly-father-with-children.webp" alt="Heavenly Father with children in heaven" class="absolute bottom-48 rounded right-4 w-20 md:w-32 sm:right-24 md:right-8"/></button>
+            
+            <button onclick="highlight(event)"><img id="3" src="./static/images/program-2024/jesus-second-coming.webp" alt="Jesus in the second coming" class="absolute top-48 rounded right-16 w-16 md:w-32"/></button>
+            
+            <button onclick="highlight(event)"><img id="4" src="./static/images/program-2024/president-nelson.webp" alt="President Nelson" class="absolute bottom-96 md:bottom-12 rounded right-56 md:left-24 w-16 md:w-32"/></button>
+            
+            <button onclick="highlight(event)"><img id="5" src="./static/images/program-2024/tears.png" alt="my eyes are wet" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-32"/></button>
+
+            <button onclick="highlight(event)"><img id="6" src="./static/images/program-2024/heart-is-full-2.png" alt="my heart is full" class="absolute top-1/3 left-1/4 transform -translate-x-1/3 -translate-y-1/4 w-20 md:w-32"/></button>
+            
+            <button onclick="highlight(event)"><img id="7" src="./static/images/program-2024/speech-bubble.png" alt="The Spirit speaks today" class="absolute left-1/3 transform -translate-x-1/3 w-24 bottom-0"/></button>
+            
+            <button onclick="highlight(event)"><img id="8" src="./static/images/program-2024/life-renew.png" alt="my life renew" class="absolute bottom-0 right-2 transform w-20 md:w-24"/></button>
+
+            <button onclick="highlight(event)"><img id="9" src="./static/images/program-2024/days.png" alt="dulls the pain of days" class="absolute top-36 rounded left-12 w-24 md:w-32"/></button>
+
+            <button onclick="highlight(event)"><img id="10" src="./static/images/program-2024/heaven.png" alt="heaven's view" class="absolute bottom-80 rounded right-12 md:right-96 w-16"/></button>
+
+            <button onclick="highlight(event)"><img id="11" src="./static/images/program-2024/gaze.png" alt="appears before my gaze" class="absolute bottom-52 rounded left-10 w-20 md:w-28"/></button>    
         </div>
            
-        <div>
+        <div class="flex items-center justify-center w-full">
             <p class="px-4 whitespace-pre-line md:text-lg lg:text-xl">
                 1. The witness of the Holy Ghost,
                 As borne by those who know,
@@ -76,6 +146,19 @@
                 For one brief moment, heaven's view
                 Appears before my gaze.
             </p>
+        </div>
+
+        <div class="w-full md:max-w-4xl mx-auto px-4">
+            <div class="relative w-full h-0 overflow-hidden max-w-full bg-black" style="padding-bottom: 56.25%">
+                <iframe class="absolute top-0 left-0 w-full h-full" 
+                    src="https://www.youtube.com/embed/TTHZbDt-VpM?si=7Sj2mcAAcJekk0zv" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </main>
     
@@ -113,7 +196,12 @@
 
         function highlight(event) {
             const target = event.target
+            console.log(target)
             target.classList.add('ring-4', 'ring-green-400')
+            const id = target.id
+            console.log(id)
+            const item = document.getElementById(`item-${id}`)
+            item.classList.add('ring-4', 'ring-green-400')
         }
     </script>
 </body>
