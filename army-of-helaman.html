@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We'll Bring the World His Truth</title>
+    <meta property="og:image"
+      content="https://ethyl2.github.io/primary-song-activities/static/images/program-2024/life-renew.png">
+    <meta property="og:url" content="https://ethyl2.github.io/primary-song-activities/army-of-helaman.html">
+    <meta property="og:title" content="We'll Bring the World His Truth | Primary Song Activities">
+    <meta property="og:description" content="Activity page for We'll Bring the World His Truth">
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="https://ethyl2.github.io/primary-song-activities/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="https://ethyl2.github.io/primary-song-activities/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="https://ethyl2.github.io/primary-song-activities/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+            h1, h2, h3, h4, h5, h6, .title {
+                font-family: "Kanit", sans-serif;
+                }
+
+            .image-comparison-container, .image-comparison-container-2 {
+                position: relative;
+                width: 100%;
+                max-width: 90vw; /* Adjust width as needed */
+                overflow: hidden;
+                height: 100vh;
+                }
+
+                .image-top,
+                .image-bottom,
+                .image-top-2,
+                .image-bottom-2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                }
+
+                .image-top img,
+                .image-bottom img, 
+                .image-top-2 img,
+                .image-bottom-2 img {
+                width: 100%;
+                height: auto;
+                }
+
+                .image-top, .image-top-2 {
+                clip-path: inset(0 50% 0 0); /* Start with half of the top image hidden */
+                }
+
+                .slider-bar {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 12px;
+                height: 100vh;
+                background-color: rgba(230, 245, 19, 0.985);
+                cursor: ew-resize;
+                transform: translateX(-50%);
+                }
+
+    </style>
+</head>
+<body>
+    <header class="w-full py-8 bg-black text-white font-bold ">
+        <div class="container flex items-center justify-center mx-auto flex-col text-center">
+            <h1 class="text-xl md:text-4xl">We'll Bring the World His Truth</h1>
+            <p>We are as the army of Helaman.<br class="md:hidden" />
+                We have been taught in our youth.</p>
+                <p>And we will be the Lord's missionaries
+                <br class="md:hidden" />to bring the world his truth.</p>
+        </div>
+        
+    </header>
+    <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 pb-16 md:pb-20">
+        <div class="flex items-center justify-center space-x-2">
+            <h2 class="text-center text-lg md:text-2xl ">Move the yellow sliders below! </h2>
+            <div class="w-3 h-10" style="background: rgba(230, 245, 19, 0.985);"></div>
+        </div>
+
+        <div class="image-comparison-container mx-auto">
+            <div class="image-top z-30">
+                <img src="./static/images/program-2024/army-of-helaman.png" alt="Image 1">
+            </div>
+            <div class="image-bottom z-20">
+                <img src="./static/images/program-2024/missionaries.png" alt="Image 2">
+                </div>
+            <div class="slider-bar z-40" id="slider-bar"></div>
+        </div>
+          
+    </main>
+
+    <div class="flex items-center justify-center w-full">
+    <p class="px-4 whitespace-pre-line md:text-lg lg:text-xl mx-auto pb-8 md:pb-12">
+        1. We have been born, as Nephi of old,
+        To goodly parents who love the Lord.
+        We have been taught, and we understand,
+        That we must do as the Lord commands.
+
+        We are as the army of Helaman.
+        We have been taught in our youth.
+        And we will be the Lord's missionaries
+        To bring the world his truth.
+
+        2. We have been saved for these latter days
+        To build the kingdom in righteous ways.
+        We hear the words our prophet declares:
+        "Let each who's worthy go forth and share."
+
+        We are as the army of Helaman.
+        We have been taught in our youth.
+        And we will be the Lord's missionaries
+        To bring the world his truth.
+
+        3. We know his plan, and we will prepare,
+        Increase our knowledge through study and prayer.
+        Daily we'll learn until we are called
+        To take the gospel to all the world.
+
+        We are as the army of Helaman.
+        We have been taught in our youth.
+        And we will be the Lord's missionaries
+        To bring the world his truth.
+        To bring the world his truth.
+    </p>
+</div>
+
+    <div class="image-comparison-container-2 mx-auto">
+        <div class="image-top-2 z-30">
+            <img src="./static/images/program-2024/army-of-helaman.png" alt="Image 1">
+        </div>
+        <div class="image-bottom z-20">
+            <img src="./static/images/program-2024/primary-collage.png" alt="Image 2">
+            </div>
+        <div class="slider-bar z-40" id="slider-bar-2"></div>
+    </div>
+
+    <div class="w-full md:max-w-4xl mx-auto px-4 py-8 md:py-12">
+        <div class="relative w-full h-0 overflow-hidden max-w-full bg-black" style="padding-bottom: 56.25%">
+            <iframe class="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube.com/embed/HNhGJORCUdw?si=znXeudtUwpvORj1B" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-gray-800 text-white p-4 text-center flex flex-col space-y-2">
+        
+        <div class="flex items-center justify-center space-x-3">
+            <a href="https://ethyl2.github.io/primary-song-activities/" title="back to home"
+              class="bg-white p-px rounded shadow hover:bg-green-400 shake">
+              <img src="./images/home.png" alt="music note" class="w-7 h-7 md:w-10 md:h-10" />
+              <span class="sr-only">Back to Home</span>
+            </a>
+    
+            <a href="https://github.com/ethyl2/primary-song-activities" target="_blank" rel="noopener noreferrer"
+              class="p-px rounded bg-white shadow hover:bg-red-400 shake" title="link to GitHub repository">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                class="w-7 h-7 md:w-10 md:h-10" focusable="false" width="1.73em" height="1.5em" style="
+                                              -ms-transform: rotate(360deg);
+                                              -webkit-transform: rotate(360deg);
+                                              transform: rotate(360deg);
+                                          " preserveAspectRatio="xMidYMid meet" viewBox="0 0 1227.825 1000">
+                <path
+                  d="M1078.94-.985c-33.192-.491-110.295 10.777-239.027 96.936c-70.161-17.535-144.812-26.188-219.591-26.188c-82.278 0-165.425 10.448-242.965 31.719C192.534-24.605 110.955 1.234 110.955 1.234c-53.258 133.183-20.347 231.788-10.344 256.277C38.014 325.069-.2 411.338-.2 517.07c0 79.822 9.085 151.416 31.281 213.653c1.231 4.803.832 3.732 2.906 7.844c4.89 12.884 10.327 25.39 16.438 37.468c2.094 4.346 4 7.563 4 7.563c62.395 116.307 185.396 191.438 404.244 215.028l330.995.375c233.392-23.144 345.386-98.499 396.994-215.591l3.281-7.625c4.89-11.828 9.153-24.135 20.813-65.562c11.659-41.427 16.875-113.172 16.875-193.185c0-114.755-43.1-206.577-113.092-276.434c12.231-39.48 28.57-127.158-16.313-239.402c0 0-6.293-1.995-19.281-2.188zM818.1 420.133c53.893-.117 100.057 9.136 134.717 45.499v.031c43.369 45.541 68.749 100.525 68.749 159.778c0 276.658-177.932 284.183-397.4 284.183c-219.506 0-397.4-38.336-397.4-284.183c0-58.861 25.009-113.516 67.843-158.872c71.451-75.59 192.365-35.562 329.558-35.562c70.423-.011 136.564-10.75 193.935-10.875zm-408.807 81.468c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936zm443.649 0c-45.666 0-82.687 61.741-82.687 137.936c0 76.206 37.019 137.967 82.687 137.967c45.666 0 82.687-61.761 82.687-137.967c0-76.184-37.019-137.881-82.687-137.936z"
+                  fill="black" />
+              </svg>
+              <span class="sr-only">GitHub Repo</span>
+            </a>
+          </div>
+
+          <p>&copy; <span id="current-year">2024</span> <a href="https://github.com/ethyl2" target="_blank" class="hover:underline">Heather Nuffer</a></p>
+    </footer>
+    <script>
+        const currentYearSpan = document.getElementById('current-year')
+        currentYearSpan.textContent = new Date().getFullYear()
+        const sliderBar = document.getElementById('slider-bar');
+        const sliderBar2 = document.getElementById('slider-bar-2');
+        const imageTop = document.querySelector('.image-top');
+        const container = document.querySelector('.image-comparison-container');
+        const container2 = document.querySelector('.image-comparison-container-2');
+        const imageTop2 = document.querySelector('.image-top-2');
+
+        let isDragging = false;
+        let isDragging2 = false;
+
+        sliderBar.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            e.preventDefault(); // Prevent text selection
+        });
+
+        sliderBar2.addEventListener('mousedown', (e) => {
+            isDragging2 = true;
+            e.preventDefault(); // Prevent text selection
+        });
+
+        document.addEventListener('mouseup', () => {
+        isDragging = false;
+        });
+
+        document.addEventListener('mouseup', () => {
+        isDragging2 = false;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const rect = container.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const width = Math.max(0, Math.min(offsetX, rect.width));
+            
+            const percentage = (width / rect.width) * 100;
+            imageTop.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            sliderBar.style.left = `${width}px`;
+        }
+
+        if (isDragging2) {
+            const rect2 = container2.getBoundingClientRect();
+            const offsetX2 = e.clientX - rect2.left;
+            const width2 = Math.max(0, Math.min(offsetX2, rect2.width));
+            
+            const percentage2 = (width2 / rect2.width) * 100;
+            imageTop2.style.clipPath = `inset(0 ${100 - percentage2}% 0 0)`;
+            sliderBar2.style.left = `${width2}px`;
+        }
+    });
+    </script>
+</body>
+</html>
