@@ -83,8 +83,9 @@
     </header>
     <main class="container mx-auto pt-8 md:pt-12 min-h-screen flex flex-col space-y-4 md:space-y-8 pb-16 md:pb-20">
         <div class="flex items-center justify-center space-x-2">
-            <h2 class="text-center text-lg md:text-2xl ">Move the yellow sliders below! </h2>
+            <h2 class="text-center text-lg md:text-2xl ">Move the yellow sliders below! </h2> 
             <div class="w-3 h-10" style="background: rgba(230, 245, 19, 0.985);"></div>
+            <h2 class="text-center text-lg md:text-2xl ">What happens? Why, do you think? </h2> 
         </div>
 
         <div class="image-comparison-container mx-auto">
@@ -190,104 +191,52 @@
         currentYearSpan.textContent = new Date().getFullYear()
 
         function setupImageSlider(sliderId, topImageClass) {
-        const slider = document.getElementById(sliderId);
-        const topImage = document.querySelector(topImageClass);
+            const slider = document.getElementById(sliderId)
+            const topImage = document.querySelector(topImageClass)
 
-        let isDragging = false;
+            let isDragging = false
 
-        slider.addEventListener("mousedown", (e) => {
-            isDragging = true;
-        });
+            slider.addEventListener("mousedown", (e) => {
+                isDragging = true
+            });
 
-        slider.addEventListener("touchstart", (e) => {
-            isDragging = true;
-        });
+            slider.addEventListener("touchstart", (e) => {
+                isDragging = true
+            });
 
-        document.addEventListener("mouseup", () => {
-            isDragging = false;
-        });
+            document.addEventListener("mouseup", () => {
+                isDragging = false
+            });
 
-        document.addEventListener("touchend", () => {
-            isDragging = false;
-        });
+            document.addEventListener("touchend", () => {
+                isDragging = false
+            });
 
-        document.addEventListener("mousemove", (e) => {
-            if (!isDragging) return;
-            handleSlide(e.clientX, slider, topImage);
-        });
+            document.addEventListener("mousemove", (e) => {
+                if (!isDragging) return
+                handleSlide(e.clientX, slider, topImage)
+            });
 
-        document.addEventListener("touchmove", (e) => {
-            if (!isDragging) return;
-            handleSlide(e.touches[0].clientX, slider, topImage);
-        });
-    }
-
-    function handleSlide(x, slider, topImage) {
-        const container = slider.parentElement;
-        const rect = container.getBoundingClientRect();
-        const offsetX = x - rect.left;
-
-        if (offsetX >= 0 && offsetX <= rect.width) {
-            const percentage = (offsetX / rect.width) * 100;
-            slider.style.left = `${percentage}%`;
-            topImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            document.addEventListener("touchmove", (e) => {
+                if (!isDragging) return
+                handleSlide(e.touches[0].clientX, slider, topImage)
+            });
         }
-    }
 
-    // Initialize sliders
-    setupImageSlider("slider-bar", ".image-top");
-    setupImageSlider("slider-bar-2", ".image-top-2");
+        function handleSlide(x, slider, topImage) {
+            const container = slider.parentElement
+            const rect = container.getBoundingClientRect()
+            const offsetX = x - rect.left
 
+            if (offsetX >= 0 && offsetX <= rect.width) {
+                const percentage = (offsetX / rect.width) * 100
+                slider.style.left = `${percentage}%`
+                topImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`
+            }
+        }
 
-    //     const sliderBar = document.getElementById('slider-bar');
-    //     const sliderBar2 = document.getElementById('slider-bar-2');
-    //     const imageTop = document.querySelector('.image-top');
-    //     const container = document.querySelector('.image-comparison-container');
-    //     const container2 = document.querySelector('.image-comparison-container-2');
-    //     const imageTop2 = document.querySelector('.image-top-2');
-
-    //     let isDragging = false;
-    //     let isDragging2 = false;
-
-    //     sliderBar.addEventListener('mousedown', (e) => {
-    //         isDragging = true;
-    //         e.preventDefault(); // Prevent text selection
-    //     });
-
-    //     sliderBar2.addEventListener('mousedown', (e) => {
-    //         isDragging2 = true;
-    //         e.preventDefault(); // Prevent text selection
-    //     });
-
-    //     document.addEventListener('mouseup', () => {
-    //     isDragging = false;
-    //     });
-
-    //     document.addEventListener('mouseup', () => {
-    //     isDragging2 = false;
-    //     });
-
-    //     document.addEventListener('mousemove', (e) => {
-    //     if (isDragging) {
-    //         const rect = container.getBoundingClientRect();
-    //         const offsetX = e.clientX - rect.left;
-    //         const width = Math.max(0, Math.min(offsetX, rect.width));
-            
-    //         const percentage = (width / rect.width) * 100;
-    //         imageTop.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-    //         sliderBar.style.left = `${width}px`;
-    //     }
-
-    //     if (isDragging2) {
-    //         const rect2 = container2.getBoundingClientRect();
-    //         const offsetX2 = e.clientX - rect2.left;
-    //         const width2 = Math.max(0, Math.min(offsetX2, rect2.width));
-            
-    //         const percentage2 = (width2 / rect2.width) * 100;
-    //         imageTop2.style.clipPath = `inset(0 ${100 - percentage2}% 0 0)`;
-    //         sliderBar2.style.left = `${width2}px`;
-    //     }
-    // });
+        setupImageSlider("slider-bar", ".image-top");
+        setupImageSlider("slider-bar-2", ".image-top-2");
     </script>
 </body>
 </html>
